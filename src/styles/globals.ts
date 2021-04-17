@@ -20,9 +20,17 @@ export default createGlobalStyle`
         src: url(${robotoBold}) format('truetype');
     };
 
-    html, body {
-        background-color: greyLight;
+    * {
         margin: 0rem;
         padding: 0rem;
+    }
+
+    html {
+        font-size: 10px;
+        font-family: "roboto";
+    }
+
+    body {
+        font-size: 13px;
     }
 `;
