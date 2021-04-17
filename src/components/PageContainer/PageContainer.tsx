@@ -1,11 +1,31 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const PageContainer = () => {
-  return <Div>content</Div>;
+type Props = {
+  children?: React.ReactNode;
+};
+
+const PageContainer = ({ children }: Props) => {
+  return (
+    <Wrapper>
+      test
+      <div>test</div>
+      <div>
+        bla<div className="test">bleeee</div>
+      </div>
+    </Wrapper>
+  );
 };
 
 export default PageContainer;
 
-export const Div = styled.div`
-  background-color: ${(props) => props.theme.colors.ocher};
+export const Wrapper = styled.div`
+  div {
+    background-color: ${(props) => props.theme.colors.ocher};
+    color: blue;
+    font-size: 20px;
+
+    > div {
+      color: red;
+    }
+  }
 `;
