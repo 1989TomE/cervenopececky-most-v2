@@ -18,7 +18,7 @@ module.exports = {
         exclude: "/node_modules/",
       },
       {
-        test: /\.ttf$/,
+        test: /\.(ttf|jpg)$/,
         use: [
           {
             loader: "file-loader",
@@ -30,6 +30,9 @@ module.exports = {
   output: {
     filename: "index.js",
     path: path.resolve(__dirname, "dist"),
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({

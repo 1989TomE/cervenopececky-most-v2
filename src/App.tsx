@@ -1,18 +1,20 @@
 import React from "react";
-import DocumentHead from "./components/DocumentHead/DocumentHead";
+import Head from "./components/DocumentHead/DocumentHead";
 import PageContainer from "./components/PageContainer/PageContainer";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styles/theme";
 import GlobalStyles from "./styles/globals";
+import LandingPage from "./pages/Landing/Landing";
+import Routes from "./Routes";
 
 const App = () => {
   return (
     <React.StrictMode>
-      <DocumentHead />
+      <Head />
 
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <PageContainer />
+        <Routes />
       </ThemeProvider>
     </React.StrictMode>
   );
