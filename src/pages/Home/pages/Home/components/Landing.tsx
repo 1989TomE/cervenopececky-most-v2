@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import landingImage from "@root/assets/landing_background.jpg";
 import whiteLogo from "@root/assets/logo_white.jpg";
+import { pageHeight } from "@src/styles/page";
 
 const Landing = () => {
   const [backGroundImageLoaded, setBackgroundImageLoaded] = useState(false);
@@ -14,7 +15,7 @@ const Landing = () => {
 
     if (backGroundImageLoaded) {
       timerId = window.setTimeout(() => {
-        setHideLanding(true);
+        // setHideLanding(true);
       }, 5000);
     }
 
@@ -33,7 +34,7 @@ const Landing = () => {
       }}
       hide={hideLanding}
     >
-      <div>
+      <div className="logoContainer">
         <LogoImage
           src={whiteLogo}
           loaded={logoLoaded}
@@ -67,10 +68,10 @@ const Wrapper = styled.div<{ hide: boolean }>`
   top: 0px;
   left: 0px;
   right: 0px;
-  bottom: 0px;
+  height: ${pageHeight}px;
   z-index: 10;
 
-  > div {
+  .logoContainer {
     position: absolute;
     top: 0px;
     left: 0px;
