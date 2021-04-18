@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import homeBackgroundImage from "@root/assets/webBackground.jpg";
 import PageTopPart from "@src/components/PageTopPart/PageTopPart";
+import Navigation from "@src/components/Navigation/Navigation";
 
 type Props = {
   children?: React.ReactNode;
@@ -9,8 +10,11 @@ type Props = {
 const PageContainer = ({ children }: Props) => {
   return (
     <Wrapper>
-      <PageTopPart />
-      {children}
+      <div>
+        <PageTopPart />
+        <Navigation />
+        <div> {children}</div>
+      </div>
     </Wrapper>
   );
 };
@@ -24,4 +28,9 @@ export const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center top;
   background-size: auto;
+
+  > div {
+    margin: 0 auto;
+    max-width: 800px;
+  }
 `;

@@ -24,14 +24,12 @@ export default PageTopPart;
 
 const Wrapper = styled.div`
   height: 10rem;
-  margin: 0 auto;
-  max-width: 800px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   > div {
-    color: ${(props) => props.theme.colors.redDark};
+    color: ${(props) => props.theme.colors.redLight};
     height: 6rem;
     justify-content: center;
     align-items: center;
@@ -42,7 +40,11 @@ const Wrapper = styled.div`
     height: 6rem;
   }
 
-  .facebook,
+  .facebook {
+    margin-left: -2rem; // compensation for svg padding
+    height: 6rem;
+  }
+
   .instagram {
     height: 6rem;
   }
