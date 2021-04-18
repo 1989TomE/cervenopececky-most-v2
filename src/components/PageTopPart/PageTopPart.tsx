@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { default as Instagram } from "@root/assets/instagram.svg";
-import { default as Facebook } from "@root/assets/facebook.svg";
+import { default as InstagramSvgIcon } from "@root/assets/instagram.svg";
+import { default as FacebookSvgIcon } from "@root/assets/facebook.svg";
 import polabi from "@root/assets/polabi.png";
 import eu from "@root/assets/eu.png";
 import { theme } from "@src/styles/theme";
@@ -9,16 +9,8 @@ const PageTopPart = () => {
   return (
     <Wrapper>
       <div>
-        <Facebook
-          style={{ fill: theme.colors.redDark }}
-          alt="facebook"
-          className="facebook"
-        />
-        <Instagram
-          style={{ fill: theme.colors.redDark }}
-          alt="instagram"
-          className="instagram"
-        />
+        <FacebookSvgIcon alt="facebook" className="facebook" />
+        <InstagramSvgIcon alt="instagram" className="instagram" />
         <div className="phoneNumber">+420 604 402 763</div>
       </div>
       <div>
@@ -52,10 +44,12 @@ const Wrapper = styled.div`
   .facebook {
     margin-left: -2rem; // compensation for svg padding
     height: 6rem;
+    fill: ${(props) => props.theme.colors.redDark};
   }
 
   .instagram {
     height: 6rem;
+    fill: ${(props) => props.theme.colors.redDark};
   }
 
   .phoneNumber {

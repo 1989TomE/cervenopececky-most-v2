@@ -2,11 +2,11 @@ import { MainNavigationRouteProps } from "@src/pages/index";
 import styled from "styled-components";
 import NavLink from "./NavLink";
 
-const NavItem = ({ route, label, icon }: MainNavigationRouteProps) => {
+const NavItem = ({ route, label, icon: SvgIcon }: MainNavigationRouteProps) => {
   return (
     <Wrapper>
       <NavLink to={route}>
-        <img src={icon} />
+        <SvgIcon className="icon" />
         <div>{label}</div>
       </NavLink>
     </Wrapper>
@@ -27,8 +27,9 @@ const Wrapper = styled.li`
     justify-content: space-between;
     align-items: center;
 
-    > img {
+    > svg {
       height: 6rem;
+      fill: ${(props) => props.theme.colors.redDark};
     }
 
     > div {

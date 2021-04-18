@@ -1,8 +1,8 @@
-import homoIcon from "@root/assets/home.svg";
-import fruitPress from "@root/assets/fruitPress.svg";
-import twoBottles from "@root/assets/twoBottles.svg";
-import shoppingCart from "@root/assets/shoppingCart.svg";
-import cellPhone from "@root/assets/cellPhone.svg";
+import { default as HomeIcon } from "@root/assets/home.svg";
+import { default as ShoppingCart } from "@root/assets/shoppingCart.svg";
+import { default as CellPhone } from "@root/assets/cellPhone.svg";
+import { default as FruitPress } from "@root/assets/fruitPress.svg";
+import { default as TwoBottles } from "@root/assets/twoBottles.svg";
 
 export enum NavigationRoute {
   Home = "/",
@@ -19,21 +19,21 @@ export enum NavigationRoute {
 export type MainNavigationRouteProps = {
   route: NavigationRoute;
   label: string;
-  icon: React.ImgHTMLAttributes<HTMLImageElement>["src"];
+  icon: React.ElementType;
 };
 
 export const pages: MainNavigationRouteProps[] = [
-  { route: NavigationRoute.Home, label: "Domů", icon: homoIcon },
+  { route: NavigationRoute.Home, label: "Domů", icon: HomeIcon },
   {
     route: NavigationRoute.About,
     label: "O nás",
-    icon: fruitPress,
+    icon: FruitPress,
   },
-  { route: NavigationRoute.EShop, label: "E-shop", icon: shoppingCart },
+  { route: NavigationRoute.EShop, label: "E-shop", icon: ShoppingCart },
   {
     route: NavigationRoute.SalesStore,
     label: "Prodejna",
-    icon: twoBottles,
+    icon: TwoBottles,
   },
-  { route: NavigationRoute.Contact, label: "Kontakt", icon: cellPhone },
+  { route: NavigationRoute.Contact, label: "Kontakt", icon: CellPhone },
 ];

@@ -16,7 +16,7 @@ const ImageLink = ({
   to,
   imageSource,
   imageAltText,
-  icon: Icon,
+  icon: SvgIcon,
   iconAltText,
 }: Props) => {
   const [hovered, setHovered] = useState(false);
@@ -32,7 +32,7 @@ const ImageLink = ({
 
       <div className="background"></div>
       <div className="iconContainer">
-        <Icon style={{ fill: theme.colors.white, height: "12rem" }} />
+        <SvgIcon alt={iconAltText} />
       </div>
     </Wrapper>
   );
@@ -67,6 +67,11 @@ const Wrapper = styled(NavLink)<{ hovered: boolean }>`
     opacity: ${(props) => (props.hovered ? 0 : 1)};
     transition: opacity 0.25s ease-in-out;
     z-index: 2;
+
+    > svg {
+      fill: ${(props) => props.theme.colors.white};
+      height: 12rem;
+    }
   }
 
   .background {
