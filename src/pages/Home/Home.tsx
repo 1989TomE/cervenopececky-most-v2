@@ -1,36 +1,26 @@
-import { useState } from "react";
 import styled from "styled-components";
 import HomeBackgroundImage from "../../../assets/webBackground.jpg";
+import Landing from "./components/Landing";
 
 const Home = () => {
-  const [loaded, setLoaded] = useState(false);
   return (
-    <Image
-      src={HomeBackgroundImage}
-      onLoad={() => setLoaded(true)}
-      loaded={loaded}
-    />
+    <Wrapper>
+      <Landing />
+      <Image src={HomeBackgroundImage} />
+    </Wrapper>
   );
 };
 
 export default Home;
 
-const Image = styled.img<{ loaded: boolean }>`
-  @keyframes fadeIn {
-    from {
-      opacity: 0.8;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+const Wrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+`;
 
+const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: ${(props) => (props.loaded ? "block" : "none")};
-  animation-name: "fadeIn";
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
 `;

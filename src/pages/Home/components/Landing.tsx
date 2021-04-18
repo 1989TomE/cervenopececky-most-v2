@@ -1,21 +1,20 @@
 import { useEffect, useState } from "react";
-import { Redirect } from "react-router";
 import styled from "styled-components";
-import landingImage from "../../../assets/landing_background.jpg";
-import whiteLogo from "../../../assets/logo_white.jpg";
-import { Page } from "../index";
+import landingImage from "../../../../assets/landing_background.jpg";
+import whiteLogo from "../../../../assets/logo_white.jpg";
 
-const LandingPage = () => {
+const Landing = () => {
   const [backGroundImageLoaded, setBackgroundImageLoaded] = useState(false);
   const [logoLoaded, setLogoLoaded] = useState(false);
-  const [redirect, setRedirect] = useState(false);
+  const [hideLanding, setHideLanding] = useState(false);
+  const [render, setRender] = useState(true);
 
   useEffect(() => {
     let timerId: number | undefined = undefined;
 
     if (backGroundImageLoaded) {
       timerId = window.setTimeout(() => {
-        setRedirect(true);
+        setHideLanding(true);
       }, 6000);
     }
 
@@ -24,16 +23,17 @@ const LandingPage = () => {
     };
   }, [backGroundImageLoaded]);
 
-  return redirect ? (
-    <Redirect to={Page.Home} />
-  ) : (
-    <Wrapper>
+  return render ? (
+    <Wrapper onAnimationEnd={() => setRender(false)} hide={hideLanding}>
       <div>
         <LogoImage
           src={whiteLogo}
           loaded={logoLoaded}
           onLoad={() => {
             setLogoLoaded(true);
+          }}
+          onClick={() => {
+            setHideLanding(true);
           }}
         />
       </div>
@@ -46,16 +46,21 @@ const LandingPage = () => {
         }}
       />
     </Wrapper>
-  );
+  ) : null;
 };
 
-export default LandingPage;
+export default Landing;
 
-const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
+const Wrapper = styled.div<{ hide: boolean }>`
   background-color: ${(props) => props.theme.colors.greyDark};
-  position: relative;
+  opacity: ${(props) => (props.hide ? 0 : 1)};
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
 
   > div {
     position: absolute;
@@ -74,7 +79,7 @@ const BackgroundImage = styled.img<{ loaded: boolean }>`
   height: 100%;
   object-fit: cover;
   opacity: ${(props) => (props.loaded ? 1 : 0)};
-  transition: opacity 4s ease-in-out;
+  transition: opacity 2.5s ease-in;
 `;
 
 const LogoImage = styled.img<{ loaded: boolean }>`
@@ -82,5 +87,6 @@ const LogoImage = styled.img<{ loaded: boolean }>`
   transition: opacity 0.25s ease-in-out;
   width: 300px;
   height: 300px;
-  z-index: 1;
+  z-index: 2;
+  cursor: pointer;
 `;
