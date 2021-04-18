@@ -15,8 +15,8 @@ const Landing = () => {
 
     if (backGroundImageLoaded) {
       timerId = window.setTimeout(() => {
-        // setHideLanding(true);
-      }, 5000);
+        setHideLanding(true);
+      }, 6000);
     }
 
     return () => {
@@ -25,16 +25,26 @@ const Landing = () => {
   }, [backGroundImageLoaded]);
 
   return render ? (
-    <>
-      <LogoWrapper
-        onTransitionEnd={() => {
-          if (hideLanding) {
-            setRender(false);
-          }
-        }}
-        logoLoaded={logoLoaded}
-        hide={hideLanding}
-      >
+    <Wrapper
+      onTransitionEnd={() => {
+        if (hideLanding) {
+          setRender(false);
+        }
+      }}
+      $backgroundImageLoaded={backGroundImageLoaded}
+      $logoLoaded={logoLoaded}
+      $hide={hideLanding}
+    >
+      <div className="imageWrapper">
+        <img
+          src={landingImage}
+          onLoad={() => {
+            setBackgroundImageLoaded(true);
+          }}
+        />
+      </div>
+
+      <div className="logoWrapper">
         <img
           src={whiteLogo}
           onLoad={() => {
@@ -44,64 +54,64 @@ const Landing = () => {
             setHideLanding(true);
           }}
         />
-      </LogoWrapper>
-
-      <BackgroundImageWrapper
-        hide={hideLanding}
-        backgroundImageLoaded={backGroundImageLoaded}
-      >
-        <img
-          src={landingImage}
-          onLoad={() => {
-            setBackgroundImageLoaded(true);
-          }}
-        />
-      </BackgroundImageWrapper>
-    </>
+      </div>
+    </Wrapper>
   ) : null;
 };
 
 export default Landing;
 
-const LogoWrapper = styled.div<{ hide: boolean; logoLoaded: boolean }>`
-  opacity: ${(props) => (props.hide ? 0 : 1)};
+const Wrapper = styled.div<{
+  $hide: boolean;
+  $logoLoaded: boolean;
+  $backgroundImageLoaded: boolean;
+}>`
+  opacity: ${(props) => (props.$hide ? 0 : 1)};
   transition: 1s ease-in-out;
   position: absolute;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  z-index: 10;
+  z-index: 100;
 
-  > img {
-    opacity: ${(props) => (props.logoLoaded ? 1 : 0)};
-    transition: 0.5s ease-in-out;
-    width: 300px;
-    height: 300px;
-    z-index: 1;
-    cursor: pointer;
+  .imageWrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: ${pageHeight}px;
+    background-color: ${(props) => props.theme.colors.greyDark};
+    z-index: 101;
+
+    > img {
+      height: 100%;
+      object-fit: contain;
+      opacity: ${(props) => (props.$backgroundImageLoaded ? 1 : 0)};
+      transition: 2.5s ease-in;
+      transition-delay: 1s;
+    }
   }
-`;
 
-const BackgroundImageWrapper = styled.div<{
-  hide: boolean;
-  backgroundImageLoaded: boolean;
-}>`
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  background-color: ${(props) => props.theme.colors.greyDark};
-  bottom: ${window.visualViewport.height}px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .logoWrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 102;
 
-  > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: ${(props) => (props.backgroundImageLoaded ? 1 : 0)};
-    transition: 3s ease-in;
+    > img {
+      position: relative;
+      top: 10%;
+      height: 300px;
+      width: 300px;
+      opacity: ${(props) => (props.$logoLoaded ? 1 : 0)};
+      transition: 0.25s ease-in;
+      cursor: pointer;
+    }
   }
 `;
