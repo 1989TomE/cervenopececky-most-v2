@@ -1,4 +1,4 @@
-import { MainRoute, pages } from "@src/pages/index";
+import { pages } from "@src/pages/index";
 import styled from "styled-components";
 import NavItem from "./components/NavItem";
 
@@ -22,7 +22,7 @@ export default Navigation;
 
 const Nav = styled.nav`
   > ul {
-    margin-top: 260px;
+    margin-top: 110px;
     display: flex;
     justify-content: center;
     padding: 3rem;

@@ -22,12 +22,11 @@ const PageContainer = ({ children }: Props) => {
 export default PageContainer;
 
 export const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
+  height: 1200px;
   background-image: url(${homeBackgroundImage});
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: auto;
+  background-position: top center;
+  background-size: cover;
 
   > div {
     margin: 0 auto;

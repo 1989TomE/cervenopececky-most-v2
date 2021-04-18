@@ -19,6 +19,10 @@ const Wrapper = styled.li`
   flex: 1;
   min-width: 80px;
   max-width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 10rem;
 
   a {
     text-decoration: none;
@@ -29,13 +33,23 @@ const Wrapper = styled.li`
 
     > svg {
       height: 6rem;
-      fill: ${(props) => props.theme.colors.redDark};
+      fill: ${(props) => props.theme.colors.redLight};
+      transition: 0.2s ease-in;
     }
 
     > div {
       text-transform: uppercase;
       color: ${(props) => props.theme.colors.redLight};
       font-size: 15px;
+    }
+
+    &:hover {
+      > svg {
+        fill: ${(props) => props.theme.colors.redDark};
+      }
+      > div {
+        color: ${(props) => props.theme.colors.redDark};
+      }
     }
   }
 
