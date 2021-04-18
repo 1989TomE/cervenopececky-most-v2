@@ -20,9 +20,13 @@ const ImageLink = ({ to, imageSource, icon: SvgIcon, label }: Props) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="container">
-        <div></div>
+      <div>
         <img src={imageSource} alt={label} />
+      </div>
+      <div className="text">{label}</div>
+      <div className="background" />
+      <div className="svgContainer">
+        <SvgIcon />
       </div>
     </Wrapper>
   );
@@ -41,6 +45,7 @@ const Wrapper = styled(NavLink)<{ isHovered: boolean }>`
     top: 0px;
     left: 0px;
     right: 0px;
+    bottom: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,9 +57,17 @@ const Wrapper = styled(NavLink)<{ isHovered: boolean }>`
     }
   }
 
-  .closedContainer {
+  .text {
+    color: ${(props) => props.theme.colors.white};
+    font-size: 30px;
+    font-family: "barlow";
+    opacity: ${(props) => (props.isHovered ? 1 : 0)};
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .svgContainer {
     opacity: ${(props) => (props.isHovered ? 0 : 1)};
-    transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     z-index: 2;
 
     > svg {
@@ -65,7 +78,7 @@ const Wrapper = styled(NavLink)<{ isHovered: boolean }>`
 
   .background {
     opacity: ${(props) => (props.isHovered ? 0 : 0.7)};
-    transition: opacity 0.25s ease-in;
+    transition: opacity 0.3s ease-in;
     background-color: ${(props) => props.theme.colors.ocher};
     z-index: 1;
   }

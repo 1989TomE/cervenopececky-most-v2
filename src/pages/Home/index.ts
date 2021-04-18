@@ -31,6 +31,12 @@ export const homeRoutes: HomeRouteProps[] = [
     imageSource: workPlaceWidescreen,
   },
   {
+    route: HomeRoute.WorkPlace,
+    label: "Moštárna",
+    icon: Tap,
+    imageSource: workPlaceWidescreen,
+  },
+  {
     route: HomeRoute.FruitOrchards,
     label: "Ovocné sady",
     icon: Leaf,
@@ -41,12 +47,6 @@ export const homeRoutes: HomeRouteProps[] = [
     label: "Produkty",
     icon: AppleAndBottle,
     imageSource: bottlesWidescreen,
-  },
-  {
-    route: HomeRoute.WorkPlace,
-    label: "Moštárna",
-    icon: Tap,
-    imageSource: workPlaceWidescreen,
   },
   {
     route: HomeRoute.PublicAppleJuicing,
