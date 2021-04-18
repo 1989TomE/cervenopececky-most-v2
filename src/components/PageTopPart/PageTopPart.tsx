@@ -1,15 +1,24 @@
 import styled from "styled-components";
-import instagram from "@root/assets/instagram.svg";
-import facebook from "@root/assets/facebook.svg";
+import { default as Instagram } from "@root/assets/instagram.svg";
+import { default as Facebook } from "@root/assets/facebook.svg";
 import polabi from "@root/assets/polabi.png";
 import eu from "@root/assets/eu.png";
+import { theme } from "@src/styles/theme";
 
 const PageTopPart = () => {
   return (
     <Wrapper>
       <div>
-        <img src={facebook} alt="facebook" className="facebook" />
-        <img src={instagram} alt="instagram" className="instagram" />
+        <Facebook
+          style={{ fill: theme.colors.redDark }}
+          alt="facebook"
+          className="facebook"
+        />
+        <Instagram
+          style={{ fill: theme.colors.redDark }}
+          alt="instagram"
+          className="instagram"
+        />
         <div className="phoneNumber">+420 604 402 763</div>
       </div>
       <div>
