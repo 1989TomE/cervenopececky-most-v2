@@ -13,7 +13,7 @@ const PageContainer = ({ children }: Props) => {
       <div>
         <PageTopPart />
         <Navigation />
-        <div> {children}</div>
+        <div>{children}</div>
       </div>
     </Wrapper>
   );
@@ -32,5 +32,9 @@ export const Wrapper = styled.div`
   > div {
     margin: 0 auto;
     max-width: 800px;
+
+    > div {
+      display: flex;
+    }
   }
 `;

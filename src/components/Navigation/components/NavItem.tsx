@@ -1,8 +1,8 @@
-import { PageProps } from "@src/pages/index";
+import { MainNavigationRouteProps } from "@src/pages/index";
 import styled from "styled-components";
 import NavLink from "./NavLink";
 
-const NavItem = ({ route, label, icon }: PageProps) => {
+const NavItem = ({ route, label, icon }: MainNavigationRouteProps) => {
   return (
     <Wrapper>
       <NavLink to={route}>
@@ -18,7 +18,7 @@ export default NavItem;
 const Wrapper = styled.li`
   flex: 1;
   min-width: 80px;
-  max-width: 120px;
+  max-width: 150px;
 
   a {
     text-decoration: none;

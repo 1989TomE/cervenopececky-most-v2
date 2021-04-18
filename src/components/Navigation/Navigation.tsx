@@ -9,7 +9,9 @@ const Navigation = () => {
         {pages.map((page) => {
           const { route, icon, label } = page;
 
-          return <NavItem route={route} label={label} icon={icon} />;
+          return (
+            <NavItem key={label} route={route} label={label} icon={icon} />
+          );
         })}
       </ul>
     </Nav>

@@ -22,12 +22,16 @@ module.exports = {
         exclude: "/node_modules/",
       },
       {
-        test: /\.(ttf|jpg|svg|png)$/,
+        test: /\.(ttf|jpg|png)$/,
         use: [
           {
             loader: "file-loader",
           },
         ],
+      },
+      {
+        test: /\.svg$/,
+        use: ["@svgr/webpack"],
       },
     ],
   },

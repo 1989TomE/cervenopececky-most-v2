@@ -6,30 +6,34 @@ import cellPhone from "@root/assets/cellPhone.svg";
 
 export enum NavigationRoute {
   Home = "/",
-  MakingAppleJuice = "/chci-mostovat",
+  WorkPlace = "/mostarna",
+  About = "/o-nas",
+  Arboriculture = "/ovocne-sady",
+  MakingAppleJuiceForPublic = "/mostovani-pro-verejnost",
+  EShop = "/e-shop",
   Products = "/produkty",
-  WhereToBuy = "/kde-nakoupit",
+  SalesStore = "/prodejna",
   Contact = "/kontakt",
 }
 
-export type PageProps = {
+export type MainNavigationRouteProps = {
   route: NavigationRoute;
   label: string;
   icon: React.ImgHTMLAttributes<HTMLImageElement>["src"];
 };
 
-export const pages: PageProps[] = [
+export const pages: MainNavigationRouteProps[] = [
   { route: NavigationRoute.Home, label: "Domů", icon: homoIcon },
   {
-    route: NavigationRoute.MakingAppleJuice,
-    label: "Chci moštovat",
+    route: NavigationRoute.About,
+    label: "O nás",
     icon: fruitPress,
   },
-  { route: NavigationRoute.Products, label: "Produkty", icon: twoBottles },
+  { route: NavigationRoute.EShop, label: "E-shop", icon: shoppingCart },
   {
-    route: NavigationRoute.WhereToBuy,
-    label: "Kde nakoupit",
-    icon: shoppingCart,
+    route: NavigationRoute.SalesStore,
+    label: "Prodejna",
+    icon: twoBottles,
   },
   { route: NavigationRoute.Contact, label: "Kontakt", icon: cellPhone },
 ];
