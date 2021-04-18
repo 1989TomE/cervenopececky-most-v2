@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./theme";
 
 import barlowCondensedSemiBold from "./fonts/BarlowCondensed-SemiBold.ttf";
 import roboto from "./fonts/Roboto-Regular.ttf";
@@ -23,14 +24,23 @@ export default createGlobalStyle`
     * {
         margin: 0rem;
         padding: 0rem;
+        box-sizing: border-box;
     }
 
     html {
         font-size: 10px;
         font-family: "roboto";
+        height: 100%;
     }
 
     body {
         font-size: 13px;
+        height: 100%;
+        background-color: ${(props) => props.theme.colors.ocher};
+       
+    }
+
+    #root {
+        height: 100%;
     }
 `;

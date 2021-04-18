@@ -1,11 +1,15 @@
 import { useState } from "react";
 import styled from "styled-components";
-import HomeImage from "../../../assets/CPmost_web_bckg2.jpg";
+import HomeBackgroundImage from "../../../assets/webBackground.jpg";
 
 const Home = () => {
   const [loaded, setLoaded] = useState(false);
   return (
-    <Image src={HomeImage} onLoad={() => setLoaded(true)} loaded={loaded} />
+    <Image
+      src={HomeBackgroundImage}
+      onLoad={() => setLoaded(true)}
+      loaded={loaded}
+    />
   );
 };
 
