@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { NavigationRoute } from "../index";
+import { MainRoute } from "../index";
+import { HomeRoute } from "./index";
 import WorkPlace from "./pages/Home/Home";
 import Home from "./pages/Home/Home";
 import Products from "./pages/Products/Products";
@@ -10,13 +11,13 @@ const Routes = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path={NavigationRoute.Home} component={Home} />
-        <Route path={NavigationRoute.WorkPlace} component={WorkPlace} />
+        <Route exact path={HomeRoute.Home} component={Home} />
+        <Route path={HomeRoute.WorkPlace} component={WorkPlace} />
         <Route
-          path={NavigationRoute.PublicAppleJuicing}
+          path={HomeRoute.PublicAppleJuicing}
           component={PublicAppleJuicing}
         />
-        <Route path={NavigationRoute.Products} component={Products} />
+        <Route path={HomeRoute.Products} component={Products} />
       </Switch>
     </Router>
   );

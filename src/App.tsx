@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "./styles/theme";
 import GlobalStyles from "./styles/globals";
 import Landing from "./pages/Home/pages/Home/components/Landing";
-import Routes from "./Routes";
+import Routes from "./pages/Routes";
 
 const App = () => {
   return (

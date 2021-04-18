@@ -1,55 +1,33 @@
-import { NavigationRoute } from "@src/pages/index";
 import ImageLink from "./ImageLink";
-
-import workPlaceWidescreen from "@root/assets/mostarnaWidescreen.jpg";
-import cuteLady from "@root/assets/cuteLady.jpg";
-import bottlesWidescreen from "@root/assets/bottlesWidescreen.jpg";
-import publicAppleJuicing from "@root/assets/publicAppleJuicing.jpg";
-
-import { default as Leaf } from "@root/assets/leaf.svg";
-import { default as AppleAndBottle } from "@root/assets/appleAndBottle.svg";
-import { default as Tap } from "@root/assets/tap.svg";
-import { default as WineGlass } from "@root/assets/wineGlass.svg";
-
 import PageColumn from "@src/components/PageColumn/PageColumn";
+import { HomeRoute, homeRoutes } from "@src/pages/Home/index";
+import styled from "styled-components";
 
 const Content = () => {
   return (
-    <>
-      <PageColumn>
-        <ImageLink
-          to={NavigationRoute.WorkPlace}
-          imageSource={workPlaceWidescreen}
-          imageAltText="mostarna"
-          icon={Tap}
-          iconAltText="kohoutek"
-        />
-        <ImageLink
-          to={NavigationRoute.Products}
-          imageSource={bottlesWidescreen}
-          imageAltText="produkty"
-          icon={AppleAndBottle}
-          iconAltText="jablko"
-        />
-      </PageColumn>
-      <PageColumn>
-        <ImageLink
-          to={NavigationRoute.FruitOrchards}
-          imageSource={cuteLady}
-          imageAltText="ovocné sady"
-          icon={Leaf}
-          iconAltText="list"
-        />
-        <ImageLink
-          to={NavigationRoute.PublicAppleJuicing}
-          imageSource={publicAppleJuicing}
-          imageAltText="moštování pro veřejnost"
-          icon={WineGlass}
-          iconAltText="víno"
-        />
-      </PageColumn>
-    </>
+    <Wrapper>
+      {homeRoutes
+        .filter((route) => route.route !== HomeRoute.Home)
+        .map((r) => {
+          const { route, imageSource, label, icon } = r;
+
+          return (
+            <ImageLink
+              to={route}
+              imageSource={imageSource}
+              icon={icon}
+              label={label}
+            />
+          );
+        })}
+    </Wrapper>
   );
 };
 
 export default Content;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+`;

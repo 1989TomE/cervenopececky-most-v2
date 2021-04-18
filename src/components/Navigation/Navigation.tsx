@@ -1,4 +1,4 @@
-import { NavigationRoute, pages } from "@src/pages/index";
+import { MainRoute, pages } from "@src/pages/index";
 import styled from "styled-components";
 import NavItem from "./components/NavItem";
 

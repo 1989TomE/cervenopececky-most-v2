@@ -1,24 +1,16 @@
+import { HomeRoute } from "@src/pages/Home/index";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { NavigationRoute } from "@src/pages/index";
-import { theme } from "@src/styles/theme";
 
 type Props = {
-  to: NavigationRoute;
-  imageAltText: string;
-  iconAltText: string;
+  to: HomeRoute;
   imageSource: React.ImgHTMLAttributes<HTMLImageElement>["src"];
   icon: React.ElementType;
+  label: string;
 };
 
-const ImageLink = ({
-  to,
-  imageSource,
-  imageAltText,
-  icon: SvgIcon,
-  iconAltText,
-}: Props) => {
+const ImageLink = ({ to, imageSource, icon: SvgIcon, label }: Props) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -28,11 +20,9 @@ const ImageLink = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <img src={imageSource} alt={imageAltText} />
-
-      <div className="background"></div>
-      <div className="iconContainer">
-        <SvgIcon alt={iconAltText} />
+      <div className="container">
+        <div></div>
+        <img src={imageSource} alt={label} />
       </div>
     </Wrapper>
   );
@@ -42,28 +32,27 @@ export default ImageLink;
 
 const Wrapper = styled(NavLink)<{ isHovered: boolean }>`
   position: relative;
-  flex: 1;
-  height: 200px;
+  width: 49%;
+  min-height: 280px;
   margin: 1px;
-
-  > img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
 
   > div {
     position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
-    bottom: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    > img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
   }
 
-  .iconContainer {
+  .closedContainer {
     opacity: ${(props) => (props.isHovered ? 0 : 1)};
     transition: opacity 0.25s ease-in-out;
     z-index: 2;
