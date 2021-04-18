@@ -16,7 +16,7 @@ const Landing = () => {
     if (backGroundImageLoaded) {
       timerId = window.setTimeout(() => {
         setHideLanding(true);
-      }, 6000);
+      }, 7000);
     }
 
     return () => {
@@ -44,14 +44,16 @@ const Landing = () => {
         />
       </div>
 
-      <div className="logoWrapper">
+      <div
+        className="logoWrapper"
+        onClick={() => {
+          setHideLanding(true);
+        }}
+      >
         <img
           src={whiteLogo}
           onLoad={() => {
             setLogoLoaded(true);
-          }}
-          onClick={() => {
-            setHideLanding(true);
           }}
         />
       </div>
@@ -67,7 +69,7 @@ const Wrapper = styled.div<{
   $backgroundImageLoaded: boolean;
 }>`
   opacity: ${(props) => (props.$hide ? 0 : 1)};
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -89,7 +91,7 @@ const Wrapper = styled.div<{
       object-fit: contain;
       opacity: ${(props) => (props.$backgroundImageLoaded ? 1 : 0)};
       transition: 2.5s ease-in;
-      transition-delay: 1s;
+      transition-delay: 2s;
     }
   }
 
@@ -106,9 +108,9 @@ const Wrapper = styled.div<{
 
     > img {
       position: relative;
-      top: 10%;
-      height: 300px;
-      width: 300px;
+      top: 12%;
+      height: 380px;
+      width: 380px;
       opacity: ${(props) => (props.$logoLoaded ? 1 : 0)};
       transition: 0.25s ease-in;
       cursor: pointer;
