@@ -54,7 +54,7 @@ export default Landing;
 const Wrapper = styled.div<{ hide: boolean }>`
   background-color: ${(props) => props.theme.colors.greyDark};
   opacity: ${(props) => (props.hide ? 0 : 1)};
-  transition: 0.5s ease-in-out;
+  transition: 0.25s ease-in-out;
   position: absolute;
   top: 0px;
   left: 0px;

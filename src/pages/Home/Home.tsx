@@ -1,26 +1,8 @@
-import styled from "styled-components";
-import HomeBackgroundImage from "../../../assets/webBackground.jpg";
 import Landing from "./components/Landing";
+import PageContainer from "@src/components/PageContainer/PageContainer";
 
 const Home = () => {
-  return (
-    <Wrapper>
-      <Landing />
-      <Image src={HomeBackgroundImage} />
-    </Wrapper>
-  );
+  return <PageContainer>test{/* <Landing /> */}</PageContainer>;
 };
 
 export default Home;
-
-const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;

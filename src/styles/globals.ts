@@ -36,7 +36,7 @@ export default createGlobalStyle`
     body {
         font-size: 13px;
         height: 100%;
-        background-color: ${(props) => props.theme.colors.ocher};
+        background-color: ${(props) => props.theme.colors.white};
        
     }
 
