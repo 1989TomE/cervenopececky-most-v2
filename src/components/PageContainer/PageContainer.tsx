@@ -1,12 +1,18 @@
 import styled from "styled-components";
 import homeBackgroundImage from "@root/assets/webBackground.jpg";
+import PageTopPart from "@src/components/PageTopPart/PageTopPart";
 
 type Props = {
   children?: React.ReactNode;
 };
 
 const PageContainer = ({ children }: Props) => {
-  return <Wrapper>{children}</Wrapper>;
+  return (
+    <Wrapper>
+      <PageTopPart />
+      {children}
+    </Wrapper>
+  );
 };
 
 export default PageContainer;

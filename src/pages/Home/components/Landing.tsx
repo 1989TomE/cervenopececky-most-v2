@@ -15,7 +15,7 @@ const Landing = () => {
     if (backGroundImageLoaded) {
       timerId = window.setTimeout(() => {
         setHideLanding(true);
-      }, 6000);
+      }, 5000);
     }
 
     return () => {
@@ -54,7 +54,7 @@ export default Landing;
 const Wrapper = styled.div<{ hide: boolean }>`
   background-color: ${(props) => props.theme.colors.greyDark};
   opacity: ${(props) => (props.hide ? 0 : 1)};
-  transition: 0.25s ease-in-out;
+  transition: 1s ease-in-out;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -79,12 +79,12 @@ const BackgroundImage = styled.img<{ loaded: boolean }>`
   height: 100%;
   object-fit: cover;
   opacity: ${(props) => (props.loaded ? 1 : 0)};
-  transition: opacity 2.5s ease-in;
+  transition: 3s ease-in;
 `;
 
 const LogoImage = styled.img<{ loaded: boolean }>`
   opacity: ${(props) => (props.loaded ? 1 : 0)};
-  transition: opacity 0.25s ease-in-out;
+  transition: 0.5s ease-in-out;
   width: 300px;
   height: 300px;
   z-index: 2;
