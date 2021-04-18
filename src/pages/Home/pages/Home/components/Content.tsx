@@ -13,6 +13,7 @@ const Content = () => {
 
           return (
             <ImageLink
+              key={label}
               to={route}
               imageSource={imageSource}
               icon={icon}
