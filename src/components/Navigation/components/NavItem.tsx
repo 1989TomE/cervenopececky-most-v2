@@ -33,6 +33,7 @@ const Wrapper = styled.li`
     }
 
     > div {
+      text-transform: uppercase;
       color: ${(props) => props.theme.colors.redLight};
       font-size: 15px;
     }

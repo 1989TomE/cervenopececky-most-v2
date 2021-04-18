@@ -37,7 +37,7 @@ export default ImageLink;
 const Wrapper = styled(NavLink)<{ isHovered: boolean }>`
   position: relative;
   width: 49%;
-  min-height: 280px;
+  min-height: 300px;
   margin: 1px;
 
   > div {
@@ -52,7 +52,7 @@ const Wrapper = styled(NavLink)<{ isHovered: boolean }>`
 
     > img {
       width: 100%;
-      height: 280px;
+      height: 300px;
       object-fit: cover;
     }
   }
@@ -62,12 +62,13 @@ const Wrapper = styled(NavLink)<{ isHovered: boolean }>`
     font-size: 30px;
     font-family: "barlow";
     opacity: ${(props) => (props.isHovered ? 1 : 0)};
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
+    text-transform: uppercase;
   }
 
   .svgContainer {
     opacity: ${(props) => (props.isHovered ? 0 : 1)};
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
     z-index: 2;
 
     > svg {
@@ -77,8 +78,8 @@ const Wrapper = styled(NavLink)<{ isHovered: boolean }>`
   }
 
   .background {
-    opacity: ${(props) => (props.isHovered ? 0 : 0.7)};
-    transition: opacity 0.3s ease-in;
+    opacity: ${(props) => (props.isHovered ? 0 : 0.8)};
+    transition: opacity 0.25s ease-in;
     background-color: ${(props) => props.theme.colors.ocher};
     z-index: 1;
   }
