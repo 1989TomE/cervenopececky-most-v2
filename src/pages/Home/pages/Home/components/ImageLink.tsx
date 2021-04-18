@@ -24,7 +24,7 @@ const ImageLink = ({
   return (
     <Wrapper
       to={to}
-      hovered={hovered}
+      isHovered={hovered}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -40,7 +40,7 @@ const ImageLink = ({
 
 export default ImageLink;
 
-const Wrapper = styled(NavLink)<{ hovered: boolean }>`
+const Wrapper = styled(NavLink)<{ isHovered: boolean }>`
   position: relative;
   flex: 1;
   height: 200px;
@@ -64,7 +64,7 @@ const Wrapper = styled(NavLink)<{ hovered: boolean }>`
   }
 
   .iconContainer {
-    opacity: ${(props) => (props.hovered ? 0 : 1)};
+    opacity: ${(props) => (props.isHovered ? 0 : 1)};
     transition: opacity 0.25s ease-in-out;
     z-index: 2;
 
@@ -75,7 +75,7 @@ const Wrapper = styled(NavLink)<{ hovered: boolean }>`
   }
 
   .background {
-    opacity: ${(props) => (props.hovered ? 0 : 0.7)};
+    opacity: ${(props) => (props.isHovered ? 0 : 0.7)};
     transition: opacity 0.25s ease-in;
     background-color: ${(props) => props.theme.colors.ocher};
     z-index: 1;

@@ -25,23 +25,23 @@ const Content = () => {
           iconAltText="kohoutek"
         />
         <ImageLink
-          to={NavigationRoute.WorkPlace}
+          to={NavigationRoute.Products}
           imageSource={bottlesWidescreen}
-          imageAltText="mostarna"
+          imageAltText="produkty"
           icon={AppleAndBottle}
           iconAltText="jablko"
         />
       </PageColumn>
       <PageColumn>
         <ImageLink
-          to={NavigationRoute.Arboriculture}
+          to={NavigationRoute.FruitOrchards}
           imageSource={cuteLady}
           imageAltText="ovocné sady"
           icon={Leaf}
           iconAltText="list"
         />
         <ImageLink
-          to={NavigationRoute.MakingAppleJuiceForPublic}
+          to={NavigationRoute.PublicAppleJuicing}
           imageSource={publicAppleJuicing}
           imageAltText="moštování pro veřejnost"
           icon={WineGlass}

@@ -4,7 +4,7 @@ import PageContainer from "./components/PageContainer/PageContainer";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styles/theme";
 import GlobalStyles from "./styles/globals";
-import Landing from "./pages/Home/components/Landing";
+import Landing from "./pages/Home/pages/Home/components/Landing";
 import Routes from "./Routes";
 
 const App = () => {

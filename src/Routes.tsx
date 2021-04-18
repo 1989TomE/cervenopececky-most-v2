@@ -1,7 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Landing from "./pages/Home/components/Landing";
-import Home from "./pages/Home/Home";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import HomeRoutes from "./pages/Home/Routes";
 import { NavigationRoute } from "./pages/index";
 import NotFound from "./pages/NotFound/Notfound";
 
@@ -9,7 +7,7 @@ const Routes = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path={NavigationRoute.Home} component={Home} />
+        <Route exact path={NavigationRoute.Home} component={HomeRoutes} />
         <Route component={NotFound} />
       </Switch>
     </Router>

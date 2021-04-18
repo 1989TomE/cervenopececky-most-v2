@@ -1,11 +1,11 @@
-import Landing from "./components/Landing";
 import PageContainer from "@src/components/PageContainer/PageContainer";
+import Landing from "./components/Landing";
 import Content from "./components/Content";
 
 const Home = () => {
   return (
     <PageContainer>
-      {/* <Landing/> */}
+      <Landing />
       <Content />
     </PageContainer>
   );

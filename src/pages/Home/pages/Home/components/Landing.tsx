@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import landingImage from "../../../../assets/landing_background.jpg";
-import whiteLogo from "../../../../assets/logo_white.jpg";
+import landingImage from "@root/assets/landing_background.jpg";
+import whiteLogo from "@root/assets/logo_white.jpg";
 
 const Landing = () => {
   const [backGroundImageLoaded, setBackgroundImageLoaded] = useState(false);
@@ -24,7 +24,15 @@ const Landing = () => {
   }, [backGroundImageLoaded]);
 
   return render ? (
-    <Wrapper onAnimationEnd={() => setRender(false)} hide={hideLanding}>
+    <Wrapper
+      onTransitionEnd={() => {
+        if (hideLanding) {
+          console.log("redred to false");
+          setRender(false);
+        }
+      }}
+      hide={hideLanding}
+    >
       <div>
         <LogoImage
           src={whiteLogo}
@@ -60,7 +68,7 @@ const Wrapper = styled.div<{ hide: boolean }>`
   left: 0px;
   right: 0px;
   bottom: 0px;
-  z-index: 1;
+  z-index: 10;
 
   > div {
     position: absolute;
@@ -87,6 +95,6 @@ const LogoImage = styled.img<{ loaded: boolean }>`
   transition: 0.5s ease-in-out;
   width: 300px;
   height: 300px;
-  z-index: 2;
+  z-index: 1;
   cursor: pointer;
 `;
