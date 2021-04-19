@@ -3,6 +3,7 @@ import homeBackgroundImage from "@root/assets/webBackground.jpg";
 import PageTopPart from "@src/components/PageTopPart/PageTopPart";
 import Navigation from "@src/components/Navigation/Navigation";
 import { pageMinHeight } from "@src/styles/page";
+import darkLogo from "@root/assets/logo_dark.jpg";
 
 type Props = {
   children?: React.ReactNode;
@@ -11,10 +12,13 @@ type Props = {
 const PageContainer = ({ children }: Props) => {
   return (
     <Wrapper>
-      <div>
+      <div className="pageContainer">
         <PageTopPart />
         <Navigation />
-        <div>{children}</div>
+        <main className="contentContainer">{children}</main>
+        <footer className="footer">
+          <img src={darkLogo} alt="logo" />
+        </footer>
       </div>
     </Wrapper>
   );
@@ -31,12 +35,23 @@ export const Wrapper = styled.div`
   background-size: cover;
   margin: 0 auto;
 
-  > div {
+  .pageContainer {
     margin: 0 auto;
     max-width: 1080px;
 
-    > div {
+    .contentContainer {
       display: flex;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 4rem;
+      > img {
+        width: 20rem;
+        height: 20rem;
+      }
     }
   }
 `;
