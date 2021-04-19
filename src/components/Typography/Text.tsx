@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
 type Props = {
-  title: string;
+  children: React.ReactNode;
   primary?: boolean;
 };
 
-export const Header = ({ title, primary = false }: Props) => {
-  return <Wrapper primary={primary}>{title}</Wrapper>;
+export const Text = ({ children, primary = false }: Props) => {
+  return <Wrapper primary={primary}>{children}</Wrapper>;
 };
 
 const Wrapper = styled.div<{ primary: boolean }>`
-  font-family: "barlow";
-  font-size: 2rem;
+  font-family: "roboto";
+  font-size: 1.5rem;
   color: ${(props) =>
     props.primary ? props.theme.colors.redLight : undefined};
   padding: 0.5rem;
-  height: 4rem;
+  text-align: justify;
 `;
