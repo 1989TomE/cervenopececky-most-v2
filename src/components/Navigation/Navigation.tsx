@@ -27,6 +27,6 @@ const Nav = styled.nav`
     justify-content: center;
     padding: 3rem;
     list-style-type: none;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 `;

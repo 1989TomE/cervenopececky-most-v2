@@ -11,7 +11,6 @@ export const Text = ({ children, primary = false }: Props) => {
 
 const Wrapper = styled.div<{ primary: boolean }>`
   font-family: "roboto";
-  font-size: 1.5rem;
   color: ${(props) =>
     props.primary ? props.theme.colors.redLight : undefined};
   padding: 0.5rem;

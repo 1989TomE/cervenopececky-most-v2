@@ -13,5 +13,5 @@ export default PagePortraitImage;
 const Image = styled.img`
   width: 100%;
   height: auto;
-  margin-top: 4.5rem;
+  margin-top: 5.5rem;
 `;
