@@ -36,8 +36,9 @@ export default ImageLink;
 
 const Wrapper = styled(NavLink)<{ $hover: boolean }>`
   position: relative;
-  width: 49%;
-  min-height: 300px;
+  flex: 1;
+  min-width: 400px;
+  min-height: 340px;
   margin: 1px;
 
   > div {
@@ -52,7 +53,7 @@ const Wrapper = styled(NavLink)<{ $hover: boolean }>`
 
     > img {
       width: 100%;
-      height: 300px;
+      height: 340px;
       object-fit: cover;
     }
   }

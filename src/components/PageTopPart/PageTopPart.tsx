@@ -56,7 +56,7 @@ const Wrapper = styled.div`
   }
 
   .facebook {
-    margin-left: -2rem; // compensation for svg padding
+    margin-left: -1.5rem; // compensation for svg padding
     height: 6rem;
     fill: ${(props) => props.theme.colors.redDark};
   }

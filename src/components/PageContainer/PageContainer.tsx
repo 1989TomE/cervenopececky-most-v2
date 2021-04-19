@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
 
   > div {
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 1080px;
 
     > div {
       display: flex;
