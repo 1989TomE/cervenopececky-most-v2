@@ -2,12 +2,20 @@ import { PageProps } from "@src/pages/index";
 import styled from "styled-components";
 import NavLink from "./NavLink";
 
-const NavItem = ({ route, label, icon: SvgIcon }: PageProps) => {
+type Props = PageProps & { showLabel?: boolean; horizontalSpacing?: boolean };
+
+const NavItem = ({
+  route,
+  label,
+  icon: SvgIcon,
+  showLabel,
+  horizontalSpacing = true,
+}: Props) => {
   return (
-    <Wrapper>
+    <Wrapper horizontalSpacing={horizontalSpacing}>
       <NavLink to={route}>
         <SvgIcon className="icon" />
-        <div>{label}</div>
+        {showLabel && <div>{label}</div>}
       </NavLink>
     </Wrapper>
   );
@@ -15,14 +23,13 @@ const NavItem = ({ route, label, icon: SvgIcon }: PageProps) => {
 
 export default NavItem;
 
-const Wrapper = styled.li`
+const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
   flex: 1;
-  min-width: 80px;
-  max-width: 150px;
+  min-width: ${(props) => (props.horizontalSpacing ? "80px" : "30px")};
+  max-width: ${(props) => (props.horizontalSpacing ? "150px" : "80px")};
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 10rem;
 
   a {
     text-decoration: none;

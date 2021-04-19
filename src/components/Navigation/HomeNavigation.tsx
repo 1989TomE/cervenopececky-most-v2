@@ -1,12 +1,12 @@
-import { pages } from "@src/pages/index";
+import { homePages } from "@src/pages/index";
 import styled from "styled-components";
 import NavItem from "./components/NavItem";
 
-const Navigation = () => {
+const HomeNavigation = () => {
   return (
     <Nav>
       <ul>
-        {pages.map((page) => {
+        {homePages.map((page) => {
           const { route, icon, label } = page;
 
           return (
@@ -15,7 +15,7 @@ const Navigation = () => {
               route={route}
               label={label}
               icon={icon}
-              showLabel
+              horizontalSpacing={false}
             />
           );
         })}
@@ -24,14 +24,13 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default HomeNavigation;
 
 const Nav = styled.nav`
   > ul {
-    margin-top: 155px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    padding: 3rem;
     list-style-type: none;
     margin-bottom: 1rem;
   }
