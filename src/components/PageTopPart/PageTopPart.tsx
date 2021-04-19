@@ -3,9 +3,18 @@ import { default as InstagramSvgIcon } from "@root/assets/instagram.svg";
 import { default as FacebookSvgIcon } from "@root/assets/facebook.svg";
 import polabi from "@root/assets/polabi.png";
 import eu from "@root/assets/eu.png";
-import { theme } from "@src/styles/theme";
+import cert from "@root/assets/pdf/cert.pdf";
+import euMostarna from "@root/assets/eu_mostarna.jpg";
 
 const PageTopPart = () => {
+  const handleEUClick = () => {
+    window.open(euMostarna, "_blank");
+  };
+
+  const handlePolabiClick = () => {
+    window.open(cert, "_blank");
+  };
+
   return (
     <Wrapper>
       <div>
@@ -14,8 +23,13 @@ const PageTopPart = () => {
         <div className="phoneNumber">+420 604 402 763</div>
       </div>
       <div>
-        <img src={polabi} alt="polabi" className="polabi" />
-        <img src={eu} alt="EU" className="eu" />
+        <img
+          src={polabi}
+          alt="polabi"
+          className="polabi"
+          onClick={handlePolabiClick}
+        />
+        <img src={eu} alt="EU" className="eu" onClick={handleEUClick} />
       </div>
     </Wrapper>
   );
@@ -60,9 +74,11 @@ const Wrapper = styled.div`
   .polabi {
     height: 4rem;
     margin-right: 2rem;
+    cursor: pointer;
   }
 
   .eu {
     height: 3.5rem;
+    cursor: pointer;
   }
 `;
