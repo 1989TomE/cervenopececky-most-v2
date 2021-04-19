@@ -1,8 +1,8 @@
-import { MainNavigationRouteProps } from "@src/pages/index";
+import { PageProps } from "@src/pages/index";
 import styled from "styled-components";
 import NavLink from "./NavLink";
 
-const NavItem = ({ route, label, icon: SvgIcon }: MainNavigationRouteProps) => {
+const NavItem = ({ route, label, icon: SvgIcon }: PageProps) => {
   return (
     <Wrapper>
       <NavLink to={route}>

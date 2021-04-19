@@ -1,13 +1,12 @@
 import ImageLink from "./ImageLink";
-import PageColumn from "@src/components/PageColumn/PageColumn";
-import { HomeRoute, homeRoutes } from "@src/pages/Home/index";
+import { Page, homePages } from "@src/pages/index";
 import styled from "styled-components";
 
 const Content = () => {
   return (
     <Wrapper>
-      {homeRoutes
-        .filter((route) => route.route !== HomeRoute.Home)
+      {homePages
+        .filter((route) => route.route !== Page.Home)
         .map((r) => {
           const { route, imageSource, label, icon } = r;
 

@@ -1,10 +1,10 @@
-import { HomeRoute } from "@src/pages/Home/index";
+import { Page } from "@src/pages/index";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 type Props = {
-  to: HomeRoute;
+  to: Page;
   imageSource: React.ImgHTMLAttributes<HTMLImageElement>["src"];
   icon: React.ElementType;
   label: string;
