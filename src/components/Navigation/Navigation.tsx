@@ -22,11 +22,11 @@ export default Navigation;
 
 const Nav = styled.nav`
   > ul {
-    margin-top: 115px;
+    margin-top: 120px;
     display: flex;
     justify-content: center;
     padding: 3rem;
     list-style-type: none;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 `;

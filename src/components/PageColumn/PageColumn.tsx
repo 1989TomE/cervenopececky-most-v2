@@ -11,7 +11,5 @@ const PageColumn = ({ children }: Props) => {
 export default PageColumn;
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
   flex: 1;
 `;

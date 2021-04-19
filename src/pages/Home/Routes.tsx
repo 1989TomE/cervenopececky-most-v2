@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { MainRoute } from "../index";
 import { HomeRoute } from "./index";
-import WorkPlace from "./pages/Home/Home";
+import WorkPlace from "./pages/WorkPlace/WorkPlace";
 import Home from "./pages/Home/Home";
 import Products from "./pages/Products/Products";
 import PublicAppleJuicing from "./pages/PublicAppleJuicing/PublicAppleJuicing";
