@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import landingImage from "@root/assets/landing_background.jpg";
 import whiteLogo from "@root/assets/logo_white.jpg";
-import { pageHeight } from "@src/styles/page";
 
 const Landing = () => {
   const [backGroundImageLoaded, setBackgroundImageLoaded] = useState(false);
@@ -78,20 +77,22 @@ const Wrapper = styled.div<{
   z-index: 100;
 
   .imageWrapper {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
-    height: ${pageHeight}px;
+    bottom: 0px;
     background-color: ${(props) => props.theme.colors.greyDark};
     z-index: 101;
 
     > img {
       height: 100%;
-      object-fit: contain;
+      width: 100%;
+      object-fit: cover;
       opacity: ${(props) => (props.$backgroundImageLoaded ? 1 : 0)};
+
       transition: 2.5s ease-in;
-      transition-delay: 2s;
+      transition-delay: 1s;
     }
   }
 
@@ -108,7 +109,6 @@ const Wrapper = styled.div<{
 
     > img {
       position: relative;
-      top: 12%;
       height: 380px;
       width: 380px;
       opacity: ${(props) => (props.$logoLoaded ? 1 : 0)};

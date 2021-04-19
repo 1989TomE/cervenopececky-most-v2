@@ -1,1 +1,1 @@
-export const pageHeight = 1280;
+export const pageMinHeight = 1400;
