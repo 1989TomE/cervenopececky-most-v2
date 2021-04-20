@@ -1,7 +1,7 @@
-import PageContainer from "@src/components/PageContainer/PageContainer";
+import PageLayout from "@src/components/PagesContent/Layout/Page";
 
 const Contact = () => {
-  return <PageContainer>Contact</PageContainer>;
+  return <PageLayout>Contact</PageLayout>;
 };
 
 export default Contact;

@@ -1,7 +1,7 @@
-import PageContainer from "@src/components/PageContainer/PageContainer";
+import PageLayout from "@src/components/PagesContent/Layout/Page";
 
 const Products = () => {
-  return <PageContainer>Products</PageContainer>;
+  return <PageLayout>Products</PageLayout>;
 };
 
 export default Products;

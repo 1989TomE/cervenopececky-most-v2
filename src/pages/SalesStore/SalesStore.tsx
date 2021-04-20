@@ -1,7 +1,7 @@
-import PageContainer from "@src/components/PageContainer/PageContainer";
+import PageLayout from "@src/components/PagesContent/Layout/Page";
 
 const SalesStore = () => {
-  return <PageContainer>SalesStore</PageContainer>;
+  return <PageLayout>SalesStore</PageLayout>;
 };
 
 export default SalesStore;

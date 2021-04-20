@@ -1,13 +1,13 @@
-import PageContainer from "@src/components/PageContainer/PageContainer";
+import PageLayout from "@src/components/PagesContent/Layout/Page";
 import Landing from "./components/Landing";
 import Content from "./components/Content";
 
 const Home = () => {
   return (
-    <PageContainer>
+    <PageLayout>
       {/* <Landing /> */}
       <Content />
-    </PageContainer>
+    </PageLayout>
   );
 };
 

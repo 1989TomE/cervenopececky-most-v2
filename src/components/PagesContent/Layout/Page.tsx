@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import homeBackgroundImage from "@root/assets/webBackground.jpg";
-import PageTopPart from "@src/components/PageTopPart/PageTopPart";
-import Navigation from "@src/components/Navigation/Navigation";
+import PageTopPart from "@src/components/PagesContent/TopPart/PageTopPart";
+import Navigation from "@src/components/Navigation/MainNavigation";
 import { pageMinHeight } from "@src/styles/page";
 import darkLogo from "@root/assets/logo_dark.jpg";
 
@@ -9,7 +9,7 @@ type Props = {
   children?: React.ReactNode;
 };
 
-const PageContainer = ({ children }: Props) => {
+const PageWrapper = ({ children }: Props) => {
   return (
     <Wrapper>
       <div className="pageContainer">
@@ -24,7 +24,7 @@ const PageContainer = ({ children }: Props) => {
   );
 };
 
-export default PageContainer;
+export default PageWrapper;
 
 export const Wrapper = styled.div`
   height: ${pageMinHeight}px;
@@ -38,10 +38,6 @@ export const Wrapper = styled.div`
   .pageContainer {
     margin: 0 auto;
     max-width: 1080px;
-
-    .contentContainer {
-      display: flex;
-    }
 
     .footer {
       display: flex;

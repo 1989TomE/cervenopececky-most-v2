@@ -1,7 +1,7 @@
-import PageContainer from "@src/components/PageContainer/PageContainer";
+import PageLayout from "@src/components/PagesContent/Layout/Page";
 
 const PublicAppleJuicing = () => {
-  return <PageContainer>PublicAppleJuicing</PageContainer>;
+  return <PageLayout>PublicAppleJuicing</PageLayout>;
 };
 
 export default PublicAppleJuicing;

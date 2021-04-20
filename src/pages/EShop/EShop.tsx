@@ -1,7 +1,7 @@
-import PageContainer from "@src/components/PageContainer/PageContainer";
+import PageLayout from "@src/components/PagesContent/Layout/Page";
 
 const EShop = () => {
-  return <PageContainer>EShop</PageContainer>;
+  return <PageLayout>EShop</PageLayout>;
 };
 
 export default EShop;

@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "./components/DocumentHead/DocumentHead";
-import PageContainer from "./components/PageContainer/PageContainer";
+import PageLayout from "./components/PagesContent/Layout/Page";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styles/theme";
 import GlobalStyles from "./styles/globals";

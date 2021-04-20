@@ -1,7 +1,7 @@
-import PageContainer from "@src/components/PageContainer/PageContainer";
+import PageLayout from "@src/components/PagesContent/Layout/Page";
 
 const About = () => {
-  return <PageContainer>About</PageContainer>;
+  return <PageLayout>About</PageLayout>;
 };
 
 export default About;
