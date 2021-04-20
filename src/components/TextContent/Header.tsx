@@ -11,9 +11,9 @@ export const Header = ({ title, primary = false }: Props) => {
 
 const Wrapper = styled.div<{ primary: boolean }>`
   font-family: "barlow";
-  font-size: 3rem;
+  font-size: ${(props) => props.theme.fontSize.header};
   color: ${(props) =>
     props.primary ? props.theme.colors.redLight : undefined};
-  padding: 0.5rem;
+  margin-top: 1rem;
   height: 5rem;
 `;

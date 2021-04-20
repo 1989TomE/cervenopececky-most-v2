@@ -8,4 +8,9 @@ export const theme = {
     ocher: "rgb(255, 222, 148)",
     white: "rgb(255,255,255)",
   },
+  fontSize: {
+    header: "3rem",
+    normal: "1.5rem",
+    small: "1.2rem",
+  },
 };

@@ -5,7 +5,7 @@ import {
   Column,
 } from "@src/components/PagesContent/Layout";
 import PagePortraitImage from "@src/components/PagesContent/PortraitImage/PagePortraitImage";
-import { Header } from "@src/components/Typography";
+import { Header } from "@src/components/TextContent";
 import TextContent from "./components/TextContent";
 import products from "@root/assets/bottlesPortrait.jpg";
 

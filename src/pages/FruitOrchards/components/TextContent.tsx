@@ -1,8 +1,8 @@
-import { Text } from "@src/components/Typography";
+import { Paragraph } from "@src/components/TextContent";
 
 const TextContent = () => {
   return (
-    <Text>
+    <Paragraph>
       Sadařství v Červených Pečkách má dlouholetou tradici, ve které se naše
       rodina snaží pokračovat. Hospodaříme na celkové ploše 7 hektarů a věnujeme
       se jednak péči o stávající staré ovocné stromy tvaru zákrsku nebo
@@ -18,7 +18,7 @@ const TextContent = () => {
       údržbou zeleně. Monitorujeme výskyt škůdců a chorob, proti kterým se
       snažíme aplikovat přirozené způsoby ochrany dle pravidel svazu pro
       integrované systémy pěstování ovoce a středočeské ovocnářské unie.
-    </Text>
+    </Paragraph>
   );
 };
 

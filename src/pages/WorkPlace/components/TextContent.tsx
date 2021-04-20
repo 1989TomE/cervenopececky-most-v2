@@ -1,8 +1,8 @@
-import { Text } from "@src/components/Typography";
+import { Paragraph } from "@src/components/TextContent";
 
 const TextContent = () => {
   return (
-    <Text>
+    <Paragraph>
       V roce 2017 jsme zrekonstruovali a technologicky vybavili objekt v bývalém
       areálu JZD v Červených Pečkách za účelem zbudování moštárny ke zpracování
       ovoce z našeho rodinného ovocnářství. Zpracování ovoce zajišťuje částečně
@@ -19,7 +19,7 @@ const TextContent = () => {
       nabízíme moštování pro veřejnost, kdy Vám po domluvě vyrobíme mošt z
       Vašeho ovoce. Kromě sezónního prodeje v moštárně je umožněn i celoroční
       prodej, a to prostřednictvím našeho e-shopu nebo po domluvě.
-    </Text>
+    </Paragraph>
   );
 };
 

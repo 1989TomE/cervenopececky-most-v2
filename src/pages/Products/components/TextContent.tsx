@@ -1,8 +1,8 @@
-import { Text } from "@src/components/Typography";
+import { Paragraph } from "@src/components/TextContent";
 
 const TextContent = () => {
   return (
-    <Text>
+    <Paragraph>
       V ovocných sadech pěstujeme v současné době jabloně, ale plánujeme i
       výsadbu hruškového sadu. V naší nabídce stávajících sadů naleznete
       podzimní odrůdy gloster, rubín a golden delicious. Mezi zimními odrůdami
@@ -20,7 +20,7 @@ const TextContent = () => {
       plněn do obalů. Kromě jablek zpracováváme na mošt i hrušky, které pochází
       od okolních ovocnářů. Od roku 2019 jsme držitelem certifikátu regionálního
       produktu.
-    </Text>
+    </Paragraph>
   );
 };
 

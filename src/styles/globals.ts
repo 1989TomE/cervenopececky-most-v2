@@ -34,7 +34,7 @@ export default createGlobalStyle`
     }
 
     body {
-        font-size: 1.8rem;
+        font-size: ${(props) => props.theme.fontSize.normal};
         height: 100%;
         background-color: ${(props) => props.theme.colors.white};
        

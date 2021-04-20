@@ -1,4 +1,4 @@
-import { Header } from "@src/components/Typography";
+import { Header } from "@src/components/TextContent";
 import TextContent from "./components/TextContent";
 import workplace from "@root/assets/mostarnaPortait.jpg";
 import PagePortraitImage from "@src/components/PagesContent/PortraitImage/PagePortraitImage";
