@@ -5,9 +5,9 @@ import {
   Column,
 } from "@src/components/PagesContent/Layout";
 import PagePortraitImage from "@src/components/PagesContent/PortraitImage/PagePortraitImage";
-import { Header } from "@src/components/TextContent";
 import TextContent from "./components/TextContent";
 import fruitOrchards from "@root/assets/cuteLadyPortrait.jpg";
+import ContentHeader from "@src/components/PagesContent/Layout/ContentHeader";
 
 const FruitOrchards = () => {
   return (
@@ -15,7 +15,7 @@ const FruitOrchards = () => {
       <ContentWrapper>
         <ColumnsWrapper>
           <Column isOnLeft>
-            <Header title="Ovocné sady" />
+            <ContentHeader />
             <TextContent />
           </Column>
 

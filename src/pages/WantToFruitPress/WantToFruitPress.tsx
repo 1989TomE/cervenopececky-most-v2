@@ -8,7 +8,7 @@ import {
 } from "@src/components/PagesContent/Layout";
 import ContentHeader from "@src/components/PagesContent/Layout/ContentHeader";
 
-const PublicAppleJuicing = () => {
+const WantToFruitPress = () => {
   return (
     <HomeSubPageWrapper>
       <ContentWrapper>
@@ -27,4 +27,4 @@ const PublicAppleJuicing = () => {
   );
 };
 
-export default PublicAppleJuicing;
+export default WantToFruitPress;

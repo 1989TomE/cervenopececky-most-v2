@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import About from "./About/About";
 import { Page } from "./index";
 import NotFound from "./NotFound/Notfound";
 import Home from "@src/pages/Home/Home";
@@ -10,6 +9,7 @@ import FruitOrchards from "./FruitOrchards/FruitOrchards";
 import EShop from "./EShop/EShop";
 import SalesStore from "./SalesStore/SalesStore";
 import Contact from "./Contact/Contact";
+import WantToFruitPress from "./WantToFruitPress/WantToFruitPress";
 
 const Routes = () => {
   return (
@@ -25,7 +25,7 @@ const Routes = () => {
         <Route path={Page.EShop} component={EShop} />
         <Route path={Page.SalesStore} component={SalesStore} />
         <Route path={Page.Contact} component={Contact} />
-        <Route path={Page.About} component={About} />
+        <Route path={Page.WantToFruitPress} component={WantToFruitPress} />
 
         <Route component={NotFound} />
       </Switch>

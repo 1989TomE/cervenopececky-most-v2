@@ -1,4 +1,3 @@
-import { Header } from "@src/components/TextContent";
 import TextContent from "./components/TextContent";
 import workplace from "@root/assets/mostarnaPortait.jpg";
 import PagePortraitImage from "@src/components/PagesContent/PortraitImage/PagePortraitImage";
@@ -8,6 +7,7 @@ import {
   ColumnsWrapper,
   Column,
 } from "@src/components/PagesContent/Layout";
+import ContentHeader from "@src/components/PagesContent/Layout/ContentHeader";
 
 const WorkPlace = () => {
   return (
@@ -15,7 +15,7 @@ const WorkPlace = () => {
       <ContentWrapper>
         <ColumnsWrapper>
           <Column isOnLeft>
-            <Header title="Moštárna" />
+            <ContentHeader />
             <TextContent />
           </Column>
 
