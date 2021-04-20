@@ -1,9 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import landingImage from "@root/assets/landing_background.jpg";
 import whiteLogo from "@root/assets/logo_white.jpg";
+import { useAppContext } from "@src/context/context";
 
-const Landing = () => {
+type Props = {
+  setShowLandingPage: Dispatch<SetStateAction<boolean>>;
+};
+
+const Landing = ({ setShowLandingPage }: Props) => {
   const [backGroundImageLoaded, setBackgroundImageLoaded] = useState(false);
   const [logoLoaded, setLogoLoaded] = useState(false);
   const [hideLanding, setHideLanding] = useState(false);
@@ -33,13 +38,16 @@ const Landing = () => {
     };
   }, [backGroundImageLoaded]);
 
+  const landingPageFadingOut = () => {
+    if (hideLanding) {
+      setRender(false);
+      setShowLandingPage(false);
+    }
+  };
+
   return render ? (
     <Wrapper
-      onTransitionEnd={() => {
-        if (hideLanding) {
-          setRender(false);
-        }
-      }}
+      onTransitionEnd={landingPageFadingOut}
       $backgroundImageLoaded={backGroundImageLoaded}
       $logoLoaded={logoLoaded}
       $hide={hideLanding}

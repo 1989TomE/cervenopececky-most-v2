@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "./styles/theme";
 import GlobalStyles from "./styles/globals";
 import Routes from "./pages/Routes";
+import ContextProvider from "./context/ContextProvider";
 
 const App = () => {
   return (
@@ -12,7 +13,9 @@ const App = () => {
 
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Routes />
+        <ContextProvider>
+          <Routes />
+        </ContextProvider>
       </ThemeProvider>
     </React.StrictMode>
   );
