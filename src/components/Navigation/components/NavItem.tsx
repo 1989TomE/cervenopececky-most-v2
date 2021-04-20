@@ -25,8 +25,8 @@ export default NavItem;
 
 const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
   flex: 1;
-  min-width: ${(props) => (props.horizontalSpacing ? "80px" : "30px")};
-  max-width: ${(props) => (props.horizontalSpacing ? "150px" : "80px")};
+  min-width: ${(props) => (props.horizontalSpacing ? "120px" : "30px")};
+  max-width: ${(props) => (props.horizontalSpacing ? "170px" : "80px")};
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -48,7 +48,6 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
       text-transform: uppercase;
       color: ${(props) => props.theme.colors.redLight};
       font-size: 15px;
-      font-weight: 700;
     }
 
     &:hover {

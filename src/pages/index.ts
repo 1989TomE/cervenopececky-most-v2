@@ -17,7 +17,7 @@ import publicAppleJuicing from "@root/assets/publicAppleJuicing.jpg";
 export enum Page {
   Home = "/",
   WantToFruitPress = "/chci-zmostovat",
-  EShop = "/e-shop",
+  WhereToBuy = "/kde-zakoupit",
   SalesStore = "/prodejna",
   Contact = "/kontakt",
   WorkPlace = "/mostarna",
@@ -39,12 +39,12 @@ export const pages: PageProps[] = [
     label: "Chci zmoštovat",
     icon: FruitPress,
   },
-  { route: Page.EShop, label: "E-shop", icon: ShoppingCart },
   {
     route: Page.SalesStore,
     label: "Naše produkty",
     icon: TwoBottles,
   },
+  { route: Page.WhereToBuy, label: "Kde zakoupit", icon: ShoppingCart },
   { route: Page.Contact, label: "Kontakt", icon: CellPhone },
 ];
 
