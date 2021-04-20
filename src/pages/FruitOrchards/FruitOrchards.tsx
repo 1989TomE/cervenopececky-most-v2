@@ -1,4 +1,3 @@
-import HomeNavigation from "@src/components/Navigation/HomeNavigation";
 import {
   HomeSubPageWrapper,
   ContentWrapper,
@@ -8,7 +7,7 @@ import {
 import PagePortraitImage from "@src/components/PagesContent/PortraitImage/PagePortraitImage";
 import { Header } from "@src/components/Typography";
 import TextContent from "./components/TextContent";
-import fruitOrchards from "@root/assets/cuteLady.jpg";
+import fruitOrchards from "@root/assets/cuteLadyPortrait.jpg";
 
 const FruitOrchards = () => {
   return (
