@@ -1,12 +1,11 @@
 import { ProductItemProps } from "./ProductItem";
 import apples from "@root/assets/cuteLady.jpg";
 
-export const mock: ProductItemProps[] = [
+export const data: ProductItemProps[] = [
   {
     title: "MOŠT JABLKO",
     prices: ["70 Kč / 2 l", "90 Kč / 3 l"],
     descriptions: ["100 % jablko, pasterizováno.", "Baleno v krabici."],
-    src: apples,
   },
   {
     title: "MOŠT HRUŠKA",
@@ -45,5 +44,6 @@ export const mock: ProductItemProps[] = [
     title: "JABLKA",
     prices: ["od 20 Kč / 1 kg"],
     descriptions: ["Odrůdy dle sklizně."],
+    src: apples,
   },
 ];

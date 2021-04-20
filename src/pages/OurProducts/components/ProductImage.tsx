@@ -20,8 +20,9 @@ const ProductImage = ({ src, title }: ProductImageProps) => {
 export default ProductImage;
 
 const Wrapper = styled.div`
-  height: 160px;
-  max-height: 160px;
+  height: 200px;
+  max-height: 200px;
+  min-width: 250px;
   width: 100%;
 
   > img {

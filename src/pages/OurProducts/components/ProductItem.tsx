@@ -36,9 +36,8 @@ export default ProductItem;
 
 const Wrapper = styled.div`
   flex: 1;
-  min-width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem 0.4rem;
+  margin: 1rem 0.4rem 4rem 0.4rem;
 `;
