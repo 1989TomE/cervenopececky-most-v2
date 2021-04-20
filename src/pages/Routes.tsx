@@ -6,10 +6,10 @@ import WorkPlace from "@src/pages/WorkPlace/WorkPlace";
 import Products from "@src/pages/Products/Products";
 import PublicAppleJuicing from "@src/pages/PublicAppleJuicing/PublicAppleJuicing";
 import FruitOrchards from "./FruitOrchards/FruitOrchards";
-import EShop from "./EShop/EShop";
 import Contact from "./Contact/Contact";
 import WantToFruitPress from "./WantToFruitPress/WantToFruitPress";
 import OurProducts from "./OurProducts/OurProducts";
+import EShop from "./WhereToBuy/WhereToBuy";
 
 const Routes = () => {
   return (

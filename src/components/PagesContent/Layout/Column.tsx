@@ -18,6 +18,6 @@ export default PageColumn;
 
 const Wrapper = styled.div<Props>`
   flex: 1;
-  margin-left: ${(props) => (props.isOnRight ? "1rem" : 0)};
-  margin-right: ${(props) => (props.isOnLeft ? "1rem" : 0)};
+  margin-left: ${(props) => (props.isOnRight ? "2rem" : 0)};
+  margin-right: ${(props) => (props.isOnLeft ? "2rem" : 0)};
 `;

@@ -4,7 +4,7 @@ import Widget from "@src/components/TextContent/Widget";
 const Content = () => {
   return (
     <>
-      <Widget>
+      <Widget marginBottom="2rem">
         <Header primary title="ČERSTVÝ MOŠT" />
         <Paragraph bold primaryColor>
           Mošt 1 l &nbsp;5 Kč

@@ -23,7 +23,6 @@ const ProductItem = (props: ProductItemProps) => {
         <Paragraph
           key={description}
           paddingTop={index === 0 ? "0.75rem" : "0rem"}
-          smallFontSize
         >
           {description}
         </Paragraph>

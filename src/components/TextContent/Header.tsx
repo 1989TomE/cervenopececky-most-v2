@@ -3,17 +3,22 @@ import styled from "styled-components";
 type Props = {
   title: string;
   primary?: boolean;
+  marginTop?: string;
 };
 
-export const Header = ({ title, primary = false }: Props) => {
-  return <Wrapper primary={primary}>{title}</Wrapper>;
+type StyleProps = Omit<Props, "title">;
+
+export const Header = (props: Props) => {
+  const { title, ...styleProps } = props;
+
+  return <Wrapper {...styleProps}>{title}</Wrapper>;
 };
 
-const Wrapper = styled.div<{ primary: boolean }>`
+const Wrapper = styled.div<StyleProps>`
   font-family: "barlow";
   font-size: ${(props) => props.theme.fontSize.header};
   color: ${(props) =>
     props.primary ? props.theme.colors.redLight : undefined};
-  margin-top: 1rem;
+  margin-top: ${(props) => props.marginTop || "1rem"};
   height: 5rem;
 `;
