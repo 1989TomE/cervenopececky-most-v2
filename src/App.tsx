@@ -1,10 +1,8 @@
 import React from "react";
 import Head from "./components/DocumentHead/DocumentHead";
-import PageLayout from "./components/PagesContent/Layout/Page";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styles/theme";
 import GlobalStyles from "./styles/globals";
-import Landing from "./pages/Home/components/Landing";
 import Routes from "./pages/Routes";
 
 const App = () => {

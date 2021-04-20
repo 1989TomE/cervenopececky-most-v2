@@ -31,13 +31,14 @@ export default createGlobalStyle`
         font-size: 10px;
         font-family: "roboto";
         height: 100%;
+       
     }
 
     body {
         font-size: ${(props) => props.theme.fontSize.normal};
         height: 100%;
         background-color: ${(props) => props.theme.colors.white};
-       
+        
     }
 
     #root {

@@ -5,7 +5,7 @@ import Content from "./components/Content";
 const Home = () => {
   return (
     <PageWrapper>
-      {/* <Landing /> */}
+      <Landing />
       <Content />
     </PageWrapper>
   );
