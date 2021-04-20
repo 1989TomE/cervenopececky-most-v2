@@ -18,7 +18,7 @@ export enum Page {
   Home = "/",
   WantToFruitPress = "/chci-zmostovat",
   WhereToBuy = "/kde-zakoupit",
-  SalesStore = "/prodejna",
+  OurProducts = "/nase-produkty",
   Contact = "/kontakt",
   WorkPlace = "/mostarna",
   Products = "/produkty",
@@ -40,7 +40,7 @@ export const pages: PageProps[] = [
     icon: FruitPress,
   },
   {
-    route: Page.SalesStore,
+    route: Page.OurProducts,
     label: "Naše produkty",
     icon: TwoBottles,
   },

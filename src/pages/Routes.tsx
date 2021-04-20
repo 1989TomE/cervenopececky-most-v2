@@ -7,9 +7,9 @@ import Products from "@src/pages/Products/Products";
 import PublicAppleJuicing from "@src/pages/PublicAppleJuicing/PublicAppleJuicing";
 import FruitOrchards from "./FruitOrchards/FruitOrchards";
 import EShop from "./EShop/EShop";
-import SalesStore from "./SalesStore/SalesStore";
 import Contact from "./Contact/Contact";
 import WantToFruitPress from "./WantToFruitPress/WantToFruitPress";
+import OurProducts from "./OurProducts/OurProducts";
 
 const Routes = () => {
   return (
@@ -23,7 +23,7 @@ const Routes = () => {
         <Route path={Page.FruitOrchards} component={FruitOrchards} />
 
         <Route path={Page.WhereToBuy} component={EShop} />
-        <Route path={Page.SalesStore} component={SalesStore} />
+        <Route path={Page.OurProducts} component={OurProducts} />
         <Route path={Page.Contact} component={Contact} />
         <Route path={Page.WantToFruitPress} component={WantToFruitPress} />
 
