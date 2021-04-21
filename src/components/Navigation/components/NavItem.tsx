@@ -41,7 +41,7 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
     > svg {
       height: 6rem;
       fill: ${(props) => props.theme.colors.redLight};
-      transition: 0.2s ease-in;
+      transition: 0.1s ease-in;
     }
 
     > div {
@@ -49,6 +49,7 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
       color: ${(props) => props.theme.colors.redLight};
       font-size: ${(props) => props.theme.fontSize.normal};
       font-weight: 700;
+      transition: 0.1s ease-in;
     }
 
     &:hover {
