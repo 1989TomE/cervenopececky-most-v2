@@ -17,7 +17,7 @@ const PageWrapper = ({ children }: Props) => {
         <Navigation />
         <main className="contentContainer">{children}</main>
         <footer className="footer">
-          2021 created by TomE, designed by Kamka
+          &#xA9;2021 created by TomE, designed by Kamka
         </footer>
       </div>
     </Wrapper>
