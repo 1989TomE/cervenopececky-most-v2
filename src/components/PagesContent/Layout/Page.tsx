@@ -17,7 +17,12 @@ const PageWrapper = ({ children }: Props) => {
         <Navigation />
         <main className="contentContainer">{children}</main>
         <footer className="footer">
-          &#xA9;2021 created by TomE, designed by Kamka
+          &#xA9;
+          {`2021 created by TomE, designed by Kamka${
+            process.env.NODE_ENV === "development"
+              ? `; v${process.env.VERSION}`
+              : ""
+          }`}
         </footer>
       </div>
     </Wrapper>
