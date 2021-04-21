@@ -47,7 +47,7 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
     > div {
       text-transform: uppercase;
       color: ${(props) => props.theme.colors.redLight};
-      font-size: 15px;
+      font-size: ${(props) => props.theme.fontSize.normal};
       font-weight: 700;
     }
 
@@ -62,11 +62,15 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
   }
 
   .active {
-    > svg {
-      opacity: 0.5;
-    }
-    > div {
-      opacity: 0.5;
+    opacity: 0.5;
+
+    &:hover {
+      > svg {
+        fill: ${(props) => props.theme.colors.redLight};
+      }
+      > div {
+        color: ${(props) => props.theme.colors.redLight};
+      }
     }
   }
 `;

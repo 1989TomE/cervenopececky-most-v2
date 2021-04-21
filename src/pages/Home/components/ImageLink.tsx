@@ -24,7 +24,7 @@ const ImageLink = ({ to, imageSource, icon: SvgIcon, label }: Props) => {
         <img src={imageSource} alt={label} />
       </div>
       <div className="text">{label}</div>
-      <div className="background" />
+      {/* <div className="background" /> */}
       <div className="svgContainer">
         <SvgIcon />
       </div>
@@ -37,8 +37,8 @@ export default ImageLink;
 const Wrapper = styled(NavLink)<{ $hover: boolean }>`
   position: relative;
   flex: 1;
-  min-width: 400px;
-  min-height: 340px;
+  min-width: 380px;
+  min-height: 250px;
   margin: 1px;
 
   > div {
@@ -53,7 +53,7 @@ const Wrapper = styled(NavLink)<{ $hover: boolean }>`
 
     > img {
       width: 100%;
-      height: 340px;
+      height: 250px;
       object-fit: cover;
     }
   }
@@ -74,14 +74,14 @@ const Wrapper = styled(NavLink)<{ $hover: boolean }>`
 
     > svg {
       fill: ${(props) => props.theme.colors.white};
-      height: 12rem;
+      height: 8rem;
     }
   }
 
-  .background {
+  /* .background {
     opacity: ${(props) => (props.$hover ? 0 : 0.8)};
     transition: opacity 0.25s ease-in;
     background-color: ${(props) => props.theme.colors.ocher};
     z-index: 1;
-  }
+  } */
 `;

@@ -28,7 +28,7 @@ export default Navigation;
 
 const Nav = styled.nav`
   > ul {
-    margin-top: 155px;
+    margin-top: 18rem;
     display: flex;
     justify-content: center;
     padding: 3rem;

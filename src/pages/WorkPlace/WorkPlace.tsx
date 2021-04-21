@@ -1,6 +1,6 @@
 import TextContent from "./components/TextContent";
-import workplace from "@root/assets/mostarnaPortait.jpg";
-import PagePortraitImage from "@src/components/PagesContent/PortraitImage/PagePortraitImage";
+import workplace from "@root/assets/mostarnaWidescreen.jpg";
+import PageImage from "@src/components/PagesContent/PortraitImage/PageImage";
 import {
   HomeSubPageWrapper,
   ContentWrapper,
@@ -20,7 +20,7 @@ const WorkPlace = () => {
           </Column>
 
           <Column isOnRight>
-            <PagePortraitImage src={workplace} />
+            <PageImage src={workplace} />
           </Column>
         </ColumnsWrapper>
       </ContentWrapper>

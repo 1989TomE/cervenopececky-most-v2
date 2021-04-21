@@ -33,11 +33,10 @@ export const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  margin: 0 auto;
 
   .pageContainer {
     margin: 0 auto;
-    max-width: 1080px;
+    max-width: 800px;
 
     .footer {
       display: flex;

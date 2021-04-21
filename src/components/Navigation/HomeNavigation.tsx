@@ -28,7 +28,7 @@ export default HomeNavigation;
 
 const Nav = styled.nav`
   > ul {
-    margin-top: 20px;
+    margin-top: 4rem;
     display: flex;
     justify-content: center;
     list-style-type: none;

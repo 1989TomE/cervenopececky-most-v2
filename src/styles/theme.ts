@@ -9,8 +9,8 @@ export const theme = {
     white: "rgb(255,255,255)",
   },
   fontSize: {
-    header: "3rem",
-    normal: "1.5rem",
-    small: "1.2rem",
+    header: "2.5rem",
+    normal: "1.3rem",
+    small: "1.0rem",
   },
 };

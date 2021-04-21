@@ -4,9 +4,9 @@ import {
   ColumnsWrapper,
   Column,
 } from "@src/components/PagesContent/Layout";
-import PagePortraitImage from "@src/components/PagesContent/PortraitImage/PagePortraitImage";
+import PageImage from "@src/components/PagesContent/PortraitImage/PageImage";
 import TextContent from "./components/TextContent";
-import products from "@root/assets/bottlesPortrait.jpg";
+import products from "@root/assets/bottlesWidescreen.jpg";
 import ContentHeader from "@src/components/PagesContent/Layout/ContentHeader";
 
 const Products = () => {
@@ -20,7 +20,7 @@ const Products = () => {
           </Column>
 
           <Column isOnRight>
-            <PagePortraitImage src={products} />
+            <PageImage src={products} />
           </Column>
         </ColumnsWrapper>
       </ContentWrapper>

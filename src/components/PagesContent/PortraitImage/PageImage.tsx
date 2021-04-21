@@ -4,14 +4,14 @@ type Props = {
   src: React.ImgHTMLAttributes<HTMLImageElement>["src"];
 };
 
-const PagePortraitImage = ({ src }: Props) => {
+const PageImage = ({ src }: Props) => {
   return <Image src={src} />;
 };
 
-export default PagePortraitImage;
+export default PageImage;
 
 const Image = styled.img`
   width: 100%;
   height: auto;
-  margin-top: 5.5rem;
+  margin-top: 6.5rem;
 `;
