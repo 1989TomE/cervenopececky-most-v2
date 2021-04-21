@@ -14,6 +14,8 @@ const Landing = ({ setShowLandingPage }: Props) => {
   const [hideLanding, setHideLanding] = useState(false);
   const [render, setRender] = useState(true);
 
+  const startAnimation = logoLoaded && backGroundImageLoaded;
+
   useEffect(() => {
     const root = document.querySelector("#root") as HTMLElement;
 
@@ -30,7 +32,7 @@ const Landing = ({ setShowLandingPage }: Props) => {
     if (backGroundImageLoaded) {
       timerId = window.setTimeout(() => {
         setHideLanding(true);
-      }, 7000);
+      }, 3500);
     }
 
     return () => {
@@ -48,8 +50,7 @@ const Landing = ({ setShowLandingPage }: Props) => {
   return render ? (
     <Wrapper
       onTransitionEnd={landingPageFadingOut}
-      $backgroundImageLoaded={backGroundImageLoaded}
-      $logoLoaded={logoLoaded}
+      $startAnimation={startAnimation}
       $hide={hideLanding}
     >
       <div className="imageWrapper">
@@ -80,11 +81,12 @@ const Landing = ({ setShowLandingPage }: Props) => {
 
 export default Landing;
 
-const Wrapper = styled.div<{
+type StyleProps = {
   $hide: boolean;
-  $logoLoaded: boolean;
-  $backgroundImageLoaded: boolean;
-}>`
+  $startAnimation: boolean;
+};
+
+const Wrapper = styled.div<StyleProps>`
   opacity: ${(props) => (props.$hide ? 0 : 1)};
   transition: 0.5s ease-in;
   position: absolute;
@@ -107,10 +109,8 @@ const Wrapper = styled.div<{
       height: 100%;
       width: 100%;
       object-fit: cover;
-      opacity: ${(props) => (props.$backgroundImageLoaded ? 1 : 0)};
-
-      transition: 2.5s ease-in;
-      transition-delay: 1s;
+      opacity: ${(props) => (props.$startAnimation ? 1 : 0)};
+      transition: 0.25s ease-in;
     }
   }
 
@@ -129,7 +129,7 @@ const Wrapper = styled.div<{
       position: relative;
       height: 380px;
       width: 380px;
-      opacity: ${(props) => (props.$logoLoaded ? 1 : 0)};
+      opacity: ${(props) => (props.$startAnimation ? 1 : 0)};
       transition: 0.25s ease-in;
       cursor: pointer;
     }
