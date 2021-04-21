@@ -48,6 +48,7 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
       text-transform: uppercase;
       color: ${(props) => props.theme.colors.redLight};
       font-size: 15px;
+      font-weight: 700;
     }
 
     &:hover {
@@ -62,10 +63,10 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
 
   .active {
     > svg {
-      fill: ${(props) => props.theme.colors.redDark};
+      opacity: 0.5;
     }
     > div {
-      color: ${(props) => props.theme.colors.redDark};
+      opacity: 0.5;
     }
   }
 `;
