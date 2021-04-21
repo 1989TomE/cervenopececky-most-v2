@@ -17,7 +17,7 @@ const PageWrapper = ({ children }: Props) => {
         <Navigation />
         <main className="contentContainer">{children}</main>
         <footer className="footer">
-          <img src={darkLogo} alt="logo" />
+          2021 created by TomE, designed by Kamka
         </footer>
       </div>
     </Wrapper>

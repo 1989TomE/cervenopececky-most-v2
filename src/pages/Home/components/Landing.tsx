@@ -1,8 +1,7 @@
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import styled from "styled-components";
 import landingImage from "@root/assets/landing_background.jpg";
 import whiteLogo from "@root/assets/logo_white.jpg";
-import { useAppContext } from "@src/context/context";
 
 type Props = {
   setShowLandingPage: Dispatch<SetStateAction<boolean>>;
