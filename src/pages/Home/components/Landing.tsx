@@ -87,7 +87,7 @@ type StyleProps = {
 
 const Wrapper = styled.div<StyleProps>`
   opacity: ${(props) => (props.$hide ? 0 : 1)};
-  transition: 0.5s ease-in;
+  transition: 1s ease-in;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -109,7 +109,6 @@ const Wrapper = styled.div<StyleProps>`
       width: 100%;
       object-fit: cover;
       opacity: ${(props) => (props.$startAnimation ? 1 : 0)};
-      transition: 0.25s ease-in;
     }
   }
 
@@ -129,7 +128,6 @@ const Wrapper = styled.div<StyleProps>`
       height: 380px;
       width: 380px;
       opacity: ${(props) => (props.$startAnimation ? 1 : 0)};
-      transition: 0.25s ease-in;
       cursor: pointer;
     }
   }
