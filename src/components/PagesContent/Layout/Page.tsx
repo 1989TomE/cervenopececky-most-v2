@@ -4,7 +4,6 @@ import PageTopPart from "@src/components/PagesContent/TopPart/PageTopPart";
 import Navigation from "@src/components/Navigation/MainNavigation";
 import { pageMinHeight } from "@src/styles/page";
 import { useState, useEffect } from "react";
-// import { CSSTransition } from "react-transition-group";
 
 type Props = {
   children?: React.ReactNode;
@@ -15,7 +14,6 @@ const PageWrapper = ({ children }: Props) => {
 
   useEffect(() => {
     const timerId = setTimeout(() => {
-      console.log("mounting");
       setMounted(true);
     });
 
@@ -59,7 +57,7 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
 
     .contentContainer {
       opacity: ${(props) => (props.mounted ? 1 : 0)};
-      transition: opacity 0.5s ease-in;
+      transition: opacity 0.5s ease-in-out;
     }
 
     .footer {
