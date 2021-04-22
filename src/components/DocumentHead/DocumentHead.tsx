@@ -5,6 +5,10 @@ const DocumentHead = () => {
     <Helmet>
       <meta charSet="utf-8" />
       <title>Červenopečecký mošt</title>
+      <meta
+        name="description"
+        content="Lokální prodej jablek, hrušek a moštu v Červených Pečkách"
+      ></meta>
       <link rel="icon" href="../../assets/favicon.ico"></link>
     </Helmet>
   );

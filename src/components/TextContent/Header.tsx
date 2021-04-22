@@ -14,7 +14,7 @@ export const Header = (props: Props) => {
   return <Wrapper {...styleProps}>{title}</Wrapper>;
 };
 
-const Wrapper = styled.div<StyleProps>`
+const Wrapper = styled.h1<StyleProps>`
   font-family: "barlow";
   font-size: ${(props) => props.theme.fontSize.header};
   color: ${(props) =>
