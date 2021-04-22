@@ -59,7 +59,7 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
 
     .contentContainer {
       opacity: ${(props) => (props.mounted ? 1 : 0)};
-      transition: opacity 0.5s ease-in-out;
+      transition: opacity 0.5s ease-in;
     }
 
     .footer {
