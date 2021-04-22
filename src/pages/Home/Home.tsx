@@ -7,8 +7,6 @@ import env from "dotenv-webpack";
 const Home = () => {
   const { showLandingPage, setShowLandingPage } = useAppContext();
 
-  console.log(process.env);
-
   return (
     <PageWrapper>
       {showLandingPage && <Landing setShowLandingPage={setShowLandingPage} />}
