@@ -4,13 +4,28 @@ import PageTopPart from "@src/components/PagesContent/TopPart/PageTopPart";
 import Navigation from "@src/components/Navigation/MainNavigation";
 import { pageMinHeight } from "@src/styles/page";
 import { useState, useEffect } from "react";
+import Landing from "../LandingScreen/Landing";
+import { useAppContext } from "@src/context/context";
+import { useLocation } from "react-router";
+import Routes from "@src/pages/Routes";
+import { Page } from "@src/pages";
 
 type Props = {
   children?: React.ReactNode;
 };
 
 const PageWrapper = ({ children }: Props) => {
+  const location = useLocation();
+  const { landingPageSeen, setLandingPageSeen } = useAppContext();
   const [mounted, setMounted] = useState(false);
+
+  const showLandingPage = !landingPageSeen && location.pathname === Page.Home;
+
+  useEffect(() => {
+    if (!showLandingPage) {
+      setLandingPageSeen(true);
+    }
+  }, []);
 
   useEffect(() => {
     const timerId = setTimeout(() => {
@@ -24,6 +39,8 @@ const PageWrapper = ({ children }: Props) => {
 
   return (
     <Wrapper mounted={mounted} className="pageWrapper">
+      {showLandingPage && <Landing setLandingPageSeen={setLandingPageSeen} />}
+
       <div className="pageContainer">
         <PageTopPart />
         <Navigation />

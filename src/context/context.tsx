@@ -1,13 +1,13 @@
 import { createContext, Dispatch, SetStateAction, useContext } from "react";
 
 type ContextProps = {
-  showLandingPage: boolean;
-  setShowLandingPage: Dispatch<SetStateAction<boolean>>;
+  landingPageSeen: boolean;
+  setLandingPageSeen: Dispatch<SetStateAction<boolean>>;
 };
 
 export const Context = createContext<ContextProps>({
-  showLandingPage: true,
-  setShowLandingPage: () => {
+  landingPageSeen: false,
+  setLandingPageSeen: () => {
     throw new Error("Context has not been initialized yet");
   },
 });

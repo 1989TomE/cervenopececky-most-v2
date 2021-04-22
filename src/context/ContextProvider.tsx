@@ -6,14 +6,14 @@ type Props = {
 };
 
 const ContextProvider = ({ children }: Props) => {
-  const [showLandingPage, setShowLandingPage] = useState(true);
+  const [landingPageSeen, setLandingPageSeen] = useState(false);
 
   const context = useMemo(
     () => ({
-      showLandingPage,
-      setShowLandingPage,
+      landingPageSeen,
+      setLandingPageSeen,
     }),
-    [showLandingPage, setShowLandingPage]
+    [landingPageSeen, setLandingPageSeen]
   );
 
   return <Context.Provider value={context}>{children}</Context.Provider>;

@@ -4,10 +4,10 @@ import landingImage from "@root/assets/landing_background.jpg";
 import whiteLogo from "@root/assets/logo_white.jpg";
 
 type Props = {
-  setShowLandingPage: Dispatch<SetStateAction<boolean>>;
+  setLandingPageSeen: Dispatch<SetStateAction<boolean>>;
 };
 
-const Landing = ({ setShowLandingPage }: Props) => {
+const Landing = ({ setLandingPageSeen }: Props) => {
   const [backGroundImageLoaded, setBackgroundImageLoaded] = useState(false);
   const [logoLoaded, setLogoLoaded] = useState(false);
   const [hideLanding, setHideLanding] = useState(false);
@@ -42,7 +42,7 @@ const Landing = ({ setShowLandingPage }: Props) => {
   const landingPageFadingOut = () => {
     if (hideLanding) {
       setRender(false);
-      setShowLandingPage(false);
+      setLandingPageSeen(true);
     }
   };
 
