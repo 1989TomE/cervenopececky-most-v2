@@ -37,14 +37,14 @@ module.exports = {
       },
     ],
   },
+
   output: {
     filename: "index.js",
     path: path.resolve(__dirname, "dist"),
     publicPath: "/",
   },
-  devServer: {
-    historyApiFallback: true,
-  },
+  devtool: "inline-source-map",
+
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "index.html"),
