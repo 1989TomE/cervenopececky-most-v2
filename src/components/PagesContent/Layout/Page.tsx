@@ -67,7 +67,7 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
 export default PageWrapper;
 
 export const Wrapper = styled.div<{ mounted: boolean }>`
-  min-height: 1480px;
+  height: 1400px;
   max-width: 2560px;
   background-image: url(${homeBackgroundImage});
   background-repeat: no-repeat;
