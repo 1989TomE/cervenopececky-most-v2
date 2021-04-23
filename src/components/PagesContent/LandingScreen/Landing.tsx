@@ -133,7 +133,7 @@ const Wrapper = styled.div<StyleProps>`
 
       ${tableMediaQuery} {
         height: auto;
-        width: 50%;
+        width: 75%;
       }
     }
   }

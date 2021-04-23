@@ -40,7 +40,7 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
 
   return (
     <Wrapper mounted={mounted} className="pageWrapper">
-      {false && <Landing setLandingPageSeen={setLandingPageSeen} />}
+      {showLandingPage && <Landing setLandingPageSeen={setLandingPageSeen} />}
 
       <div className="pageContainer">
         <PageTopPart />
