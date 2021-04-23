@@ -1,4 +1,5 @@
 import { homePages } from "@src/pages/index";
+import { tableMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 import NavItem from "./components/NavItem";
 
@@ -33,5 +34,9 @@ const Nav = styled.nav`
     justify-content: center;
     list-style-type: none;
     margin-bottom: 1rem;
+
+    ${tableMediaQuery} {
+      margin-top: 0rem;
+    }
   }
 `;

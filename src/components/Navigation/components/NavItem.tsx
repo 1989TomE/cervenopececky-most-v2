@@ -1,4 +1,5 @@
 import { PageProps } from "@src/pages/index";
+import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 import NavLink from "./NavLink";
 
@@ -25,11 +26,15 @@ export default NavItem;
 
 const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
   flex: 1;
-  min-width: ${(props) => (props.horizontalSpacing ? "120px" : "30px")};
+  min-width: ${(props) => (props.horizontalSpacing ? "120px" : "50px")};
   max-width: ${(props) => (props.horizontalSpacing ? "170px" : "80px")};
   display: flex;
   justify-content: center;
   align-items: flex-end;
+
+  ${tableMediaQuery} {
+    min-width: 50px;
+  }
 
   a {
     text-decoration: none;
@@ -42,6 +47,10 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
       height: 6rem;
       fill: ${(props) => props.theme.colors.redLight};
       transition: 0.1s ease-in;
+
+      ${tableMediaQuery} {
+        height: 5rem;
+      }
     }
 
     > div {
@@ -50,6 +59,14 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
       font-size: ${(props) => props.theme.fontSize.normal};
       font-weight: 700;
       transition: 0.1s ease-in;
+
+      ${tableMediaQuery} {
+        font-size: ${(props) => props.theme.fontSize.small};
+      }
+
+      ${cellPhoneMediaQuery} {
+        display: none;
+      }
     }
 
     &:hover {

@@ -1,3 +1,4 @@
+import { tableMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 
 type Props = {

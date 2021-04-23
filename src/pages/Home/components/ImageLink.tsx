@@ -1,4 +1,5 @@
 import { Page } from "@src/pages/index";
+import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
@@ -37,9 +38,13 @@ export default ImageLink;
 const Wrapper = styled(NavLink)<{ $hover: boolean }>`
   position: relative;
   flex: 1;
-  min-width: 380px;
-  min-height: 250px;
+  min-width: 340px;
+  min-height: 280px;
   margin: 1px;
+
+  ${tableMediaQuery} {
+    min-width: 280px;
+  }
 
   > div {
     position: absolute;
@@ -53,7 +58,7 @@ const Wrapper = styled(NavLink)<{ $hover: boolean }>`
 
     > img {
       width: 100%;
-      height: 250px;
+      height: 280px;
       object-fit: cover;
     }
   }

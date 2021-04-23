@@ -1,4 +1,5 @@
 import { pages } from "@src/pages/index";
+import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 import NavItem from "./components/NavItem";
 
@@ -31,8 +32,14 @@ const Nav = styled.nav`
     margin-top: 18rem;
     display: flex;
     justify-content: center;
-    padding: 3rem;
+    padding: 3rem 0rem;
     list-style-type: none;
     margin-bottom: 1rem;
+
+    ${tableMediaQuery} {
+      margin-top: 16rem;
+      min-width: 50px;
+      padding: 1rem 0rem;
+    }
   }
 `;

@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import styled from "styled-components";
 import landingImage from "@root/assets/landing_background.jpg";
 import whiteLogo from "@root/assets/logo_white.jpg";
+import { tableMediaQuery } from "@src/styles/mediaQueries";
 
 type Props = {
   setLandingPageSeen: Dispatch<SetStateAction<boolean>>;
@@ -129,6 +130,11 @@ const Wrapper = styled.div<StyleProps>`
       width: 380px;
       opacity: ${(props) => (props.$startAnimation ? 1 : 0)};
       cursor: pointer;
+
+      ${tableMediaQuery} {
+        height: auto;
+        width: 50%;
+      }
     }
   }
 `;

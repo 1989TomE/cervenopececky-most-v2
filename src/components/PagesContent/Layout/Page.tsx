@@ -9,6 +9,7 @@ import { useAppContext } from "@src/context/context";
 import { useLocation } from "react-router";
 import { Page } from "@src/pages";
 import HomeNavigation from "@src/components/Navigation/HomeNavigation";
+import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
 
 type Props = {
   children?: React.ReactNode;
@@ -40,7 +41,7 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
 
   return (
     <Wrapper mounted={mounted} className="pageWrapper">
-      {showLandingPage && <Landing setLandingPageSeen={setLandingPageSeen} />}
+      {false && <Landing setLandingPageSeen={setLandingPageSeen} />}
 
       <div className="pageContainer">
         <PageTopPart />
@@ -67,16 +68,18 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
 export default PageWrapper;
 
 export const Wrapper = styled.div<{ mounted: boolean }>`
-  height: ${pageMinHeight}px;
+  min-height: ${pageMinHeight}px;
   max-width: 2560px;
   background-image: url(${homeBackgroundImage});
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  min-width: 320px;
 
   .pageContainer {
     margin: 0 auto;
-    max-width: 800px;
+    padding: 0 20px;
+    max-width: 840px;
 
     .contentContainer {
       opacity: ${(props) => (props.mounted ? 1 : 0)};
@@ -84,14 +87,14 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
     }
 
     .footer {
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 4rem;
-      > img {
-        width: 20rem;
-        height: 20rem;
-      }
+      margin: 2rem;
+      text-align: center;
+      padding-bottom: 1rem;
     }
   }
 `;
