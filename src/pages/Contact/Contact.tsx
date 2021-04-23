@@ -1,15 +1,15 @@
 import LeftColumn from "./components/LeftColumn";
 import RightColumn from "./components/RightColumn";
 import {
-  HomeSubPageWrapper,
   ContentWrapper,
   ColumnsWrapper,
   Column,
+  PageWrapper,
 } from "@src/components/PagesContent/Layout";
 
 const Contact = () => {
   return (
-    <HomeSubPageWrapper>
+    <PageWrapper>
       <ContentWrapper>
         <ColumnsWrapper>
           <Column isOnLeft>
@@ -21,7 +21,7 @@ const Contact = () => {
           </Column>
         </ColumnsWrapper>
       </ContentWrapper>
-    </HomeSubPageWrapper>
+    </PageWrapper>
   );
 };
 

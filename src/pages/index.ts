@@ -21,7 +21,7 @@ export enum Page {
   OurProducts = "/nase-produkty",
   Contact = "/kontakt",
   WorkPlace = "/mostarna",
-  Products = "/produkty",
+  Making = "/vyrabime",
   FruitOrchards = "/ovocne-sady",
   PublicAppleJuicing = "/mostovani-pro-verejnost",
 }
@@ -66,8 +66,8 @@ export const homePages: HomePageProps[] = [
     imageSource: cuteLady,
   },
   {
-    route: Page.Products,
-    label: "Produkty",
+    route: Page.Making,
+    label: "Vyrábíme",
     icon: AppleAndBottle,
     imageSource: bottlesWidescreen,
   },

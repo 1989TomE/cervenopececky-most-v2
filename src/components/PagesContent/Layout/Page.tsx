@@ -7,14 +7,15 @@ import { useState, useEffect } from "react";
 import Landing from "../LandingScreen/Landing";
 import { useAppContext } from "@src/context/context";
 import { useLocation } from "react-router";
-import Routes from "@src/pages/Routes";
 import { Page } from "@src/pages";
+import HomeNavigation from "@src/components/Navigation/HomeNavigation";
 
 type Props = {
   children?: React.ReactNode;
+  withSubNavigation?: boolean;
 };
 
-const PageWrapper = ({ children }: Props) => {
+const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
   const location = useLocation();
   const { landingPageSeen, setLandingPageSeen } = useAppContext();
   const [mounted, setMounted] = useState(false);
@@ -45,6 +46,11 @@ const PageWrapper = ({ children }: Props) => {
         <PageTopPart />
         <Navigation />
         <main className="contentContainer">{children}</main>
+        {withSubNavigation && (
+          <div>
+            <HomeNavigation />
+          </div>
+        )}
         <footer className="footer">
           &#xA9;
           {`2021 created by TomE, designed by Kamka${

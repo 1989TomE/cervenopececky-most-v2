@@ -1,8 +1,8 @@
 import {
-  HomeSubPageWrapper,
   ContentWrapper,
   ColumnsWrapper,
   Column,
+  PageWrapper,
 } from "@src/components/PagesContent/Layout";
 import PageImage from "@src/components/PagesContent/PortraitImage/PageImage";
 import TextContent from "./components/TextContent";
@@ -11,7 +11,7 @@ import ContentHeader from "@src/components/PagesContent/Layout/ContentHeader";
 
 const FruitOrchards = () => {
   return (
-    <HomeSubPageWrapper>
+    <PageWrapper>
       <ContentWrapper>
         <ColumnsWrapper>
           <Column isOnLeft>
@@ -24,7 +24,7 @@ const FruitOrchards = () => {
           </Column>
         </ColumnsWrapper>
       </ContentWrapper>
-    </HomeSubPageWrapper>
+    </PageWrapper>
   );
 };
 

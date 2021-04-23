@@ -1,16 +1,16 @@
 import LeftColumn from "./components/LeftColumn";
 import RightColumn from "./components/RightColumn";
 import {
-  HomeSubPageWrapper,
   ContentWrapper,
   ColumnsWrapper,
   Column,
+  PageWrapper,
 } from "@src/components/PagesContent/Layout";
 import ContentHeader from "@src/components/PagesContent/Layout/ContentHeader";
 
 const PublicAppleJuicing = () => {
   return (
-    <HomeSubPageWrapper>
+    <PageWrapper>
       <ContentWrapper>
         <ColumnsWrapper>
           <Column isOnLeft>
@@ -23,7 +23,7 @@ const PublicAppleJuicing = () => {
           </Column>
         </ColumnsWrapper>
       </ContentWrapper>
-    </HomeSubPageWrapper>
+    </PageWrapper>
   );
 };
 

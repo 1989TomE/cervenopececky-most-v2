@@ -2,16 +2,16 @@ import TextContent from "./components/TextContent";
 import workplace from "@root/assets/mostarnaWidescreen.jpg";
 import PageImage from "@src/components/PagesContent/PortraitImage/PageImage";
 import {
-  HomeSubPageWrapper,
   ContentWrapper,
   ColumnsWrapper,
   Column,
+  PageWrapper,
 } from "@src/components/PagesContent/Layout";
 import ContentHeader from "@src/components/PagesContent/Layout/ContentHeader";
 
 const WorkPlace = () => {
   return (
-    <HomeSubPageWrapper>
+    <PageWrapper>
       <ContentWrapper>
         <ColumnsWrapper>
           <Column isOnLeft>
@@ -24,7 +24,7 @@ const WorkPlace = () => {
           </Column>
         </ColumnsWrapper>
       </ContentWrapper>
-    </HomeSubPageWrapper>
+    </PageWrapper>
   );
 };
 

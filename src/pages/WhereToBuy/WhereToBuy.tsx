@@ -1,7 +1,7 @@
-import PageLayout from "@src/components/PagesContent/Layout/Page";
+import PageWrapper from "@src/components/PagesContent/Layout/Page";
 
 const WhereToBuy = () => {
-  return <PageLayout>Kde zakoupit</PageLayout>;
+  return <PageWrapper>Kde zakoupit</PageWrapper>;
 };
 
 export default WhereToBuy;

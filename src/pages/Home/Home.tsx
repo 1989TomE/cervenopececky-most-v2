@@ -3,7 +3,7 @@ import Content from "./components/Content";
 
 const Home = () => {
   return (
-    <PageWrapper>
+    <PageWrapper withSubNavigation={false}>
       <Content />
     </PageWrapper>
   );

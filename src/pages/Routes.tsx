@@ -3,7 +3,7 @@ import { Page } from "./index";
 import NotFound from "./NotFound/Notfound";
 import Home from "@src/pages/Home/Home";
 import WorkPlace from "@src/pages/WorkPlace/WorkPlace";
-import Products from "@src/pages/Products/Products";
+import Making from "@src/pages/Making/Making";
 import PublicAppleJuicing from "@src/pages/PublicAppleJuicing/PublicAppleJuicing";
 import FruitOrchards from "./FruitOrchards/FruitOrchards";
 import Contact from "./Contact/Contact";
@@ -19,7 +19,7 @@ const Routes = () => {
 
         <Route path={Page.WorkPlace} component={WorkPlace} />
         <Route path={Page.PublicAppleJuicing} component={PublicAppleJuicing} />
-        <Route path={Page.Products} component={Products} />
+        <Route path={Page.Making} component={Making} />
         <Route path={Page.FruitOrchards} component={FruitOrchards} />
 
         <Route path={Page.WhereToBuy} component={EShop} />

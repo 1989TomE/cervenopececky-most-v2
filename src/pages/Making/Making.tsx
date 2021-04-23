@@ -1,17 +1,17 @@
 import {
-  HomeSubPageWrapper,
   ContentWrapper,
   ColumnsWrapper,
   Column,
+  PageWrapper,
 } from "@src/components/PagesContent/Layout";
 import PageImage from "@src/components/PagesContent/PortraitImage/PageImage";
 import TextContent from "./components/TextContent";
 import products from "@root/assets/bottlesWidescreen.jpg";
 import ContentHeader from "@src/components/PagesContent/Layout/ContentHeader";
 
-const Products = () => {
+const Making = () => {
   return (
-    <HomeSubPageWrapper>
+    <PageWrapper>
       <ContentWrapper>
         <ColumnsWrapper>
           <Column isOnLeft>
@@ -24,8 +24,8 @@ const Products = () => {
           </Column>
         </ColumnsWrapper>
       </ContentWrapper>
-    </HomeSubPageWrapper>
+    </PageWrapper>
   );
 };
 
-export default Products;
+export default Making;
