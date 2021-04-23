@@ -80,7 +80,7 @@ const Wrapper = styled.div`
     }
 
     ${cellPhoneMediaQuery} {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   }
 
@@ -90,7 +90,7 @@ const Wrapper = styled.div`
     cursor: pointer;
 
     ${tableMediaQuery} {
-      height: 3rem;
+      height: 2.8rem;
     }
   }
 
@@ -99,7 +99,7 @@ const Wrapper = styled.div`
     cursor: pointer;
 
     ${tableMediaQuery} {
-      height: 2.5rem;
+      height: 2.2rem;
     }
   }
 `;

@@ -29,7 +29,7 @@ export default Navigation;
 
 const Nav = styled.nav`
   > ul {
-    margin-top: 18rem;
+    margin-top: 14rem;
     display: flex;
     justify-content: center;
     padding: 3rem 0rem;
@@ -37,9 +37,7 @@ const Nav = styled.nav`
     margin-bottom: 1rem;
 
     ${tableMediaQuery} {
-      margin-top: 16rem;
       min-width: 50px;
-      padding: 1rem 0rem;
     }
   }
 `;

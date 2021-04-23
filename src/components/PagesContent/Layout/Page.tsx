@@ -2,7 +2,6 @@ import styled from "styled-components";
 import homeBackgroundImage from "@root/assets/webBackground.jpg";
 import PageTopPart from "@src/components/PagesContent/TopPart/PageTopPart";
 import Navigation from "@src/components/Navigation/MainNavigation";
-import { pageMinHeight } from "@src/styles/page";
 import { useState, useEffect } from "react";
 import Landing from "../LandingScreen/Landing";
 import { useAppContext } from "@src/context/context";
@@ -68,7 +67,7 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
 export default PageWrapper;
 
 export const Wrapper = styled.div<{ mounted: boolean }>`
-  min-height: ${pageMinHeight}px;
+  min-height: 1480px;
   max-width: 2560px;
   background-image: url(${homeBackgroundImage});
   background-repeat: no-repeat;
