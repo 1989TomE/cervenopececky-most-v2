@@ -39,5 +39,10 @@ const Nav = styled.nav`
     ${tableMediaQuery} {
       min-width: 50px;
     }
+
+    ${cellPhoneMediaQuery} {
+      margin-bottom: 0rem;
+      padding: 2rem 0rem 1rem 0rem;
+    }
   }
 `;
