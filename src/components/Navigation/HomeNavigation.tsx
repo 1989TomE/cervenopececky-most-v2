@@ -34,6 +34,7 @@ const Nav = styled.nav`
     justify-content: center;
     list-style-type: none;
     margin-bottom: 1rem;
+    background-color: ${(props) => props.theme.colors.ocherLight};
 
     ${tableMediaQuery} {
       margin-top: 0rem;

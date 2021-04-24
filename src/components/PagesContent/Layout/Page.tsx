@@ -74,15 +74,19 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
   background-position: top center;
   background-size: cover;
   min-width: 320px;
+  margin: 0 auto;
 
   .pageContainer {
     margin: 0 auto;
-    padding: 0 20px;
     max-width: 840px;
 
     .contentContainer {
       opacity: ${(props) => (props.mounted ? 1 : 0)};
       transition: opacity 0.5s ease-in-out;
+      ${tableMediaQuery} {
+        background-color: ${(props) => props.theme.colors.ocherLight};
+      }
+      margin: 0 20px;
     }
 
     .footer {
@@ -90,10 +94,11 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 4rem;
-      margin: 2rem;
+      padding-top: 4rem;
+      padding: 2rem;
       text-align: center;
       padding-bottom: 1rem;
+      background-color: ${(props) => props.theme.colors.ocherLight};
     }
   }
 `;

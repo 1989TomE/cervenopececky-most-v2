@@ -38,5 +38,5 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem 0.4rem 4rem 0.4rem;
+  margin: 1rem 0.3rem 4rem 0.3rem;
 `;

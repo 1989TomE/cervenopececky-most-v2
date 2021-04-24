@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { theme } from "./theme";
 
 import barlowCondensedSemiBold from "./fonts/BarlowCondensed-SemiBold.ttf";
 import roboto from "./fonts/Roboto-Regular.ttf";
@@ -37,8 +36,6 @@ export default createGlobalStyle`
     body {
         font-size: ${(props) => props.theme.fontSize.normal};
         height: 100%;
-        background-color: ${(props) => props.theme.colors.ocherLight};
-        
     }
 
     #root {
