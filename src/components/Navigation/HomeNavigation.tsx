@@ -29,15 +29,15 @@ export default HomeNavigation;
 
 const Nav = styled.nav`
   > ul {
-    margin-top: 4rem;
+    padding-top: 4rem;
     display: flex;
     justify-content: center;
     list-style-type: none;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     background-color: ${(props) => props.theme.colors.ocherLight};
 
     ${tableMediaQuery} {
-      margin-top: 0rem;
+      padding-top: 0rem;
     }
   }
 `;
