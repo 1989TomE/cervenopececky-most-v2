@@ -86,7 +86,7 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
       ${tableMediaQuery} {
         background-color: ${(props) => props.theme.colors.ocherLight};
       }
-      margin: 0 20px;
+      padding: 0 20px;
     }
 
     .footer {
