@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import styled from "styled-components";
 import landingImage from "@root/assets/landing.jpg";
+import landingImageFullHd from "@root/assets/landingFullHd.jpg";
 import whiteLogo from "@root/assets/logo_white.png";
 import { tableMediaQuery } from "@src/styles/mediaQueries";
 
@@ -55,7 +56,7 @@ const Landing = ({ setLandingPageSeen }: Props) => {
     >
       <div className="imageWrapper">
         <img
-          src={landingImage}
+          src={window.innerWidth > 1920 ? landingImage : landingImageFullHd}
           onLoad={() => {
             setBackgroundImageLoaded(true);
           }}
