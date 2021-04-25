@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import styled from "styled-components";
-import landingImage from "@root/assets/landing_background.jpg";
-import whiteLogo from "@root/assets/logo_white.jpg";
+import landingImage from "@root/assets/landing.jpg";
+import whiteLogo from "@root/assets/logo_white.png";
 import { tableMediaQuery } from "@src/styles/mediaQueries";
 
 type Props = {

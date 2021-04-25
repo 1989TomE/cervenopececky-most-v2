@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import homeBackgroundImage from "@root/assets/webBackground.jpg";
+import homeBackgroundImage from "@root/assets/background.jpg";
 import PageTopPart from "@src/components/PagesContent/TopPart/PageTopPart";
 import Navigation from "@src/components/Navigation/MainNavigation";
 import { useState, useEffect } from "react";
