@@ -1,25 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Page } from "./index";
+import {
+  Contact,
+  FruitOrchards,
+  Home,
+  Making,
+  OurProducts,
+  Page,
+  PublicAppleJuicing,
+  WantToFruitPress,
+  WhereToBuy,
+  WorkPlace,
+} from "./index";
 import NotFound from "./NotFound/Notfound";
-
-const Home = React.lazy(() => import("@src/pages/Home/Home"));
-const WorkPlace = React.lazy(() => import("@src/pages/WorkPlace/WorkPlace"));
-const PublicAppleJuicing = React.lazy(
-  () => import("@src/pages/PublicAppleJuicing/PublicAppleJuicing")
-);
-const Making = React.lazy(() => import("@src/pages/Making/Making"));
-const FruitOrchards = React.lazy(
-  () => import("@src/pages/FruitOrchards/FruitOrchards")
-);
-const Contact = React.lazy(() => import("@src/pages/Contact/Contact"));
-const WantToFruitPress = React.lazy(
-  () => import("@src/pages/WantToFruitPress/WantToFruitPress")
-);
-const OurProducts = React.lazy(
-  () => import("@src/pages/OurProducts/OurProducts")
-);
-const WhereToBuy = React.lazy(() => import("@src/pages/WhereToBuy/WhereToBuy"));
 
 const Routes = () => {
   return (

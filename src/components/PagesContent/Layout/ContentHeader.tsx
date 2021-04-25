@@ -1,12 +1,12 @@
 import { Header } from "@src/components/TextContent";
-import { homePages, pages } from "@src/pages";
+import { homePages, mainPages } from "@src/pages";
 import { useLocation } from "react-router";
 
 const ContentHeader = () => {
   const location = useLocation();
 
   const header =
-    pages.find((page) => page.route === location.pathname)?.label ||
+    mainPages.find((page) => page.route === location.pathname)?.label ||
     homePages.find((homePage) => homePage.route === location.pathname)?.label ||
     "Nadpis stránky";
 

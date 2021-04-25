@@ -1,4 +1,4 @@
-import { pages } from "@src/pages/index";
+import { mainPages } from "@src/pages/index";
 import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 import NavItem from "./components/NavItem";
@@ -7,7 +7,7 @@ const Navigation = () => {
   return (
     <Nav>
       <ul>
-        {pages.map((page) => {
+        {mainPages.map((page) => {
           const { route, icon, label } = page;
 
           return (

@@ -4,6 +4,7 @@ import landingImage from "@root/assets/landing.jpg";
 import landingImageFullHd from "@root/assets/landingFullHd.jpg";
 import whiteLogo from "@root/assets/logo_white.png";
 import { tableMediaQuery } from "@src/styles/mediaQueries";
+import { importWorkplacePage, preloadPages } from "@src/pages";
 
 type Props = {
   setLandingPageSeen: Dispatch<SetStateAction<boolean>>;
@@ -25,6 +26,8 @@ const Landing = ({ setLandingPageSeen }: Props) => {
     } else {
       root.style.overflowY = "scroll";
     }
+
+    preloadPages();
   }, [hideLanding]);
 
   useEffect(() => {
