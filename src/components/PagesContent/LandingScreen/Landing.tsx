@@ -63,6 +63,7 @@ const Landing = ({ setLandingPageSeen }: Props) => {
           onLoad={() => {
             setBackgroundImageLoaded(true);
           }}
+          alt="fruit tree image"
         />
       </div>
 
@@ -77,6 +78,7 @@ const Landing = ({ setLandingPageSeen }: Props) => {
           onLoad={() => {
             setLogoLoaded(true);
           }}
+          alt="logo image"
         />
       </div>
     </Wrapper>
