@@ -82,6 +82,7 @@ const Wrapper = styled.div`
 
     ${cellPhoneMediaQuery} {
       font-size: 1rem;
+      text-align: center;
     }
   }
 

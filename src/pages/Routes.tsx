@@ -1,18 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import {
-  Contact,
-  FruitOrchards,
-  Home,
-  Making,
-  OurProducts,
-  Page,
-  PublicAppleJuicing,
-  WantToFruitPress,
-  WhereToBuy,
-  WorkPlace,
-} from "./index";
+import Contact from "./Contact/Contact";
+import FruitOrchards from "./FruitOrchards/FruitOrchards";
+import Home from "./Home/Home";
+import Making from "./Making/Making";
 import NotFound from "./NotFound/Notfound";
+import OurProducts from "./OurProducts/OurProducts";
+import PublicAppleJuicing from "./PublicAppleJuicing/PublicAppleJuicing";
+import WantToFruitPress from "./WantToFruitPress/WantToFruitPress";
+import WhereToBuy from "./WhereToBuy/WhereToBuy";
+import WorkPlace from "./WorkPlace/WorkPlace";
+import { Page } from "./index";
 
 const Routes = () => {
   return (
