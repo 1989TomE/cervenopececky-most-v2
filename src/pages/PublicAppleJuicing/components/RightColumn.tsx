@@ -4,8 +4,8 @@ import Widget from "@src/components/TextContent/Widget";
 const Content = () => {
   return (
     <>
-      <Widget>
-        <Header primary title="ČERSTVÝ MOŠT" />
+      <Widget marginTop="6rem">
+        <Header primary title="ČERSTVÝ MOŠT" marginTop="0rem" />
         <Paragraph bold primaryColor>
           Mošt 1 l &nbsp;5 Kč
         </Paragraph>
@@ -18,7 +18,7 @@ const Content = () => {
       </Widget>
 
       <Widget>
-        <Header primary title="PASTERIZOVANÝ MOŠT" />
+        <Header primary title="PASTERIZOVANÝ MOŠT" marginTop="0rem" />
         <Paragraph bold primaryColor>
           Mošt 3 l &nbsp;30 Kč
         </Paragraph>

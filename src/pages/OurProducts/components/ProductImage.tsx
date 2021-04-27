@@ -21,7 +21,7 @@ export default ProductImage;
 
 const Wrapper = styled.div`
   height: 160px;
-  min-width: 180px;
+  min-width: 200px;
   align-self: stretch;
 
   > img {

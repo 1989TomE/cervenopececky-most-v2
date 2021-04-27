@@ -5,7 +5,7 @@ import ProductItem from "./components/ProductItem";
 
 const OurProducts = () => {
   return (
-    <PageWrapper>
+    <PageWrapper withSubNavigation={false}>
       <ContentWrapper>
         {data.map((i) => (
           <ProductItem key={i.title} {...i} />

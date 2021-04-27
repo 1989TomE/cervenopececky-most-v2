@@ -26,19 +26,9 @@ export const data: ProductItemProps[] = [
     descriptions: ["Jablko / hruška", "dle denní nabídky."],
   },
   {
-    title: "SUŠENÉ JABLKO",
+    title: "SUŠENÉ OVOCE",
     prices: ["40 Kč / 100 g"],
     descriptions: ["100 % jablečné plátky", "Baleno v sáčku."],
-  },
-  {
-    title: "SUŠENÁ HRUŠKA",
-    prices: ["40 Kč / 100 g"],
-    descriptions: ["100 % hruškové plátky.", "Baleno v sáčku."],
-  },
-  {
-    title: "SUŠENÉ JABLKO A HRUŠKA",
-    prices: ["40 Kč / 100 g"],
-    descriptions: ["50 % jablečné a 50 % hruškové", "plátky. Baleno v sáčku."],
   },
   {
     title: "JABLKA",

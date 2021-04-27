@@ -29,7 +29,7 @@ export default Navigation;
 
 const Nav = styled.nav`
   > ul {
-    margin-top: 14rem;
+    margin-top: 11rem;
     display: flex;
     justify-content: center;
     padding: 3rem 0rem;

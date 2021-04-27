@@ -40,7 +40,8 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
 
   return (
     <Wrapper mounted={mounted} className="pageWrapper">
-      {showLandingPage && <Landing setLandingPageSeen={setLandingPageSeen} />}
+      {/* {showLandingPage && <Landing setLandingPageSeen={setLandingPageSeen} />} */}
+      {false && <Landing setLandingPageSeen={setLandingPageSeen} />}
 
       <div className="pageContainer">
         <PageTopPart />
@@ -67,7 +68,7 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
 export default PageWrapper;
 
 export const Wrapper = styled.div<{ mounted: boolean }>`
-  height: 1400px;
+  height: 1200px;
   max-width: 2560px;
   background-image: url(${homeBackgroundImage});
   background-repeat: no-repeat;
@@ -87,6 +88,7 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
         background-color: ${(props) => props.theme.colors.ocherLight};
       }
       padding: 0 20px;
+      min-height: 425px;
     }
 
     .footer {

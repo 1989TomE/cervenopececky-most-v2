@@ -3,18 +3,18 @@ import { Paragraph } from "@src/components/TextContent";
 const Content = () => {
   return (
     <>
-      <Paragraph bold>
+      <Paragraph>
         Moštování pro veřejnost probíhá během podzimu, a to na základě
         telefonické dohody.
       </Paragraph>
 
-      <Paragraph bold>
+      <Paragraph>
         Nabízíme výrobu jak čerstvého moštu, tak Vám mošt můžeme zpasterizovat.
         Čerstvý mošt lze stočit do Vámi přivezených nádob nebo poskytneme naše
         nádoby. Pasterizovaný mošt stáčíme pouze do našich bag in box sáčků.
       </Paragraph>
 
-      <Paragraph bold paddingTop="3rem">
+      <Paragraph paddingTop="3rem" bold>
         Jak postupovat, když chci zmoštovat své ovoce?
       </Paragraph>
 

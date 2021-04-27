@@ -27,7 +27,7 @@ export default NavItem;
 const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
   flex: 1;
   min-width: ${(props) => (props.horizontalSpacing ? "120px" : "50px")};
-  max-width: ${(props) => (props.horizontalSpacing ? "170px" : "80px")};
+  max-width: ${(props) => (props.horizontalSpacing ? "150px" : "80px")};
   display: flex;
   justify-content: center;
   align-items: flex-end;

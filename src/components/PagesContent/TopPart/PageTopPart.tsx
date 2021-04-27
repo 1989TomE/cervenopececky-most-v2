@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { default as InstagramSvgIcon } from "@root/assets/instagram.svg";
 import { default as FacebookSvgIcon } from "@root/assets/facebook.svg";
-import polabi from "@root/assets/polabi.png";
+import polabi from "@root/assets/polabi.jpg";
 import eu from "@root/assets/eu.png";
 import cert from "@root/assets/pdf/cert.pdf";
 import euMostarna from "@root/assets/eu_mostarna.jpg";
@@ -55,29 +55,29 @@ const Wrapper = styled.div`
 
   .facebook {
     margin-left: -1.5rem; // compensation for svg padding
-    height: 6rem;
+    height: 4rem;
     fill: ${(props) => props.theme.colors.redDark};
 
     ${tableMediaQuery} {
-      height: 4.5rem;
+      height: 4rem;
     }
   }
 
   .instagram {
-    height: 6rem;
+    height: 4rem;
     fill: ${(props) => props.theme.colors.redDark};
 
     ${tableMediaQuery} {
-      height: 4.5rem;
+      height: 4rem;
     }
   }
 
   .phoneNumber {
     margin-left: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 
     ${tableMediaQuery} {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
 
     ${cellPhoneMediaQuery} {
@@ -86,21 +86,21 @@ const Wrapper = styled.div`
   }
 
   .polabi {
-    height: 4rem;
+    height: 2.5rem;
     margin-right: 2rem;
     cursor: pointer;
 
     ${tableMediaQuery} {
-      height: 2.8rem;
+      height: 2.5rem;
     }
   }
 
   .eu {
-    height: 3.5rem;
+    height: 2.5rem;
     cursor: pointer;
 
     ${tableMediaQuery} {
-      height: 2.2rem;
+      height: 2rem;
     }
   }
 `;

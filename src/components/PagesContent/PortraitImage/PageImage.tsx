@@ -14,7 +14,7 @@ export default PageImage;
 const Image = styled.img`
   width: 100%;
   height: auto;
-  margin-top: 6.5rem;
+  margin-top: 7.2rem;
 
   ${tableMediaQuery} {
     margin-top: 1rem;

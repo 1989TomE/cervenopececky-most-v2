@@ -36,16 +36,16 @@ export type PageProps = {
 export const mainPages: PageProps[] = [
   { route: Page.Home, label: "O nás", icon: HomeIcon },
   {
-    route: Page.WantToFruitPress,
-    label: "Chci zmoštovat",
-    icon: FruitPress,
-  },
-  {
     route: Page.OurProducts,
     label: "Naše produkty",
     icon: TwoBottles,
   },
   { route: Page.WhereToBuy, label: "Kde zakoupit", icon: ShoppingCart },
+  {
+    route: Page.WantToFruitPress,
+    label: "Chci zmoštovat",
+    icon: FruitPress,
+  },
   { route: Page.Contact, label: "Kontakt", icon: CellPhone },
 ];
 
