@@ -91,7 +91,7 @@ const Wrapper = styled.div`
     cursor: pointer;
 
     ${tableMediaQuery} {
-      height: 2.5rem;
+      height: 2rem;
     }
   }
 

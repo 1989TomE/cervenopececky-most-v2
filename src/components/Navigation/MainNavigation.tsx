@@ -1,5 +1,5 @@
 import { mainPages } from "@src/pages/index";
-import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
+import { tableMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 import NavItem from "./components/NavItem";
 

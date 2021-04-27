@@ -65,7 +65,7 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
       }
 
       ${cellPhoneMediaQuery} {
-        display: none;
+        font-size: 0.75rem;
       }
     }
 
