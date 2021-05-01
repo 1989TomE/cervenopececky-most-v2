@@ -8,8 +8,8 @@ const DocumentHead = () => {
       <meta
         name="description"
         content="Lokální prodej jablek, hrušek a moštu v Červených Pečkách"
-      ></meta>
-      <link rel="icon" href="../../assets/leaf_red.svg"></link>
+      />
+      <link rel="icon" href="../../assets/leaf_red.svg" type="image/svg+xml" />
     </Helmet>
   );
 };
