@@ -9,7 +9,6 @@ const DocumentHead = () => {
         name="description"
         content="Lokální prodej jablek, hrušek a moštu v Červených Pečkách"
       />
-      <link rel="icon" href="../../assets/favicon.png" sizes="any" />
     </Helmet>
   );
 };
