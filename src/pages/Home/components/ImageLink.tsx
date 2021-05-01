@@ -25,7 +25,6 @@ const ImageLink = ({ to, imageSource, icon: SvgIcon, label }: Props) => {
         <img src={imageSource} alt={label} />
       </div>
       <div className="text">{label}</div>
-      {/* <div className="background" /> */}
       <div className="svgContainer">
         <SvgIcon />
       </div>
@@ -82,11 +81,4 @@ const Wrapper = styled(NavLink)<{ $hover: boolean }>`
       height: 8rem;
     }
   }
-
-  /* .background {
-    opacity: ${(props) => (props.$hover ? 0 : 0.8)};
-    transition: opacity 0.25s ease-in;
-    background-color: ${(props) => props.theme.colors.ocher};
-    z-index: 1;
-  } */
 `;
