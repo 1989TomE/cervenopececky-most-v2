@@ -1,5 +1,9 @@
 import { Page } from "@src/pages/index";
-import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
+import {
+  cellPhoneMediaQuery,
+  isTouchable,
+  tableMediaQuery,
+} from "@src/styles/mediaQueries";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
@@ -79,6 +83,16 @@ const Wrapper = styled(NavLink)<{ $hover: boolean }>`
     > svg {
       fill: ${(props) => props.theme.colors.white};
       height: 8rem;
+    }
+  }
+
+  ${isTouchable} {
+    .text {
+      opacity: 1;
+    }
+
+    .svgContainer {
+      display: none;
     }
   }
 `;
