@@ -11,7 +11,7 @@ const DocumentHead = () => {
       />
       <link
         rel="icon"
-        href="../../assets/leaf_red.svg"
+        href="../../assets/favicon.png"
         type="image/svg+xml"
         sizes="any"
       />
