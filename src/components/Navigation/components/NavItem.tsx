@@ -16,7 +16,7 @@ const NavItem = ({
     <Wrapper horizontalSpacing={horizontalSpacing}>
       <NavLink to={route}>
         <SvgIcon className="icon" />
-        {showLabel && <div>{label}</div>}
+        {showLabel && <div className="label">{label}</div>}
       </NavLink>
     </Wrapper>
   );
@@ -76,6 +76,10 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
       > div {
         color: ${(props) => props.theme.colors.redDark};
       }
+    }
+
+    .label {
+      text-align: center;
     }
   }
 
