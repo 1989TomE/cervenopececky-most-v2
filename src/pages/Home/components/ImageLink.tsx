@@ -73,6 +73,7 @@ const Wrapper = styled(NavLink)<{ $hover: boolean }>`
     opacity: ${(props) => (props.$hover ? 1 : 0)};
     transition: opacity 0.25s ease-in-out;
     text-transform: uppercase;
+    text-align: center;
   }
 
   .svgContainer {
