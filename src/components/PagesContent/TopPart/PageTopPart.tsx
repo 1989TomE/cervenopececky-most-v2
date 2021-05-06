@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { default as InstagramSvgIcon } from "@root/assets/instagram.svg";
 import { default as FacebookSvgIcon } from "@root/assets/facebook.svg";
+import { default as Home } from "@root/assets/home.svg";
 import polabi from "@root/assets/polabi.jpg";
 import eu from "@root/assets/eu.png";
 import cert from "@root/assets/pdf/cert.pdf";
@@ -18,12 +19,16 @@ const PageTopPart = () => {
 
   return (
     <Wrapper>
-      <div>
+      <div className="left">
         <FacebookSvgIcon alt="facebook" className="facebook" />
         <InstagramSvgIcon alt="instagram" className="instagram" />
         <div className="phoneNumber">+420 604 402 763</div>
       </div>
-      <div>
+      <div className="mid">
+        <Home alt="domů" className="homeIcon" />
+        Moštárna Červené Pečky
+      </div>
+      <div className="right">
         <img
           src={polabi}
           alt="polabi"
@@ -53,14 +58,37 @@ const Wrapper = styled.div`
     display: flex;
   }
 
+  .mid {
+    display: flex;
+    flex: 1;
+
+    .homeIcon {
+      height: 4rem;
+      fill: ${(props) => props.theme.colors.redLight};
+      cursor: pointer;
+
+      &:hover {
+        fill: ${(props) => props.theme.colors.redDark};
+      }
+    }
+  }
+
+  .left,
+  .right {
+    width: 25%;
+    ${tableMediaQuery} {
+      display: none;
+    }
+  }
+
+  .right {
+    justify-content: flex-end;
+  }
+
   .facebook {
     margin-left: -1.5rem; // compensation for svg padding
     height: 4rem;
     fill: ${(props) => props.theme.colors.redDark};
-
-    ${tableMediaQuery} {
-      height: 4rem;
-    }
   }
 
   .instagram {

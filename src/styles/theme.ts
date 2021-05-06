@@ -14,4 +14,7 @@ export const theme = {
     normal: "1.3rem",
     small: "1.0rem",
   },
+  navIcons: {
+    size: "6rem",
+  },
 };

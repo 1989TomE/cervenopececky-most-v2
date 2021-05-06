@@ -44,7 +44,7 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
     align-items: center;
 
     > svg {
-      height: 6rem;
+      height: ${(props) => props.theme.navIcons.size};
       fill: ${(props) => props.theme.colors.redLight};
       transition: 0.1s ease-in;
 
