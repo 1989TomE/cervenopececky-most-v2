@@ -62,6 +62,10 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 0px 20px;
 
+  ${tableMediaQuery} {
+    padding: 0px 15px;
+  }
+
   > div {
     color: ${(props) => props.theme.colors.redLight};
     height: 6rem;
@@ -77,6 +81,10 @@ const Wrapper = styled.div`
     ${tableMediaQuery} {
       font-size: 1.8rem;
       font-weight: bold;
+    }
+
+    ${cellPhoneMediaQuery} {
+      justify-content: flex-start;
     }
 
     .homeIcon {
@@ -98,6 +106,10 @@ const Wrapper = styled.div`
       height: 4rem;
       fill: ${(props) => props.theme.colors.redLight};
       cursor: pointer;
+
+      ${tableMediaQuery} {
+        height: 5rem;
+      }
 
       &:hover {
         fill: ${(props) => props.theme.colors.redDark};

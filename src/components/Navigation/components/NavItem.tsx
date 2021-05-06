@@ -35,7 +35,7 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
   ${tableMediaQuery} {
     min-width: 50px;
     justify-content: flex-start;
-    padding: ${(props) => props.theme.padding.pageContent};
+    padding: 0 15px;
     max-width: 100%;
     width: 100%;
   }
