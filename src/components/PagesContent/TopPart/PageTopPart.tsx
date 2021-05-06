@@ -10,14 +10,23 @@ import { useAppContext } from "@src/context/context";
 import { useHistory } from "react-router";
 import { Page } from "@src/pages";
 import { handleEUClick, handlePolabiClick } from "@src/utils/links";
+import { Dispatch, SetStateAction } from "react";
 
-const PageTopPart = () => {
+type Props = {
+  toggleMenu: Dispatch<SetStateAction<boolean>>;
+};
+
+const PageTopPart = ({ toggleMenu }: Props) => {
   const history = useHistory();
   const { setLandingPageSeen } = useAppContext();
 
   const handleHomeIconClick = () => {
     setLandingPageSeen(false);
     history.push(Page.Home);
+  };
+
+  const handleMenuClick = () => {
+    toggleMenu((prevState) => !prevState);
   };
 
   return (
@@ -29,7 +38,7 @@ const PageTopPart = () => {
       </div>
       <div className="mid">
         <Home alt="domů" className="homeIcon" onClick={handleHomeIconClick} />
-        <Menu alt="menu" className="menuIcon" />
+        <Menu alt="menu" className="menuIcon" onClick={handleMenuClick} />
         Moštárna Červené Pečky
       </div>
       <div className="right">
@@ -53,6 +62,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px;
+  position: relative;
 
   ${tableMediaQuery} {
     padding: 0px 15px;
@@ -76,11 +86,12 @@ const Wrapper = styled.div`
     }
 
     ${cellPhoneMediaQuery} {
-      justify-content: flex-start;
+      justify-content: center;
     }
 
     .homeIcon {
       display: block;
+
       ${tableMediaQuery} {
         display: none;
       }
@@ -88,8 +99,16 @@ const Wrapper = styled.div`
 
     .menuIcon {
       display: none;
+
       ${tableMediaQuery} {
         display: block;
+      }
+
+      ${cellPhoneMediaQuery} {
+        position: absolute;
+        top: 25px;
+        left: 15px;
+        right: 0;
       }
     }
 

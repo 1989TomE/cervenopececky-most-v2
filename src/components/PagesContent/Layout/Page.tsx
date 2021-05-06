@@ -3,12 +3,11 @@ import homeBackgroundImage from "@root/assets/background.jpg";
 import PageTopPart from "@src/components/PagesContent/TopPart/PageTopPart";
 import Navigation from "@src/components/Navigation/MainNavigation";
 import { useState, useEffect } from "react";
-import Landing from "../LandingScreen/Landing";
 import { useAppContext } from "@src/context/context";
 import { useLocation } from "react-router";
 import { Page } from "@src/pages";
 import HomeNavigation from "@src/components/Navigation/HomeNavigation";
-import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
+import { tableMediaQuery } from "@src/styles/mediaQueries";
 
 type Props = {
   children?: React.ReactNode;
@@ -19,6 +18,7 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
   const location = useLocation();
   const { landingPageSeen, setLandingPageSeen } = useAppContext();
   const [mounted, setMounted] = useState(false);
+  const [menuOpened, setMenuOpened] = useState(false);
 
   const showLandingPage = !landingPageSeen && location.pathname === Page.Home;
 
@@ -43,8 +43,8 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
       {/* {showLandingPage && <Landing setLandingPageSeen={setLandingPageSeen} />} */}
 
       <div className="pageContainer">
-        <PageTopPart />
-        <Navigation />
+        <PageTopPart toggleMenu={setMenuOpened} />
+        <Navigation menuOpened={menuOpened} />
         <main className="contentContainer">{children}</main>
         {withSubNavigation && (
           <div>
