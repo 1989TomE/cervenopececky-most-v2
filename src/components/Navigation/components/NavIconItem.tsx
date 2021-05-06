@@ -107,8 +107,11 @@ export const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
     }
 
     .label {
-      margin-left: 10px;
       text-align: center;
+
+      ${tabletMediaQuery} {
+        margin-left: 10px;
+      }
     }
   }
 
