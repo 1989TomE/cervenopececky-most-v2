@@ -8,6 +8,7 @@ import { useLocation } from "react-router";
 import { Page } from "@src/pages";
 import HomeNavigation from "@src/components/Navigation/HomeNavigation";
 import { tabletMediaQuery } from "@src/styles/mediaQueries";
+import Landing from "../LandingScreen/Landing";
 
 type Props = {
   children?: React.ReactNode;
@@ -40,7 +41,7 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
 
   return (
     <Wrapper mounted={mounted} className="pageWrapper">
-      {/* {showLandingPage && <Landing setLandingPageSeen={setLandingPageSeen} />} */}
+      {showLandingPage && <Landing setLandingPageSeen={setLandingPageSeen} />}
 
       <div className="pageContainer">
         <PageTopPart toggleMenu={setMenuOpened} />
