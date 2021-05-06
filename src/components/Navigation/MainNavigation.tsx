@@ -28,6 +28,10 @@ const Navigation = () => {
 export default Navigation;
 
 const Nav = styled.nav`
+  ${tableMediaQuery} {
+    display: none;
+  }
+
   > ul {
     margin-top: 11rem;
     display: flex;

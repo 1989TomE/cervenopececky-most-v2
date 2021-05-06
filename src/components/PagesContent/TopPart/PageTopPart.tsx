@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { default as InstagramSvgIcon } from "@root/assets/instagram.svg";
 import { default as FacebookSvgIcon } from "@root/assets/facebook.svg";
 import { default as Home } from "@root/assets/home.svg";
+import { default as Menu } from "@root/assets/menu.svg";
 import polabi from "@root/assets/polabi.jpg";
 import eu from "@root/assets/eu.png";
 import cert from "@root/assets/pdf/cert.pdf";
@@ -26,6 +27,7 @@ const PageTopPart = () => {
       </div>
       <div className="mid">
         <Home alt="domů" className="homeIcon" />
+        <Menu alt="menu" className="menuIcon" />
         Moštárna Červené Pečky
       </div>
       <div className="right">
@@ -60,9 +62,29 @@ const Wrapper = styled.div`
 
   .mid {
     display: flex;
-    flex: 1;
+    flex: 3;
+
+    ${tableMediaQuery} {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
 
     .homeIcon {
+      display: block;
+      ${tableMediaQuery} {
+        display: none;
+      }
+    }
+
+    .menuIcon {
+      display: none;
+      ${tableMediaQuery} {
+        display: block;
+      }
+    }
+
+    .homeIcon,
+    .menuIcon {
       height: 4rem;
       fill: ${(props) => props.theme.colors.redLight};
       cursor: pointer;
@@ -75,8 +97,10 @@ const Wrapper = styled.div`
 
   .left,
   .right {
-    width: 25%;
-    ${tableMediaQuery} {
+    flex: 1;
+    justify-content: flex-start;
+
+    ${cellPhoneMediaQuery} {
       display: none;
     }
   }
@@ -86,7 +110,7 @@ const Wrapper = styled.div`
   }
 
   .facebook {
-    margin-left: -1.5rem; // compensation for svg padding
+    margin-left: -10px; // compensation for svg padding
     height: 4rem;
     fill: ${(props) => props.theme.colors.redDark};
   }
@@ -105,12 +129,7 @@ const Wrapper = styled.div`
     font-size: 1.3rem;
 
     ${tableMediaQuery} {
-      font-size: 1.2rem;
-    }
-
-    ${cellPhoneMediaQuery} {
-      font-size: 1rem;
-      text-align: center;
+      display: none;
     }
   }
 
