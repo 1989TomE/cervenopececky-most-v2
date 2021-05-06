@@ -1,6 +1,6 @@
 import { Column, ColumnsWrapper } from "@src/components/PagesContent/Layout";
 import { Header, Paragraph } from "@src/components/TextContent";
-import { tableMediaQuery } from "@src/styles/mediaQueries";
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 import StyledMap from "./StyledMap";
 

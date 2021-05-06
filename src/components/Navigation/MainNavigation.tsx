@@ -1,5 +1,8 @@
 import { mainPages } from "@src/pages/index";
-import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
+import {
+  cellPhoneMediaQuery,
+  tabletMediaQuery,
+} from "@src/styles/mediaQueries";
 import styled from "styled-components";
 import NavIconItem from "./components/NavIconItem";
 import NavImageItem from "./components/NavImageItem";
@@ -66,7 +69,7 @@ export default Navigation;
 const Nav = styled.nav<{ closed: boolean }>`
   min-height: 140px;
 
-  ${tableMediaQuery} {
+  ${tabletMediaQuery} {
     margin-bottom: 3rem;
   }
 
@@ -79,7 +82,7 @@ const Nav = styled.nav<{ closed: boolean }>`
     z-index: 1;
     transform: translateZ(0);
 
-    ${tableMediaQuery} {
+    ${tabletMediaQuery} {
       max-height: ${(props) => (props.closed ? "0px" : "280px")};
       overflow-y: hidden;
       transition: max-height 0.3s ease-in-out;

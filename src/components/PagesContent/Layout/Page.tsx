@@ -7,7 +7,7 @@ import { useAppContext } from "@src/context/context";
 import { useLocation } from "react-router";
 import { Page } from "@src/pages";
 import HomeNavigation from "@src/components/Navigation/HomeNavigation";
-import { tableMediaQuery } from "@src/styles/mediaQueries";
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
 
 type Props = {
   children?: React.ReactNode;
@@ -83,7 +83,7 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
     .contentContainer {
       opacity: ${(props) => (props.mounted ? 1 : 0)};
       transition: opacity 0.5s ease-in-out;
-      ${tableMediaQuery} {
+      ${tabletMediaQuery} {
         background-color: ${(props) => props.theme.colors.ocherLight};
       }
       padding: ${(props) => props.theme.padding.pageContent};

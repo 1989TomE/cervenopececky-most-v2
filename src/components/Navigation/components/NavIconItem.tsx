@@ -1,5 +1,8 @@
 import { PageProps } from "@src/pages/index";
-import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
+import {
+  cellPhoneMediaQuery,
+  tabletMediaQuery,
+} from "@src/styles/mediaQueries";
 import styled from "styled-components";
 import NavLink from "./NavLink";
 
@@ -46,12 +49,10 @@ export const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
     }
   }
 
-  ${tableMediaQuery} {
+  ${tabletMediaQuery} {
     min-width: 50px;
     justify-content: flex-start;
     padding: 0 15px;
-    max-width: 100%;
-    width: 100%;
     height: 50px;
   }
 
@@ -62,7 +63,7 @@ export const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
     justify-content: space-between;
     align-items: center;
 
-    ${tableMediaQuery} {
+    ${tabletMediaQuery} {
       flex-direction: row;
       justify-content: flex-start;
       flex: 1;
@@ -80,7 +81,7 @@ export const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
         fill: ${(props) => props.theme.colors.redLight};
         transition: 0.1s ease-in;
 
-        ${tableMediaQuery} {
+        ${tabletMediaQuery} {
           height: 5rem;
         }
       }

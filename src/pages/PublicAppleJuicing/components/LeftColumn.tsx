@@ -1,5 +1,8 @@
 import { Paragraph } from "@src/components/TextContent";
-import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
+import {
+  cellPhoneMediaQuery,
+  tabletMediaQuery,
+} from "@src/styles/mediaQueries";
 import styled from "styled-components";
 
 const Content = () => {
@@ -55,7 +58,7 @@ const Wrapper = styled.div`
     height: 180px;
     margin-bottom: 10px;
 
-    ${tableMediaQuery} {
+    ${tabletMediaQuery} {
       min-height: 120px;
       height: auto;
     }

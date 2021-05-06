@@ -2,7 +2,7 @@ import { Page } from "@src/pages/index";
 import {
   cellPhoneMediaQuery,
   isTouchable,
-  tableMediaQuery,
+  tabletMediaQuery,
 } from "@src/styles/mediaQueries";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -43,7 +43,7 @@ const Wrapper = styled(NavLink)<{ $hover: boolean }>`
   min-height: 280px;
   margin: 1px;
 
-  ${tableMediaQuery} {
+  ${tabletMediaQuery} {
     min-width: 280px;
   }
 

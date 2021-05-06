@@ -1,5 +1,5 @@
 import { homePages } from "@src/pages/index";
-import { tableMediaQuery } from "@src/styles/mediaQueries";
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 import NavIconItem from "./components/NavIconItem";
 
@@ -36,7 +36,7 @@ const Nav = styled.nav`
     padding-bottom: 1rem;
     background-color: ${(props) => props.theme.colors.ocherLight};
 
-    ${tableMediaQuery} {
+    ${tabletMediaQuery} {
       padding-top: 0rem;
     }
   }

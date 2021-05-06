@@ -5,7 +5,10 @@ import { default as Home } from "@root/assets/home.svg";
 import { default as Menu } from "@root/assets/menu.svg";
 import polabi from "@root/assets/polabi.jpg";
 import eu from "@root/assets/eu.png";
-import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
+import {
+  cellPhoneMediaQuery,
+  tabletMediaQuery,
+} from "@src/styles/mediaQueries";
 import { useAppContext } from "@src/context/context";
 import { useHistory } from "react-router";
 import { Page } from "@src/pages";
@@ -64,7 +67,7 @@ const Wrapper = styled.div`
   padding: 0px 20px;
   position: relative;
 
-  ${tableMediaQuery} {
+  ${tabletMediaQuery} {
     padding: 0px 15px;
   }
 
@@ -80,7 +83,7 @@ const Wrapper = styled.div`
     display: flex;
     flex: 3;
 
-    ${tableMediaQuery} {
+    ${tabletMediaQuery} {
       font-size: 1.8rem;
       font-weight: bold;
     }
@@ -92,7 +95,7 @@ const Wrapper = styled.div`
     .homeIcon {
       display: block;
 
-      ${tableMediaQuery} {
+      ${tabletMediaQuery} {
         display: none;
       }
     }
@@ -100,7 +103,7 @@ const Wrapper = styled.div`
     .menuIcon {
       display: none;
 
-      ${tableMediaQuery} {
+      ${tabletMediaQuery} {
         display: block;
       }
 
@@ -118,7 +121,7 @@ const Wrapper = styled.div`
       fill: ${(props) => props.theme.colors.redLight};
       cursor: pointer;
 
-      ${tableMediaQuery} {
+      ${tabletMediaQuery} {
         height: 5rem;
       }
 
@@ -134,7 +137,7 @@ const Wrapper = styled.div`
     min-width: 190px;
     justify-content: flex-start;
 
-    ${tableMediaQuery} {
+    ${tabletMediaQuery} {
       min-width: auto;
     }
 
@@ -157,7 +160,7 @@ const Wrapper = styled.div`
     height: 4rem;
     fill: ${(props) => props.theme.colors.redDark};
 
-    ${tableMediaQuery} {
+    ${tabletMediaQuery} {
       height: 4rem;
     }
   }
@@ -166,7 +169,7 @@ const Wrapper = styled.div`
     margin-left: 1.5rem;
     font-size: 1.3rem;
 
-    ${tableMediaQuery} {
+    ${tabletMediaQuery} {
       display: none;
     }
   }
@@ -176,7 +179,7 @@ const Wrapper = styled.div`
     margin-right: 2rem;
     cursor: pointer;
 
-    ${tableMediaQuery} {
+    ${tabletMediaQuery} {
       height: 2rem;
     }
   }
@@ -185,7 +188,7 @@ const Wrapper = styled.div`
     height: 2.5rem;
     cursor: pointer;
 
-    ${tableMediaQuery} {
+    ${tabletMediaQuery} {
       height: 2rem;
     }
   }
