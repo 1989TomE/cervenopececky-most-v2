@@ -8,14 +8,24 @@ import eu from "@root/assets/eu.png";
 import cert from "@root/assets/pdf/cert.pdf";
 import euMostarna from "@root/assets/eu_mostarna.jpg";
 import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
+import { useAppContext } from "@src/context/context";
+import { useHistory } from "react-router";
+import { Page } from "@src/pages";
 
 const PageTopPart = () => {
+  const history = useHistory();
+  const { setLandingPageSeen } = useAppContext();
   const handleEUClick = () => {
     window.open(euMostarna, "_blank");
   };
 
   const handlePolabiClick = () => {
     window.open(cert, "_blank");
+  };
+
+  const handleHomeIconClick = () => {
+    setLandingPageSeen(false);
+    history.push(Page.Home);
   };
 
   return (
@@ -26,7 +36,7 @@ const PageTopPart = () => {
         <div className="phoneNumber">+420 604 402 763</div>
       </div>
       <div className="mid">
-        <Home alt="domů" className="homeIcon" />
+        <Home alt="domů" className="homeIcon" onClick={handleHomeIconClick} />
         <Menu alt="menu" className="menuIcon" />
         Moštárna Červené Pečky
       </div>
