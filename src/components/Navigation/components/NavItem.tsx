@@ -3,19 +3,33 @@ import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 import NavLink from "./NavLink";
 
-type Props = PageProps & { showLabel?: boolean; horizontalSpacing?: boolean };
+type Props = PageProps & {
+  showLabel?: boolean;
+  horizontalSpacing?: boolean;
+  image?: React.ImgHTMLAttributes<HTMLImageElement>["src"];
+  imageStyle?: React.HTMLAttributes<HTMLImageElement>["style"];
+  className?: React.HTMLAttributes<HTMLImageElement>["className"];
+};
 
 const NavItem = ({
   route,
   label,
   icon: SvgIcon,
+  image,
+  imageStyle,
   showLabel,
   horizontalSpacing = true,
+  className,
 }: Props) => {
   return (
-    <Wrapper horizontalSpacing={horizontalSpacing}>
+    <Wrapper horizontalSpacing={horizontalSpacing} className={className}>
       <NavLink to={route}>
-        <SvgIcon className="icon" />
+        <div className="iconHolder">
+          {SvgIcon && <SvgIcon className="icon" />}
+          {image && (
+            <img src={image} alt={label} className="icon" style={imageStyle} />
+          )}
+        </div>
         {showLabel && <div className="label">{label}</div>}
       </NavLink>
     </Wrapper>
@@ -30,7 +44,14 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
   max-width: ${(props) => (props.horizontalSpacing ? "150px" : "80px")};
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+
+  &.image {
+    display: none;
+    ${tableMediaQuery} {
+      display: flex;
+    }
+  }
 
   ${tableMediaQuery} {
     min-width: 50px;
@@ -38,6 +59,7 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
     padding: 0 15px;
     max-width: 100%;
     width: 100%;
+    height: 50px;
   }
 
   a {
@@ -51,15 +73,23 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
       flex-direction: row;
       justify-content: flex-start;
       flex: 1;
+      height: 50px;
     }
 
-    > svg {
-      height: ${(props) => props.theme.navIcons.size};
-      fill: ${(props) => props.theme.colors.redLight};
-      transition: 0.1s ease-in;
+    .iconHolder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
 
-      ${tableMediaQuery} {
-        height: 5rem;
+      > svg {
+        height: ${(props) => props.theme.navIcons.size};
+        fill: ${(props) => props.theme.colors.redLight};
+        transition: 0.1s ease-in;
+
+        ${tableMediaQuery} {
+          height: 5rem;
+        }
       }
     }
 

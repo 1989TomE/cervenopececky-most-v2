@@ -30,7 +30,7 @@ export enum Page {
 export type PageProps = {
   route: Page;
   label: string;
-  icon: React.ElementType;
+  icon?: React.ElementType;
 };
 
 export const mainPages: PageProps[] = [

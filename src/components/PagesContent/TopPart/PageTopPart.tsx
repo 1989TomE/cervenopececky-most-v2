@@ -5,23 +5,15 @@ import { default as Home } from "@root/assets/home.svg";
 import { default as Menu } from "@root/assets/menu.svg";
 import polabi from "@root/assets/polabi.jpg";
 import eu from "@root/assets/eu.png";
-import cert from "@root/assets/pdf/cert.pdf";
-import euMostarna from "@root/assets/eu_mostarna.jpg";
 import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
 import { useAppContext } from "@src/context/context";
 import { useHistory } from "react-router";
 import { Page } from "@src/pages";
+import { handleEUClick, handlePolabiClick } from "@src/utils/links";
 
 const PageTopPart = () => {
   const history = useHistory();
   const { setLandingPageSeen } = useAppContext();
-  const handleEUClick = () => {
-    window.open(euMostarna, "_blank");
-  };
-
-  const handlePolabiClick = () => {
-    window.open(cert, "_blank");
-  };
 
   const handleHomeIconClick = () => {
     setLandingPageSeen(false);
