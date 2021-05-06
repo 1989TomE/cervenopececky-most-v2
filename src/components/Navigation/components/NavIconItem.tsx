@@ -9,6 +9,7 @@ import NavLink from "./NavLink";
 type Props = PageProps & {
   showLabel?: boolean;
   horizontalSpacing?: boolean;
+  shrink?: boolean;
 };
 
 const NavIconItem = ({
@@ -16,10 +17,11 @@ const NavIconItem = ({
   label,
   icon: SvgIcon,
   showLabel,
+  shrink,
   horizontalSpacing = true,
 }: Props) => {
   return (
-    <Wrapper horizontalSpacing={horizontalSpacing}>
+    <Wrapper horizontalSpacing={horizontalSpacing} shrink={shrink}>
       {SvgIcon && (
         <NavLink to={route}>
           <div className="iconHolder">
@@ -34,7 +36,10 @@ const NavIconItem = ({
 
 export default NavIconItem;
 
-export const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
+export const Wrapper = styled.li<{
+  horizontalSpacing: boolean;
+  shrink?: boolean;
+}>`
   flex: 1;
   min-width: ${(props) => (props.horizontalSpacing ? "120px" : "50px")};
   max-width: ${(props) => (props.horizontalSpacing ? "150px" : "80px")};
@@ -53,7 +58,7 @@ export const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
     min-width: 50px;
     justify-content: flex-start;
     padding: 0 15px;
-    max-width: 100%;
+    max-width: ${(props) => (props.shrink ? undefined : "100%")};
     width: 100%;
     height: 50px;
   }

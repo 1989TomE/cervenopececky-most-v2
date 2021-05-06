@@ -17,6 +17,7 @@ const HomeNavigation = () => {
               label={label}
               icon={icon}
               horizontalSpacing={false}
+              shrink
             />
           );
         })}
