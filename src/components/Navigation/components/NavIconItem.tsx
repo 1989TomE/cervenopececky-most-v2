@@ -53,6 +53,8 @@ export const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
     min-width: 50px;
     justify-content: flex-start;
     padding: 0 15px;
+    max-width: 100%;
+    width: 100%;
     height: 50px;
   }
 
