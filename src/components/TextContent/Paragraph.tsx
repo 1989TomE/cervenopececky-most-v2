@@ -5,7 +5,6 @@ type Props = {
   children: React.ReactNode;
   primaryColor?: boolean;
   bold?: boolean;
-  paddingTop?: string;
   smallFontSize?: boolean;
 };
 
@@ -24,6 +23,6 @@ const Wrapper = styled.div<StyleProps>`
       : props.theme.fontSize.normal};
   color: ${(props) =>
     props.primaryColor ? props.theme.colors.redLight : undefined};
-  padding-top: ${(props) => (props.paddingTop ? props.paddingTop : "1rem")};
   text-align: justify;
+  padding-bottom: 0.5rem;
 `;

@@ -7,15 +7,13 @@ import {
 import PageImage from "@src/components/PagesContent/PortraitImage/PageImage";
 import TextContent from "./components/TextContent";
 import products from "@root/assets/bottlesWidescreen.jpg";
-import ContentHeader from "@src/components/PagesContent/Layout/ContentHeader";
 
 const Making = () => {
   return (
     <PageWrapper>
-      <ContentWrapper>
+      <ContentWrapper withPageHeader={true}>
         <ColumnsWrapper>
           <Column isOnLeft>
-            <ContentHeader />
             <TextContent />
           </Column>
 

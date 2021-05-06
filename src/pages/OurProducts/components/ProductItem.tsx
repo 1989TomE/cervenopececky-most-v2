@@ -19,13 +19,8 @@ const ProductItem = (props: ProductItemProps) => {
       {prices.map((price) => (
         <Price key={price} value={price} />
       ))}
-      {descriptions.map((description, index) => (
-        <Paragraph
-          key={description}
-          paddingTop={index === 0 ? "0.75rem" : "0rem"}
-        >
-          {description}
-        </Paragraph>
+      {descriptions.map((description) => (
+        <Paragraph key={description}>{description}</Paragraph>
       ))}
     </Wrapper>
   );

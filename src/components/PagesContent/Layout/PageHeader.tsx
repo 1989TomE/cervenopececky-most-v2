@@ -2,7 +2,7 @@ import { Header } from "@src/components/TextContent";
 import { homePages, mainPages } from "@src/pages";
 import { useLocation } from "react-router";
 
-const ContentHeader = () => {
+const PageHeader = () => {
   const location = useLocation();
 
   const header =
@@ -13,4 +13,4 @@ const ContentHeader = () => {
   return <Header title={header} />;
 };
 
-export default ContentHeader;
+export default PageHeader;
