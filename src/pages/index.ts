@@ -1,13 +1,13 @@
-import { default as HomeIcon } from "@root/assets/home.svg";
-import { default as ShoppingCart } from "@root/assets/shoppingCart.svg";
-import { default as CellPhone } from "@root/assets/cellPhone.svg";
-import { default as FruitPress } from "@root/assets/fruitPress.svg";
-import { default as TwoBottles } from "@root/assets/twoBottles.svg";
+import { default as aboutIcon } from "@root/assets/about.svg";
+import { default as shoppingCart } from "@root/assets/shoppingCart.svg";
+import { default as cellPhone } from "@root/assets/cellPhone.svg";
+import { default as fruitPress } from "@root/assets/fruitPress.svg";
+import { default as twoBottles } from "@root/assets/twoBottles.svg";
 
-import { default as Leaf } from "@root/assets/leaf.svg";
-import { default as AppleAndBottle } from "@root/assets/appleAndBottle.svg";
-import { default as Tap } from "@root/assets/tap.svg";
-import { default as WineGlass } from "@root/assets/wineGlass.svg";
+import { default as leaf } from "@root/assets/leaf.svg";
+import { default as appleAndBottle } from "@root/assets/appleAndBottle.svg";
+import { default as tap } from "@root/assets/tap.svg";
+import { default as wineGlass } from "@root/assets/wineGlass.svg";
 
 import workPlaceWidescreen from "@root/assets/mostarnaWidescreen.jpg";
 import cuteLady from "@root/assets/cuteLady.jpg";
@@ -34,19 +34,19 @@ export type PageProps = {
 };
 
 export const mainPages: PageProps[] = [
-  { route: Page.Home, label: "O nás", icon: HomeIcon },
+  { route: Page.Home, label: "O nás", icon: aboutIcon },
   {
     route: Page.OurProducts,
     label: "Naše produkty",
-    icon: TwoBottles,
+    icon: twoBottles,
   },
-  { route: Page.WhereToBuy, label: "Kde zakoupit", icon: ShoppingCart },
+  { route: Page.WhereToBuy, label: "Kde zakoupit", icon: shoppingCart },
   {
     route: Page.WantToFruitPress,
     label: "Chci zmoštovat",
-    icon: FruitPress,
+    icon: fruitPress,
   },
-  { route: Page.Contact, label: "Kontakt", icon: CellPhone },
+  { route: Page.Contact, label: "Kontakt", icon: cellPhone },
 ];
 
 export type HomePageProps = PageProps & {
@@ -57,25 +57,25 @@ export const homePages: HomePageProps[] = [
   {
     route: Page.WorkPlace,
     label: "Moštárna",
-    icon: Tap,
+    icon: tap,
     imageSource: workPlaceWidescreen,
   },
   {
     route: Page.FruitOrchards,
     label: "Ovocné sady",
-    icon: Leaf,
+    icon: leaf,
     imageSource: cuteLady,
   },
   {
     route: Page.Making,
     label: "Vyrábíme",
-    icon: AppleAndBottle,
+    icon: appleAndBottle,
     imageSource: bottlesWidescreen,
   },
   {
     route: Page.PublicAppleJuicing,
     label: "Moštování pro veřejnost",
-    icon: WineGlass,
+    icon: wineGlass,
     imageSource: publicAppleJuicing,
   },
 ];
