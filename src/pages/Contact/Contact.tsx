@@ -10,7 +10,7 @@ import {
 const Contact = () => {
   return (
     <PageWrapper>
-      <ContentWrapper>
+      <ContentWrapper withPageHeader={false}>
         <ColumnsWrapper>
           <Column isOnLeft>
             <LeftColumn />

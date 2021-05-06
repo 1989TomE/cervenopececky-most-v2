@@ -6,6 +6,7 @@ export const theme = {
     redDark: "rgb(228, 3, 46)",
     redLight: "rgb(255, 77, 73)",
     ocherLight: "rgb(255, 247, 234)",
+    ocherNavBar: "rgb(255, 247, 229)",
     ocher: "rgb(255, 222, 148)",
     white: "rgb(255,255,255)",
   },
@@ -13,5 +14,11 @@ export const theme = {
     header: "2.5rem",
     normal: "1.3rem",
     small: "1.0rem",
+  },
+  navIcons: {
+    size: "6rem",
+  },
+  padding: {
+    pageContent: "0 20px",
   },
 };

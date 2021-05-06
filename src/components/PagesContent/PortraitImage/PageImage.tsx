@@ -1,4 +1,4 @@
-import { tableMediaQuery } from "@src/styles/mediaQueries";
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 
 type Props = {
@@ -6,17 +6,23 @@ type Props = {
 };
 
 const PageImage = ({ src }: Props) => {
-  return <Image src={src} />;
+  return (
+    <ImageContainer>
+      <img src={src} />
+    </ImageContainer>
+  );
 };
 
 export default PageImage;
 
-const Image = styled.img`
+const ImageContainer = styled.div`
+  padding: 3px 0px;
   width: 100%;
-  height: auto;
-  margin-top: 6.5rem;
+  height: 100%;
 
-  ${tableMediaQuery} {
-    margin-top: 1rem;
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;

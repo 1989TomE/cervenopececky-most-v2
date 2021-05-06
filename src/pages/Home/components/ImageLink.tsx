@@ -2,7 +2,7 @@ import { Page } from "@src/pages/index";
 import {
   cellPhoneMediaQuery,
   isTouchable,
-  tableMediaQuery,
+  tabletMediaQuery,
 } from "@src/styles/mediaQueries";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -11,7 +11,7 @@ import styled from "styled-components";
 type Props = {
   to: Page;
   imageSource: React.ImgHTMLAttributes<HTMLImageElement>["src"];
-  icon: React.ElementType;
+  icon?: React.ElementType;
   label: string;
 };
 
@@ -29,9 +29,7 @@ const ImageLink = ({ to, imageSource, icon: SvgIcon, label }: Props) => {
         <img src={imageSource} alt={label} />
       </div>
       <div className="text">{label}</div>
-      <div className="svgContainer">
-        <SvgIcon />
-      </div>
+      <div className="svgContainer">{SvgIcon && <SvgIcon />}</div>
     </Wrapper>
   );
 };
@@ -45,7 +43,7 @@ const Wrapper = styled(NavLink)<{ $hover: boolean }>`
   min-height: 280px;
   margin: 1px;
 
-  ${tableMediaQuery} {
+  ${tabletMediaQuery} {
     min-width: 280px;
   }
 

@@ -1,4 +1,4 @@
-import { tableMediaQuery } from "@src/styles/mediaQueries";
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 
 type Props = {
@@ -22,7 +22,7 @@ const Wrapper = styled.div<Props>`
   margin-left: ${(props) => (props.isOnRight ? "2rem" : 0)};
   margin-right: ${(props) => (props.isOnLeft ? "2rem" : 0)};
 
-  ${tableMediaQuery} {
+  ${tabletMediaQuery} {
     margin-bottom: 3rem;
     margin-left: 0rem;
     margin-right: 0rem;

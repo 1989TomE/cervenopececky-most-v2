@@ -1,11 +1,17 @@
 import { PageProps } from "@src/pages/index";
-import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
+import {
+  cellPhoneMediaQuery,
+  tabletMediaQuery,
+} from "@src/styles/mediaQueries";
 import styled from "styled-components";
 import NavLink from "./NavLink";
 
-type Props = PageProps & { showLabel?: boolean; horizontalSpacing?: boolean };
+type Props = PageProps & {
+  showLabel?: boolean;
+  horizontalSpacing?: boolean;
+};
 
-const NavItem = ({
+const NavIconItem = ({
   route,
   label,
   icon: SvgIcon,
@@ -14,26 +20,42 @@ const NavItem = ({
 }: Props) => {
   return (
     <Wrapper horizontalSpacing={horizontalSpacing}>
-      <NavLink to={route}>
-        <SvgIcon className="icon" />
-        {showLabel && <div className="label">{label}</div>}
-      </NavLink>
+      {SvgIcon && (
+        <NavLink to={route}>
+          <div className="iconHolder">
+            {SvgIcon && <SvgIcon className="icon" />}
+          </div>
+          {showLabel && <div className="label">{label}</div>}
+        </NavLink>
+      )}
     </Wrapper>
   );
 };
 
-export default NavItem;
+export default NavIconItem;
 
-const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
+export const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
   flex: 1;
   min-width: ${(props) => (props.horizontalSpacing ? "120px" : "50px")};
   max-width: ${(props) => (props.horizontalSpacing ? "150px" : "80px")};
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 
-  ${tableMediaQuery} {
+  &.image {
+    display: none;
+    ${cellPhoneMediaQuery} {
+      display: flex;
+    }
+  }
+
+  ${tabletMediaQuery} {
     min-width: 50px;
+    justify-content: flex-start;
+    padding: 0 15px;
+    max-width: 100%;
+    width: 100%;
+    height: 50px;
   }
 
   a {
@@ -43,13 +65,27 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
     justify-content: space-between;
     align-items: center;
 
-    > svg {
-      height: 6rem;
-      fill: ${(props) => props.theme.colors.redLight};
-      transition: 0.1s ease-in;
+    ${tabletMediaQuery} {
+      flex-direction: row;
+      justify-content: flex-start;
+      flex: 1;
+      height: 50px;
+    }
 
-      ${tableMediaQuery} {
-        height: 5rem;
+    .iconHolder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+
+      > svg {
+        height: ${(props) => props.theme.navIcons.size};
+        fill: ${(props) => props.theme.colors.redLight};
+        transition: 0.1s ease-in;
+
+        ${tabletMediaQuery} {
+          height: 5rem;
+        }
       }
     }
 
@@ -59,14 +95,6 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
       font-size: ${(props) => props.theme.fontSize.normal};
       font-weight: 700;
       transition: 0.1s ease-in;
-
-      ${tableMediaQuery} {
-        font-size: ${(props) => props.theme.fontSize.small};
-      }
-
-      ${cellPhoneMediaQuery} {
-        font-size: 0.75rem;
-      }
     }
 
     &:hover {
@@ -79,6 +107,7 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
     }
 
     .label {
+      margin-left: 10px;
       text-align: center;
     }
   }

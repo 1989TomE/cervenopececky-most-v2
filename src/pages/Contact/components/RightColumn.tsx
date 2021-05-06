@@ -4,7 +4,7 @@ import StyledMap from "./StyledMap";
 
 const Content = () => {
   return (
-    <Widget>
+    <Widget height={"175px"}>
       <Header primary title="FAKTURAČNÍ ADRESA" marginTop="0rem" />
       <Paragraph bold>Tomáš Adamec</Paragraph>
       <Paragraph>IČO: 06215718</Paragraph>

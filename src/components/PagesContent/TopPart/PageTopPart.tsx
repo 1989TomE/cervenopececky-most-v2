@@ -1,29 +1,50 @@
 import styled from "styled-components";
 import { default as InstagramSvgIcon } from "@root/assets/instagram.svg";
 import { default as FacebookSvgIcon } from "@root/assets/facebook.svg";
+import { default as Home } from "@root/assets/home.svg";
+import { default as Menu } from "@root/assets/menu.svg";
 import polabi from "@root/assets/polabi.jpg";
 import eu from "@root/assets/eu.png";
-import cert from "@root/assets/pdf/cert.pdf";
-import euMostarna from "@root/assets/eu_mostarna.jpg";
-import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
+import {
+  cellPhoneMediaQuery,
+  tabletMediaQuery,
+} from "@src/styles/mediaQueries";
+import { useAppContext } from "@src/context/context";
+import { useHistory } from "react-router";
+import { Page } from "@src/pages";
+import { handleEUClick, handlePolabiClick } from "@src/utils/links";
+import { Dispatch, SetStateAction } from "react";
 
-const PageTopPart = () => {
-  const handleEUClick = () => {
-    window.open(euMostarna, "_blank");
+type Props = {
+  toggleMenu: Dispatch<SetStateAction<boolean>>;
+};
+
+const PageTopPart = ({ toggleMenu }: Props) => {
+  const history = useHistory();
+  const { setLandingPageSeen } = useAppContext();
+
+  const handleHomeIconClick = () => {
+    setLandingPageSeen(false);
+    history.push(Page.Home);
   };
 
-  const handlePolabiClick = () => {
-    window.open(cert, "_blank");
+  const handleMenuClick = () => {
+    toggleMenu((prevState) => !prevState);
   };
 
   return (
     <Wrapper>
-      <div>
+      <div className="left">
         <FacebookSvgIcon alt="facebook" className="facebook" />
         <InstagramSvgIcon alt="instagram" className="instagram" />
         <div className="phoneNumber">+420 604 402 763</div>
       </div>
-      <div>
+      <div className="mid">
+        <Home alt="domů" className="homeIcon" onClick={handleHomeIconClick} />
+        <Menu alt="menu" className="menuIcon" onClick={handleMenuClick} />
+        Moštárna Červené Pečky
+      </div>
+      <div className="right">
         <img
           src={polabi}
           alt="polabi"
@@ -44,6 +65,11 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px;
+  position: relative;
+
+  ${tabletMediaQuery} {
+    padding: 0px 15px;
+  }
 
   > div {
     color: ${(props) => props.theme.colors.redLight};
@@ -53,21 +79,88 @@ const Wrapper = styled.div`
     display: flex;
   }
 
+  .mid {
+    display: flex;
+    flex: 3;
+
+    ${tabletMediaQuery} {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    ${cellPhoneMediaQuery} {
+      justify-content: center;
+    }
+
+    .homeIcon {
+      display: block;
+
+      ${tabletMediaQuery} {
+        display: none;
+      }
+    }
+
+    .menuIcon {
+      display: none;
+
+      ${tabletMediaQuery} {
+        display: block;
+      }
+
+      ${cellPhoneMediaQuery} {
+        position: absolute;
+        top: 25px;
+        left: 15px;
+        right: 0;
+      }
+    }
+
+    .homeIcon,
+    .menuIcon {
+      height: 4rem;
+      fill: ${(props) => props.theme.colors.redLight};
+      cursor: pointer;
+
+      ${tabletMediaQuery} {
+        height: 5rem;
+      }
+
+      &:hover {
+        fill: ${(props) => props.theme.colors.redDark};
+      }
+    }
+  }
+
+  .left,
+  .right {
+    flex: 1;
+    min-width: 190px;
+    justify-content: flex-start;
+
+    ${tabletMediaQuery} {
+      min-width: auto;
+    }
+
+    ${cellPhoneMediaQuery} {
+      display: none;
+    }
+  }
+
+  .right {
+    justify-content: flex-end;
+  }
+
   .facebook {
-    margin-left: -1.5rem; // compensation for svg padding
+    margin-left: -10px; // compensation for svg padding
     height: 4rem;
     fill: ${(props) => props.theme.colors.redDark};
-
-    ${tableMediaQuery} {
-      height: 4rem;
-    }
   }
 
   .instagram {
     height: 4rem;
     fill: ${(props) => props.theme.colors.redDark};
 
-    ${tableMediaQuery} {
+    ${tabletMediaQuery} {
       height: 4rem;
     }
   }
@@ -76,13 +169,8 @@ const Wrapper = styled.div`
     margin-left: 1.5rem;
     font-size: 1.3rem;
 
-    ${tableMediaQuery} {
-      font-size: 1.2rem;
-    }
-
-    ${cellPhoneMediaQuery} {
-      font-size: 1rem;
-      text-align: center;
+    ${tabletMediaQuery} {
+      display: none;
     }
   }
 
@@ -91,7 +179,7 @@ const Wrapper = styled.div`
     margin-right: 2rem;
     cursor: pointer;
 
-    ${tableMediaQuery} {
+    ${tabletMediaQuery} {
       height: 2rem;
     }
   }
@@ -100,7 +188,7 @@ const Wrapper = styled.div`
     height: 2.5rem;
     cursor: pointer;
 
-    ${tableMediaQuery} {
+    ${tabletMediaQuery} {
       height: 2rem;
     }
   }

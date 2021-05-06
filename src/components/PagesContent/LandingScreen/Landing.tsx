@@ -3,7 +3,7 @@ import styled from "styled-components";
 import landingImage from "@root/assets/landing.jpg";
 import landingImageFullHd from "@root/assets/landingFullHd.jpg";
 import whiteLogo from "@root/assets/logo_white.png";
-import { tableMediaQuery } from "@src/styles/mediaQueries";
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
 
 type Props = {
   setLandingPageSeen: Dispatch<SetStateAction<boolean>>;
@@ -134,7 +134,7 @@ const Wrapper = styled.div<StyleProps>`
       opacity: ${(props) => (props.$startAnimation ? 1 : 0)};
       cursor: pointer;
 
-      ${tableMediaQuery} {
+      ${tabletMediaQuery} {
         height: auto;
         width: 75%;
       }

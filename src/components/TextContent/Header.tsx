@@ -19,5 +19,6 @@ const Wrapper = styled.h1<StyleProps>`
   font-size: ${(props) => props.theme.fontSize.header};
   color: ${(props) =>
     props.primary ? props.theme.colors.redLight : undefined};
-  margin-top: ${(props) => props.marginTop || "2rem"};
+  height: 40px;
+  margin-top: ${(props) => props.marginTop ?? undefined};
 `;

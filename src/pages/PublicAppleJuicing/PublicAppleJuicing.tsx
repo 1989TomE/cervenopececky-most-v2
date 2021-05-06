@@ -6,15 +6,13 @@ import {
   Column,
   PageWrapper,
 } from "@src/components/PagesContent/Layout";
-import ContentHeader from "@src/components/PagesContent/Layout/ContentHeader";
 
 const PublicAppleJuicing = () => {
   return (
     <PageWrapper>
-      <ContentWrapper>
+      <ContentWrapper withPageHeader>
         <ColumnsWrapper>
           <Column isOnLeft>
-            <ContentHeader />
             <LeftColumn />
           </Column>
 

@@ -21,7 +21,7 @@ const Wrapper = styled.div<StyleProps>`
   align-items: center;
   flex-direction: column;
   height: ${(props) => props.height ?? undefined};
-  margin-top: ${(props) => props.marginTop ?? "1rem"};
+  margin-top: ${(props) => props.marginTop ?? undefined};
   margin-bottom: ${(props) => props.marginBottom ?? undefined};
 `;
 

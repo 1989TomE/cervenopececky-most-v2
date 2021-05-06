@@ -3,12 +3,12 @@ import homeBackgroundImage from "@root/assets/background.jpg";
 import PageTopPart from "@src/components/PagesContent/TopPart/PageTopPart";
 import Navigation from "@src/components/Navigation/MainNavigation";
 import { useState, useEffect } from "react";
-import Landing from "../LandingScreen/Landing";
 import { useAppContext } from "@src/context/context";
 import { useLocation } from "react-router";
 import { Page } from "@src/pages";
 import HomeNavigation from "@src/components/Navigation/HomeNavigation";
-import { cellPhoneMediaQuery, tableMediaQuery } from "@src/styles/mediaQueries";
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
+import Landing from "../LandingScreen/Landing";
 
 type Props = {
   children?: React.ReactNode;
@@ -19,6 +19,7 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
   const location = useLocation();
   const { landingPageSeen, setLandingPageSeen } = useAppContext();
   const [mounted, setMounted] = useState(false);
+  const [menuOpened, setMenuOpened] = useState(false);
 
   const showLandingPage = !landingPageSeen && location.pathname === Page.Home;
 
@@ -43,8 +44,8 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
       {showLandingPage && <Landing setLandingPageSeen={setLandingPageSeen} />}
 
       <div className="pageContainer">
-        <PageTopPart />
-        <Navigation />
+        <PageTopPart toggleMenu={setMenuOpened} />
+        <Navigation menuOpened={menuOpened} />
         <main className="contentContainer">{children}</main>
         {withSubNavigation && (
           <div>
@@ -67,7 +68,7 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
 export default PageWrapper;
 
 export const Wrapper = styled.div<{ mounted: boolean }>`
-  height: 1200px;
+  height: 1500px;
   max-width: 2560px;
   background-image: url(${homeBackgroundImage});
   background-repeat: no-repeat;
@@ -83,10 +84,10 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
     .contentContainer {
       opacity: ${(props) => (props.mounted ? 1 : 0)};
       transition: opacity 0.5s ease-in-out;
-      ${tableMediaQuery} {
+      ${tabletMediaQuery} {
         background-color: ${(props) => props.theme.colors.ocherLight};
       }
-      padding: 0 20px;
+      padding: ${(props) => props.theme.padding.pageContent};
       min-height: 450px;
     }
 

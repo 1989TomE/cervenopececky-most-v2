@@ -1,7 +1,7 @@
 import { homePages } from "@src/pages/index";
-import { tableMediaQuery } from "@src/styles/mediaQueries";
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
-import NavItem from "./components/NavItem";
+import NavIconItem from "./components/NavIconItem";
 
 const HomeNavigation = () => {
   return (
@@ -11,7 +11,7 @@ const HomeNavigation = () => {
           const { route, icon, label } = page;
 
           return (
-            <NavItem
+            <NavIconItem
               key={label}
               route={route}
               label={label}
@@ -36,7 +36,7 @@ const Nav = styled.nav`
     padding-bottom: 1rem;
     background-color: ${(props) => props.theme.colors.ocherLight};
 
-    ${tableMediaQuery} {
+    ${tabletMediaQuery} {
       padding-top: 0rem;
     }
   }

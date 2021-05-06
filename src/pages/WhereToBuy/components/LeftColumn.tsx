@@ -1,6 +1,6 @@
 import { Column, ColumnsWrapper } from "@src/components/PagesContent/Layout";
 import { Header, Paragraph } from "@src/components/TextContent";
-import { tableMediaQuery } from "@src/styles/mediaQueries";
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 import StyledMap from "./StyledMap";
 
@@ -9,21 +9,21 @@ const Content = () => {
     <Wrapper>
       <Header title="Čerstvý mošt / moštárna" />
       <Paragraph bold>Amálka 72, Červené Pečky</Paragraph>
-      <Paragraph paddingTop="0.5rem">
+      <Paragraph>
         Na prodejně lze do vyprodání zásob zakoupit jablka, sušené ovoce,
         čerstvý i pasterizovaný mošt.
       </Paragraph>
 
       <div className="openingWrapper">
         <Column>
-          <Paragraph paddingTop="3rem" bold primaryColor>
+          <Paragraph bold primaryColor>
             říjen – listopad
           </Paragraph>
           <Paragraph bold>sobota 9–12 hod.</Paragraph>
         </Column>
 
         <Column>
-          <Paragraph paddingTop="3rem" bold primaryColor>
+          <Paragraph bold primaryColor>
             březen – květen
           </Paragraph>
           <Paragraph bold>středa 16–18 hod.</Paragraph>
@@ -42,8 +42,9 @@ const Content = () => {
 
 export default Content;
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   > .openingWrapper {
     display: flex;
+    margin-top: 25px;
   }
 `;
