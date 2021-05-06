@@ -28,10 +28,6 @@ const Navigation = () => {
 export default Navigation;
 
 const Nav = styled.nav`
-  ${tableMediaQuery} {
-    display: none;
-  }
-
   > ul {
     margin-top: 11rem;
     display: flex;
@@ -41,7 +37,8 @@ const Nav = styled.nav`
     margin-bottom: 1rem;
 
     ${tableMediaQuery} {
-      min-width: 50px;
+      flex-direction: column;
+      background-color: ${(props) => props.theme.colors.ocherNavBar};
     }
   }
 `;

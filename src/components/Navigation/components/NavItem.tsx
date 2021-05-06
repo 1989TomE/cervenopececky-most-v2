@@ -34,6 +34,10 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
 
   ${tableMediaQuery} {
     min-width: 50px;
+    justify-content: flex-start;
+    padding: ${(props) => props.theme.padding.pageContent};
+    max-width: 100%;
+    width: 100%;
   }
 
   a {
@@ -42,6 +46,12 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    ${tableMediaQuery} {
+      flex-direction: row;
+      justify-content: flex-start;
+      flex: 1;
+    }
 
     > svg {
       height: ${(props) => props.theme.navIcons.size};
@@ -59,14 +69,6 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
       font-size: ${(props) => props.theme.fontSize.normal};
       font-weight: 700;
       transition: 0.1s ease-in;
-
-      ${tableMediaQuery} {
-        font-size: ${(props) => props.theme.fontSize.small};
-      }
-
-      ${cellPhoneMediaQuery} {
-        font-size: 0.75rem;
-      }
     }
 
     &:hover {

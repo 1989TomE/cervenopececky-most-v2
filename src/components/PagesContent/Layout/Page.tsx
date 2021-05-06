@@ -86,7 +86,7 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
       ${tableMediaQuery} {
         background-color: ${(props) => props.theme.colors.ocherLight};
       }
-      padding: 0 20px;
+      padding: ${(props) => props.theme.padding.pageContent};
       min-height: 450px;
     }
 
