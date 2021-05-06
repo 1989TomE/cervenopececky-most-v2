@@ -108,7 +108,12 @@ const Wrapper = styled.div`
   .left,
   .right {
     flex: 1;
+    min-width: 190px;
     justify-content: flex-start;
+
+    ${tableMediaQuery} {
+      min-width: auto;
+    }
 
     ${cellPhoneMediaQuery} {
       display: none;
