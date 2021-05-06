@@ -70,7 +70,7 @@ const Nav = styled.nav<{ closed: boolean }>`
   min-height: 120px;
 
   ${tabletMediaQuery} {
-    min-height: 20px;
+    min-height: 140px;
   }
 
   > ul {
@@ -84,6 +84,7 @@ const Nav = styled.nav<{ closed: boolean }>`
     margin-bottom: 15px;
 
     ${tabletMediaQuery} {
+      margin-top: 0rem;
       max-height: ${(props) => (props.closed ? "0px" : "280px")};
       overflow-y: hidden;
       transition: max-height 0.3s ease-in-out;
