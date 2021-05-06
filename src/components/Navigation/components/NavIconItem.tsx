@@ -6,39 +6,32 @@ import NavLink from "./NavLink";
 type Props = PageProps & {
   showLabel?: boolean;
   horizontalSpacing?: boolean;
-  image?: React.ImgHTMLAttributes<HTMLImageElement>["src"];
-  imageStyle?: React.HTMLAttributes<HTMLImageElement>["style"];
-  className?: React.HTMLAttributes<HTMLImageElement>["className"];
 };
 
-const NavItem = ({
+const NavIconItem = ({
   route,
   label,
   icon: SvgIcon,
-  image,
-  imageStyle,
   showLabel,
   horizontalSpacing = true,
-  className,
 }: Props) => {
   return (
-    <Wrapper horizontalSpacing={horizontalSpacing} className={className}>
-      <NavLink to={route}>
-        <div className="iconHolder">
-          {SvgIcon && <SvgIcon className="icon" />}
-          {image && (
-            <img src={image} alt={label} className="icon" style={imageStyle} />
-          )}
-        </div>
-        {showLabel && <div className="label">{label}</div>}
-      </NavLink>
+    <Wrapper horizontalSpacing={horizontalSpacing}>
+      {SvgIcon && (
+        <NavLink to={route}>
+          <div className="iconHolder">
+            {SvgIcon && <SvgIcon className="icon" />}
+          </div>
+          {showLabel && <div className="label">{label}</div>}
+        </NavLink>
+      )}
     </Wrapper>
   );
 };
 
-export default NavItem;
+export default NavIconItem;
 
-const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
+export const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
   flex: 1;
   min-width: ${(props) => (props.horizontalSpacing ? "120px" : "50px")};
   max-width: ${(props) => (props.horizontalSpacing ? "150px" : "80px")};
@@ -48,7 +41,7 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
 
   &.image {
     display: none;
-    ${tableMediaQuery} {
+    ${cellPhoneMediaQuery} {
       display: flex;
     }
   }
@@ -80,7 +73,7 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 70px;
+      width: 50px;
 
       > svg {
         height: ${(props) => props.theme.navIcons.size};
@@ -111,6 +104,7 @@ const Wrapper = styled.li<{ horizontalSpacing: boolean }>`
     }
 
     .label {
+      margin-left: 10px;
       text-align: center;
     }
   }

@@ -1,7 +1,8 @@
 import { mainPages } from "@src/pages/index";
 import { tableMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
-import NavItem from "./components/NavItem";
+import NavIconItem from "./components/NavIconItem";
+import NavImageItem from "./components/NavImageItem";
 import cert from "@root/assets/pdf/cert.pdf";
 import euMostarna from "@root/assets/eu_mostarna.jpg";
 import polabi from "@root/assets/polabi.jpg";
@@ -10,8 +11,8 @@ import eu from "@root/assets/eu.png";
 const Navigation = () => {
   const additionalLinks = (
     <>
-      <NavItem
-        route={cert}
+      <NavImageItem
+        href={cert}
         label={"Regionální produkt"}
         image={polabi}
         imageStyle={{
@@ -20,15 +21,15 @@ const Navigation = () => {
         showLabel
         className="image"
       />
-      <NavItem
-        route={euMostarna}
-        label={"Regionální produkt"}
-        image={eu}
+      <NavImageItem
+        label={"Projekty"}
         imageStyle={{
           width: "3.8rem",
         }}
         showLabel
         className="image"
+        href={euMostarna}
+        image={eu}
       />
     </>
   );
@@ -40,7 +41,7 @@ const Navigation = () => {
           const { route, icon, label } = page;
 
           return (
-            <NavItem
+            <NavIconItem
               key={label}
               route={route}
               label={label}
