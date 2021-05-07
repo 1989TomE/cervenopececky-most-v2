@@ -90,6 +90,7 @@ const Wrapper = styled.div`
 
     ${cellPhoneMediaQuery} {
       justify-content: center;
+      font-size: 1.6rem;
     }
 
     .homeIcon {
