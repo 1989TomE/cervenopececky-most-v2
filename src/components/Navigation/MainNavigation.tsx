@@ -80,7 +80,7 @@ const Nav = styled.nav<{ closed: boolean }>`
     padding: 0rem 0rem;
     list-style-type: none;
     z-index: 1;
-    transform: translateZ(0);
+    /* transform: translate3d(0, 0, 0); */
     margin-bottom: 15px;
 
     ${tabletMediaQuery} {
