@@ -3,8 +3,6 @@ import { default as InstagramSvgIcon } from "@root/assets/instagram.svg";
 import { default as FacebookSvgIcon } from "@root/assets/facebook.svg";
 import { default as Home } from "@root/assets/home.svg";
 import { default as Menu } from "@root/assets/menu.svg";
-import polabi from "@root/assets/polabi.jpg";
-import eu from "@root/assets/eu.png";
 import {
   cellPhoneMediaQuery,
   tabletMediaQuery,
@@ -138,10 +136,6 @@ const Wrapper = styled.div`
       ${tabletMediaQuery} {
         height: 5rem;
       }
-
-      &:hover {
-        fill: ${(props) => props.theme.colors.redDark};
-      }
     }
   }
 
@@ -174,10 +168,12 @@ const Wrapper = styled.div`
   .polabi {
     cursor: pointer;
     height: 4rem;
+    fill: ${(props) => props.theme.colors.redLight};
   }
 
   .eu {
     cursor: pointer;
     height: 4rem;
+    fill: ${(props) => props.theme.colors.redLight};
   }
 `;

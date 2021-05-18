@@ -133,7 +133,7 @@ const Wrapper = styled.div<StyleProps>`
       width: 380px;
       opacity: ${(props) => (props.$startAnimation ? 1 : 0)};
       cursor: pointer;
-      transform: rotateZ(15);
+      transform: rotateZ(-5deg);
 
       ${tabletMediaQuery} {
         height: auto;
