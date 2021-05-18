@@ -8,8 +8,8 @@ import NavIconItem from "./components/NavIconItem";
 import NavImageItem from "./components/NavImageItem";
 import cert from "@root/assets/pdf/cert.pdf";
 import euMostarna from "@root/assets/eu_mostarna.jpg";
-import polabi from "@root/assets/polabi.jpg";
-import eu from "@root/assets/eu.png";
+import polabi from "@root/assets/polabi.svg";
+import eu from "@root/assets/eu.svg";
 import { useAppContext } from "@src/context/context";
 
 type Props = {
@@ -19,26 +19,13 @@ type Props = {
 const Navigation = ({ menuOpened }: Props) => {
   const additionalLinks = (
     <>
-      <NavImageItem
+      <NavIconItem
         href={cert}
         label={"Regionální produkt"}
-        image={polabi}
-        imageStyle={{
-          width: "2.5rem",
-        }}
+        icon={polabi}
         showLabel
-        className="image"
       />
-      <NavImageItem
-        label={"Projekty"}
-        imageStyle={{
-          width: "3.8rem",
-        }}
-        showLabel
-        className="image"
-        href={euMostarna}
-        image={eu}
-      />
+      <NavIconItem label={"Projekty"} showLabel href={euMostarna} icon={eu} />
     </>
   );
 

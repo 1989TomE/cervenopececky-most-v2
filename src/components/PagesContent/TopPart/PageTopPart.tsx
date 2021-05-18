@@ -35,15 +35,12 @@ const PageTopPart = ({ toggleMenu }: Props) => {
   return (
     <Wrapper>
       <div className="left">
-        <FacebookSvgIcon alt="facebook" className="facebook" />
-        <InstagramSvgIcon alt="instagram" className="instagram" />
-        <div className="phoneNumber">+420 604 402 763</div>
-      </div>
-      <div className="mid">
         <Home alt="domů" className="homeIcon" onClick={handleHomeIconClick} />
         <Menu alt="menu" className="menuIcon" onClick={handleMenuClick} />
-        Moštárna Červené Pečky
+        <FacebookSvgIcon alt="facebook" className="facebook" />
+        <InstagramSvgIcon alt="instagram" className="instagram" />
       </div>
+      <div className="mid">Moštárna Červené Pečky</div>
       <div className="right">
         <img
           src={polabi}
@@ -82,17 +79,32 @@ const Wrapper = styled.div`
   .mid {
     display: flex;
     flex: 3;
+    font-family: "neteworthy";
+    font-size: 2.2rem;
+    font-weight: bold;
 
     ${tabletMediaQuery} {
       font-size: 1.8rem;
-      font-weight: bold;
     }
 
     ${cellPhoneMediaQuery} {
       justify-content: center;
       font-size: 1.6rem;
     }
+  }
 
+  .left,
+  .right {
+    flex: 1;
+    min-width: 190px;
+    justify-content: flex-start;
+
+    ${tabletMediaQuery} {
+      min-width: auto;
+    }
+  }
+
+  .left {
     .homeIcon {
       display: block;
 
@@ -132,29 +144,17 @@ const Wrapper = styled.div`
     }
   }
 
-  .left,
-  .right {
-    flex: 1;
-    min-width: 190px;
-    justify-content: flex-start;
-
-    ${tabletMediaQuery} {
-      min-width: auto;
-    }
-
-    ${cellPhoneMediaQuery} {
-      display: none;
-    }
-  }
-
   .right {
     justify-content: flex-end;
   }
 
   .facebook {
-    margin-left: -10px; // compensation for svg padding
     height: 4rem;
     fill: ${(props) => props.theme.colors.redDark};
+
+    ${cellPhoneMediaQuery} {
+      display: none;
+    }
   }
 
   .instagram {
@@ -164,13 +164,8 @@ const Wrapper = styled.div`
     ${tabletMediaQuery} {
       height: 4rem;
     }
-  }
 
-  .phoneNumber {
-    margin-left: 1.5rem;
-    font-size: 1.3rem;
-
-    ${tabletMediaQuery} {
+    ${cellPhoneMediaQuery} {
       display: none;
     }
   }

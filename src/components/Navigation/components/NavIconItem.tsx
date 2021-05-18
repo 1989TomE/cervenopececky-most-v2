@@ -6,10 +6,11 @@ import {
 import styled from "styled-components";
 import NavLink from "./NavLink";
 
-type Props = PageProps & {
+type Props = Partial<PageProps> & {
   showLabel?: boolean;
   horizontalSpacing?: boolean;
   shrink?: boolean;
+  href?: string;
 };
 
 const NavIconItem = ({
@@ -18,18 +19,31 @@ const NavIconItem = ({
   icon: SvgIcon,
   showLabel,
   shrink,
+  href,
   horizontalSpacing = true,
 }: Props) => {
   return (
-    <Wrapper horizontalSpacing={horizontalSpacing} shrink={shrink}>
-      {SvgIcon && (
-        <NavLink to={route}>
-          <div className="iconHolder">
-            {SvgIcon && <SvgIcon className="icon" />}
-          </div>
-          {showLabel && <div className="label">{label}</div>}
-        </NavLink>
-      )}
+    <Wrapper
+      horizontalSpacing={horizontalSpacing}
+      shrink={shrink}
+      className={route ? undefined : "externalLink"}
+    >
+      {SvgIcon &&
+        (route ? (
+          <NavLink to={route} href={href}>
+            <div className="iconHolder">
+              {SvgIcon && <SvgIcon className="icon" />}
+            </div>
+            {showLabel && <div className="label">{label}</div>}
+          </NavLink>
+        ) : (
+          <a href={href}>
+            <div className="iconHolder">
+              {SvgIcon && <SvgIcon className="icon" />}
+            </div>
+            {showLabel && <div className="label">{label}</div>}
+          </a>
+        ))}
     </Wrapper>
   );
 };
@@ -47,7 +61,7 @@ export const Wrapper = styled.li<{
   justify-content: center;
   align-items: center;
 
-  &.image {
+  &.externalLink {
     display: none;
     ${cellPhoneMediaQuery} {
       display: flex;

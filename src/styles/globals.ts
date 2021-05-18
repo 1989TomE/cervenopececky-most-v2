@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import barlowCondensedSemiBold from "./fonts/BarlowCondensed-SemiBold.ttf";
 import roboto from "./fonts/Roboto-Regular.ttf";
 import robotoBold from "./fonts/Roboto-Bold.ttf";
+import neteworthy from "./fonts/Noteworthy-Lt.ttf";
 
 export default createGlobalStyle`
     @font-face {
@@ -18,6 +19,11 @@ export default createGlobalStyle`
     @font-face {
         font-family: 'robotoBold';
         src: url(${robotoBold}) format('truetype');
+    };
+
+    @font-face {
+        font-family: 'neteworthy';
+        src: url(${neteworthy}) format('truetype');
     };
 
     * {
