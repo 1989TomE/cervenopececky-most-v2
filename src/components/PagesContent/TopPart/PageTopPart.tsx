@@ -14,6 +14,8 @@ import { useHistory } from "react-router";
 import { Page } from "@src/pages";
 import { handleEUClick, handlePolabiClick } from "@src/utils/links";
 import { Dispatch, SetStateAction } from "react";
+import { default as PolabiSvgIcon } from "@root/assets/polabi.svg";
+import { default as EuSvgIcon } from "@root/assets/eu.svg";
 
 type Props = {
   toggleMenu: Dispatch<SetStateAction<boolean>>;
@@ -42,13 +44,12 @@ const PageTopPart = ({ toggleMenu }: Props) => {
       </div>
       <div className="mid">Moštárna Červené Pečky</div>
       <div className="right">
-        <img
-          src={polabi}
+        <PolabiSvgIcon
           alt="polabi"
           className="polabi"
           onClick={handlePolabiClick}
         />
-        <img src={eu} alt="EU" className="eu" onClick={handleEUClick} />
+        <EuSvgIcon alt="eu" className="eu" onClick={handleEUClick} />
       </div>
     </Wrapper>
   );
@@ -171,21 +172,12 @@ const Wrapper = styled.div`
   }
 
   .polabi {
-    height: 2.5rem;
-    margin-right: 2rem;
     cursor: pointer;
-
-    ${tabletMediaQuery} {
-      height: 2rem;
-    }
+    height: 4rem;
   }
 
   .eu {
-    height: 2.5rem;
     cursor: pointer;
-
-    ${tabletMediaQuery} {
-      height: 2rem;
-    }
+    height: 4rem;
   }
 `;
