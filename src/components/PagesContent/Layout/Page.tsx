@@ -41,7 +41,7 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
 
   return (
     <Wrapper mounted={mounted} className="pageWrapper">
-      {showLandingPage && <Landing setLandingPageSeen={setLandingPageSeen} />}
+      {false && <Landing setLandingPageSeen={setLandingPageSeen} />}
 
       <div className="pageContainer">
         <PageTopPart toggleMenu={setMenuOpened} />

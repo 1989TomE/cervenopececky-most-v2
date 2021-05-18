@@ -56,7 +56,7 @@ const PageTopPart = ({ toggleMenu }: Props) => {
 export default PageTopPart;
 
 const Wrapper = styled.div`
-  height: 10rem;
+  height: 11rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,11 +65,11 @@ const Wrapper = styled.div`
 
   ${tabletMediaQuery} {
     padding: 0px 15px;
+    height: 10rem;
   }
 
   > div {
     color: ${(props) => props.theme.colors.redLight};
-    height: 6rem;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -85,11 +85,6 @@ const Wrapper = styled.div`
     ${tabletMediaQuery} {
       font-size: 1.8rem;
     }
-
-    ${cellPhoneMediaQuery} {
-      justify-content: center;
-      font-size: 1.6rem;
-    }
   }
 
   .left,
@@ -104,8 +99,16 @@ const Wrapper = styled.div`
   }
 
   .left {
+    ${cellPhoneMediaQuery} {
+      position: absolute;
+      top: 0px;
+      left: 15px;
+      bottom: 0px;
+    }
+
     .homeIcon {
       display: block;
+      fill: ${(props) => props.theme.colors.redLight};
 
       ${tabletMediaQuery} {
         display: none;
@@ -118,13 +121,6 @@ const Wrapper = styled.div`
       ${tabletMediaQuery} {
         display: block;
       }
-
-      ${cellPhoneMediaQuery} {
-        position: absolute;
-        top: 25px;
-        left: 15px;
-        right: 0;
-      }
     }
 
     .homeIcon,
@@ -132,20 +128,19 @@ const Wrapper = styled.div`
       height: 4rem;
       fill: ${(props) => props.theme.colors.redLight};
       cursor: pointer;
-
-      ${tabletMediaQuery} {
-        height: 5rem;
-      }
     }
   }
 
   .right {
     justify-content: flex-end;
+    ${cellPhoneMediaQuery} {
+      display: none;
+    }
   }
 
   .facebook {
     height: 4rem;
-    fill: ${(props) => props.theme.colors.redDark};
+    fill: ${(props) => props.theme.colors.redLight};
 
     ${cellPhoneMediaQuery} {
       display: none;
@@ -154,10 +149,10 @@ const Wrapper = styled.div`
 
   .instagram {
     height: 4rem;
-    fill: ${(props) => props.theme.colors.redDark};
+    fill: ${(props) => props.theme.colors.redLight};
 
     ${tabletMediaQuery} {
-      height: 4rem;
+      height: 3.5rem;
     }
 
     ${cellPhoneMediaQuery} {
