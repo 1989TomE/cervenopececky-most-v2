@@ -5,6 +5,7 @@ import { default as Home } from "@root/assets/home.svg";
 import { default as Menu } from "@root/assets/menu.svg";
 import {
   cellPhoneMediaQuery,
+  cellSmallPhoneMediaQuery,
   tabletMediaQuery,
 } from "@src/styles/mediaQueries";
 import { useAppContext } from "@src/context/context";
@@ -48,6 +49,11 @@ const PageTopPart = ({ toggleMenu }: Props) => {
           onClick={handlePolabiClick}
         />
         <EuSvgIcon alt="eu" className="eu" onClick={handleEUClick} />
+        <Home
+          alt="domů"
+          className="homeIconRight"
+          onClick={handleHomeIconClick}
+        />
       </div>
     </Wrapper>
   );
@@ -65,7 +71,6 @@ const Wrapper = styled.div`
 
   ${tabletMediaQuery} {
     padding: 0px 15px;
-    height: 10rem;
   }
 
   > div {
@@ -79,31 +84,50 @@ const Wrapper = styled.div`
     display: flex;
     flex: 3;
     font-family: "neteworthy";
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 10px;
 
-    ${tabletMediaQuery} {
+    ${cellSmallPhoneMediaQuery} {
+      letter-spacing: 0px;
       font-size: 1.8rem;
+      margin-left: 0px;
     }
   }
 
   .left,
   .right {
-    flex: 1;
-    min-width: 190px;
+    min-width: 130px;
     justify-content: flex-start;
 
     ${tabletMediaQuery} {
-      min-width: auto;
+      min-width: 80px;
+    }
+
+    ${cellPhoneMediaQuery} {
+      min-width: 0px;
     }
   }
 
   .left {
-    ${cellPhoneMediaQuery} {
-      position: absolute;
-      top: 0px;
-      left: 15px;
-      bottom: 0px;
+    .facebook {
+      height: 4rem;
+      fill: ${(props) => props.theme.colors.redLight};
+
+      ${tabletMediaQuery} {
+        display: none;
+      }
+    }
+
+    .instagram {
+      height: 4rem;
+      fill: ${(props) => props.theme.colors.redLight};
+
+      ${tabletMediaQuery} {
+        height: 3.5rem;
+        display: none;
+      }
     }
 
     .homeIcon {
@@ -133,42 +157,34 @@ const Wrapper = styled.div`
 
   .right {
     justify-content: flex-end;
-    ${cellPhoneMediaQuery} {
+
+    .homeIconRight {
       display: none;
+      height: 4rem;
+      fill: ${(props) => props.theme.colors.redLight};
+
+      ${cellPhoneMediaQuery} {
+        display: block;
+      }
     }
-  }
+    .polabi {
+      cursor: pointer;
+      height: 4rem;
+      fill: ${(props) => props.theme.colors.redLight};
 
-  .facebook {
-    height: 4rem;
-    fill: ${(props) => props.theme.colors.redLight};
-
-    ${cellPhoneMediaQuery} {
-      display: none;
-    }
-  }
-
-  .instagram {
-    height: 4rem;
-    fill: ${(props) => props.theme.colors.redLight};
-
-    ${tabletMediaQuery} {
-      height: 3.5rem;
+      ${cellPhoneMediaQuery} {
+        display: none;
+      }
     }
 
-    ${cellPhoneMediaQuery} {
-      display: none;
+    .eu {
+      cursor: pointer;
+      height: 4rem;
+      fill: ${(props) => props.theme.colors.redLight};
+
+      ${cellPhoneMediaQuery} {
+        display: none;
+      }
     }
-  }
-
-  .polabi {
-    cursor: pointer;
-    height: 4rem;
-    fill: ${(props) => props.theme.colors.redLight};
-  }
-
-  .eu {
-    cursor: pointer;
-    height: 4rem;
-    fill: ${(props) => props.theme.colors.redLight};
   }
 `;

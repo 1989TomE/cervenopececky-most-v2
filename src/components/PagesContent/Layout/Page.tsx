@@ -41,7 +41,9 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
 
   return (
     <Wrapper mounted={mounted} className="pageWrapper">
-      {showLandingPage && <Landing setLandingPageSeen={setLandingPageSeen} />}
+      {process.env.NODE_ENV === "production" && showLandingPage && (
+        <Landing setLandingPageSeen={setLandingPageSeen} />
+      )}
 
       <div className="pageContainer">
         <PageTopPart toggleMenu={setMenuOpened} />
