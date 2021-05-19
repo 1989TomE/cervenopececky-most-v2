@@ -87,7 +87,7 @@ const Wrapper = styled.div`
     font-size: 2.4rem;
     font-weight: bold;
     letter-spacing: 1px;
-    margin-left: 10px;
+    margin-left: 5px;
 
     ${cellSmallPhoneMediaQuery} {
       letter-spacing: 0px;
