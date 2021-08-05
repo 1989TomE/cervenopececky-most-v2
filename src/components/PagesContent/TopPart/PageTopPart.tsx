@@ -41,7 +41,7 @@ const PageTopPart = ({ toggleMenu }: Props) => {
         <FacebookSvgIcon alt="facebook" className="facebook" />
         <InstagramSvgIcon alt="instagram" className="instagram" />
       </div>
-      <div className="mid">Moštárna Červené Pečky</div>
+      {/* <div className="mid">Moštárna Červené Pečky</div> */}
       <div className="right">
         <PolabiSvgIcon
           alt="polabi"
@@ -62,7 +62,7 @@ const PageTopPart = ({ toggleMenu }: Props) => {
 export default PageTopPart;
 
 const Wrapper = styled.div`
-  height: 11rem;
+  height: 7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -113,7 +113,7 @@ const Wrapper = styled.div`
   .left {
     .facebook {
       height: 4rem;
-      fill: ${(props) => props.theme.colors.redLight};
+      fill: white;
 
       ${tabletMediaQuery} {
         display: none;
@@ -122,7 +122,7 @@ const Wrapper = styled.div`
 
     .instagram {
       height: 4rem;
-      fill: ${(props) => props.theme.colors.redLight};
+      fill: white;
 
       ${tabletMediaQuery} {
         height: 3.5rem;
@@ -132,7 +132,7 @@ const Wrapper = styled.div`
 
     .homeIcon {
       display: block;
-      fill: ${(props) => props.theme.colors.redLight};
+      fill: white;
 
       ${tabletMediaQuery} {
         display: none;
@@ -150,7 +150,7 @@ const Wrapper = styled.div`
     .homeIcon,
     .menuIcon {
       height: 4rem;
-      fill: ${(props) => props.theme.colors.redLight};
+      fill: white;
       cursor: pointer;
     }
   }
@@ -161,7 +161,7 @@ const Wrapper = styled.div`
     .homeIconRight {
       display: none;
       height: 4rem;
-      fill: ${(props) => props.theme.colors.redLight};
+      fill: white;
 
       ${cellPhoneMediaQuery} {
         display: block;
@@ -170,7 +170,7 @@ const Wrapper = styled.div`
     .polabi {
       cursor: pointer;
       height: 4rem;
-      fill: ${(props) => props.theme.colors.redLight};
+      fill: white;
 
       ${cellPhoneMediaQuery} {
         display: none;
@@ -180,7 +180,7 @@ const Wrapper = styled.div`
     .eu {
       cursor: pointer;
       height: 4rem;
-      fill: ${(props) => props.theme.colors.redLight};
+      fill: white;
 
       ${cellPhoneMediaQuery} {
         display: none;

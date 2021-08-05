@@ -35,7 +35,6 @@ const Nav = styled.nav`
     justify-content: center;
     list-style-type: none;
     padding-bottom: 1rem;
-    background-color: ${(props) => props.theme.colors.ocherLight};
 
     ${tabletMediaQuery} {
       padding-top: 0rem;
