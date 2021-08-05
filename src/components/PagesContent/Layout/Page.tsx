@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import homeBackgroundImage from "@root/assets/background.jpg";
+import HomeBackgroundImage from "@root/assets/background.svg";
 import PageTopPart from "@src/components/PagesContent/TopPart/PageTopPart";
 import Navigation from "@src/components/Navigation/MainNavigation";
 import { useState, useEffect } from "react";
@@ -9,6 +9,7 @@ import { Page } from "@src/pages";
 import HomeNavigation from "@src/components/Navigation/HomeNavigation";
 import { tabletMediaQuery } from "@src/styles/mediaQueries";
 import Landing from "../LandingScreen/Landing";
+import { renderToStaticMarkup } from "react-dom/server";
 
 type Props = {
   children?: React.ReactNode;
@@ -22,6 +23,10 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
   const [menuOpened, setMenuOpened] = useState(false);
 
   const showLandingPage = !landingPageSeen && location.pathname === Page.Home;
+
+  const svgString = encodeURIComponent(
+    renderToStaticMarkup(<HomeBackgroundImage />)
+  );
 
   useEffect(() => {
     if (!showLandingPage) {
@@ -44,6 +49,13 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
       {process.env.NODE_ENV === "production" && showLandingPage && (
         <Landing setLandingPageSeen={setLandingPageSeen} />
       )}
+
+      <div
+        className="topBackground"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,${svgString}")`,
+        }}
+      ></div>
 
       <div className="pageContainer">
         <PageTopPart toggleMenu={setMenuOpened} />
@@ -70,14 +82,21 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
 export default PageWrapper;
 
 export const Wrapper = styled.div<{ mounted: boolean }>`
-  height: 1500px;
   max-width: 2560px;
-  background-image: url(${homeBackgroundImage});
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
   min-width: 320px;
   margin: 0 auto;
+  position: relative;
+
+  .topBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 24rem;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
 
   .pageContainer {
     margin: 0 auto;
@@ -86,9 +105,6 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
     .contentContainer {
       opacity: ${(props) => (props.mounted ? 1 : 0)};
       transition: opacity 0.5s ease-in-out;
-      ${tabletMediaQuery} {
-        background-color: ${(props) => props.theme.colors.ocherLight};
-      }
       padding: ${(props) => props.theme.padding.pageContent};
       min-height: 450px;
     }
@@ -102,7 +118,6 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
       padding: 2rem;
       text-align: center;
       padding-bottom: 1rem;
-      background-color: ${(props) => props.theme.colors.ocherLight};
     }
   }
 `;

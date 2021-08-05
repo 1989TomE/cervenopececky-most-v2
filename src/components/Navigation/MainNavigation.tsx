@@ -61,22 +61,18 @@ const Nav = styled.nav<{ closed: boolean }>`
   }
 
   > ul {
-    margin-top: 13rem;
+    margin-top: 15rem;
     display: flex;
     justify-content: center;
     padding: 0rem 0rem;
     list-style-type: none;
-    z-index: 1;
-    /* transform: translate3d(0, 0, 0); */
-    margin-bottom: 15px;
+    z-index: 2;
 
     ${tabletMediaQuery} {
-      margin-top: 0rem;
       max-height: ${(props) => (props.closed ? "0px" : "280px")};
       overflow-y: hidden;
       transition: max-height 0.3s ease-in-out;
       flex-direction: column;
-      background-color: ${(props) => props.theme.colors.ocherNavBar};
     }
 
     ${cellPhoneMediaQuery} {
