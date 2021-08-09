@@ -57,7 +57,7 @@ const Nav = styled.nav<{ closed: boolean }>`
   min-height: 120px;
 
   ${tabletMediaQuery} {
-    min-height: 140px;
+    min-height: 150px;
   }
 
   > ul {
@@ -67,12 +67,15 @@ const Nav = styled.nav<{ closed: boolean }>`
     padding: 0rem 0rem;
     list-style-type: none;
     z-index: 2;
+    background-color: white;
 
     ${tabletMediaQuery} {
+      margin-top: 0rem;
       max-height: ${(props) => (props.closed ? "0px" : "280px")};
       overflow-y: hidden;
       transition: max-height 0.3s ease-in-out;
       flex-direction: column;
+      margin-bottom: 1rem;
     }
 
     ${cellPhoneMediaQuery} {

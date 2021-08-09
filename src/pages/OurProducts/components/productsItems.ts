@@ -1,6 +1,6 @@
 import { ProductItemProps } from "./ProductItem";
-import apples from "@root/assets/cuteLady.jpg";
 import productImage from "@root/assets/jablkohruska3L.jpg";
+import productImageAlt from "@root/assets/jablko123L_240px.jpg";
 
 export const data: ProductItemProps[] = [
   {
@@ -22,7 +22,7 @@ export const data: ProductItemProps[] = [
       "50 % jablko, 50 % hruška",
       "pasterizováno. Baleno v krabici.",
     ],
-    src: productImage,
+    src: productImageAlt,
   },
   {
     title: "ČERSTVÝ MOŠT",

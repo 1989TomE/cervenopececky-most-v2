@@ -70,7 +70,7 @@ const Wrapper = styled.div`
   position: relative;
 
   ${tabletMediaQuery} {
-    padding: 0px 15px;
+    padding: 10px 15px 0px 15px;
   }
 
   > div {
@@ -162,6 +162,7 @@ const Wrapper = styled.div`
       display: none;
       height: 4rem;
       fill: white;
+      cursor: pointer;
 
       ${cellPhoneMediaQuery} {
         display: block;

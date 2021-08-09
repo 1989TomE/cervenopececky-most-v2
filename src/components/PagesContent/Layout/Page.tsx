@@ -59,13 +59,17 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
 
       <div className="pageContainer">
         <PageTopPart toggleMenu={setMenuOpened} />
+
         <Navigation menuOpened={menuOpened} />
+
         <main className="contentContainer">{children}</main>
+
         {withSubNavigation && (
           <div>
             <HomeNavigation />
           </div>
         )}
+
         <footer className="footer">
           &#xA9;
           {`2021 created by TomE, designed by Kamka${
@@ -96,6 +100,7 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+    z-index: -1;
   }
 
   .pageContainer {

@@ -71,7 +71,7 @@ export const Wrapper = styled.li<{
   ${tabletMediaQuery} {
     min-width: 50px;
     justify-content: flex-start;
-    padding: 0 15px;
+    padding: 0 10px;
     max-width: ${(props) => (props.shrink ? undefined : "100%")};
     width: 100%;
     height: 50px;

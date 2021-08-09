@@ -1,6 +1,6 @@
 import { PageWrapper } from "@src/components/PagesContent/Layout";
 import ContentWrapper from "./components/ContentWrapper";
-import { data } from "./components/mock";
+import { data } from "./components/productsItems";
 import ProductItem from "./components/ProductItem";
 
 const OurProducts = () => {
