@@ -6,7 +6,7 @@ import {
 } from "@src/components/PagesContent/Layout";
 import PageImage from "@src/components/PagesContent/PortraitImage/PageImage";
 import TextContent from "./components/TextContent";
-import products from "@root/assets/bottlesWidescreen.jpg";
+import products from "@root/assets/produktyfoto.jpg";
 
 const Making = () => {
   return (

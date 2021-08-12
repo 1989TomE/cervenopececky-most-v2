@@ -1,7 +1,7 @@
-import { Column, ColumnsWrapper } from "@src/components/PagesContent/Layout";
+import { Column } from "@src/components/PagesContent/Layout";
 import { Header, Paragraph } from "@src/components/TextContent";
-import { tabletMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
+import { FIRST_P_HEIGHT } from "./RightColumn";
 import StyledMap from "./StyledMap";
 
 const Content = () => {
@@ -9,9 +9,10 @@ const Content = () => {
     <Wrapper>
       <Header title="Čerstvý mošt / moštárna" />
       <Paragraph bold>Amálka 72, Červené Pečky</Paragraph>
-      <Paragraph>
-        Na prodejně lze do vyprodání zásob zakoupit jablka, sušené ovoce,
-        čerstvý i pasterizovaný mošt.
+      <Paragraph height={FIRST_P_HEIGHT}>
+        V moštárně lze do vyprodání zásob zakoupit jablka, sušené ovoce, čerstvý
+        i pasterizovaný mošt. Celoročně si u nás také můžete nechat zmoštovat
+        své ovoce (dle domluvy +420 604 402 763).
       </Paragraph>
 
       <div className="openingWrapper">
@@ -19,14 +20,14 @@ const Content = () => {
           <Paragraph bold primaryColor>
             říjen – listopad
           </Paragraph>
-          <Paragraph bold>sobota 9–12 hod.</Paragraph>
+          <Paragraph bold>sobota 9–17 hod.</Paragraph>
         </Column>
 
         <Column>
           <Paragraph bold primaryColor>
             březen – květen
           </Paragraph>
-          <Paragraph bold>středa 16–18 hod.</Paragraph>
+          <Paragraph bold>středa 16–19 hod.</Paragraph>
         </Column>
       </div>
 

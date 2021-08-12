@@ -10,8 +10,8 @@ import { default as tap } from "@root/assets/tap.svg";
 import { default as wineGlass } from "@root/assets/wineGlass.svg";
 
 import workPlaceWidescreen from "@root/assets/mostarnaWidescreen.jpg";
-import cuteLady from "@root/assets/cuteLady.jpg";
-import bottlesWidescreen from "@root/assets/bottlesWidescreen.jpg";
+import ovocnysadfoto from "@root/assets/ovocnysadfoto.jpg";
+import produkty from "@root/assets/produktyfoto.jpg";
 import publicAppleJuicing from "@root/assets/publicAppleJuicing.jpg";
 import React from "react";
 
@@ -22,7 +22,7 @@ export enum Page {
   OurProducts = "/nase-produkty",
   Contact = "/kontakt",
   WorkPlace = "/mostarna",
-  Making = "/vyrabime",
+  Making = "/vyroba",
   FruitOrchards = "/ovocne-sady",
   PublicAppleJuicing = "/mostovani-pro-verejnost",
 }
@@ -64,13 +64,13 @@ export const homePages: HomePageProps[] = [
     route: Page.FruitOrchards,
     label: "Ovocné sady",
     icon: leaf,
-    imageSource: cuteLady,
+    imageSource: ovocnysadfoto,
   },
   {
     route: Page.Making,
-    label: "Vyrábíme",
+    label: "Výroba",
     icon: appleAndBottle,
-    imageSource: bottlesWidescreen,
+    imageSource: produkty,
   },
   {
     route: Page.PublicAppleJuicing,

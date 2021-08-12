@@ -5,19 +5,21 @@ import {
 } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 
+const MARGIN_TOP = "0.5rem";
+
 const Content = () => {
   return (
     <Wrapper>
       <div className="top">
         <Paragraph>
-          Moštování pro veřejnost probíhá během podzimu, a to na základě
+          Moštování pro veřejnost lze uskutečnit celoročně, a to na základě
           telefonické dohody.
         </Paragraph>
         <Paragraph>
           Nabízíme výrobu jak čerstvého moštu, tak Vám mošt můžeme
           zpasterizovat. Čerstvý mošt lze stočit do Vámi přivezených nádob nebo
-          poskytneme naše nádoby. Pasterizovaný mošt stáčíme pouze do našich bag
-          in box sáčků.
+          poskytneme naše nádoby. Pasterizovaný mošt stáčíme pouze do našich 3L
+          bag in box sáčků.
         </Paragraph>
       </div>
 
@@ -26,25 +28,22 @@ const Content = () => {
           Jak postupovat, když chci zmoštovat své ovoce?
         </Paragraph>
 
-        <Paragraph>
-          1. Zákazník zavolá a domluví se termín předání ovoce (většinou pátek
-          před moštovacím víkendem).
+        <Paragraph marginTop={MARGIN_TOP}>
+          1. Zákazník zavolá a domluví se termín předání ovoce a vyzvednutí
+          moštu
         </Paragraph>
 
-        <Paragraph>
+        <Paragraph marginTop={MARGIN_TOP}>
           2. Zákazník zkontroluje ovoce, zda se zde nevyskytují nahnilé a
-          zablácené kusy (případně přetřídí a omyje).
+          zablácené kusy (případně přetřídí a omyje)
         </Paragraph>
 
-        <Paragraph>
-          3. Zákazník v domluvený termín přiveze zkontrolované ovoce do
-          moštárny.
+        <Paragraph marginTop={MARGIN_TOP}>
+          3. Zákazník přiveze zkontrolované ovoce do moštárny
         </Paragraph>
 
-        <Paragraph>
-          4. Až bude ovoce zpracováno, tak zákazníka kontaktujeme, že si může
-          mošt vyzvednout (zpravidla je mošt vyroben a připraven k vyzvednutí
-          během víkendu, záleží na rozsahu objednávky).
+        <Paragraph marginTop={MARGIN_TOP}>
+          4. Zákazník si v domluveném termínu mošt vyzvedne
         </Paragraph>
       </div>
     </Wrapper>
@@ -55,7 +54,7 @@ export default Content;
 
 const Wrapper = styled.div`
   > .top {
-    height: 180px;
+    height: 160px;
     margin-bottom: 10px;
 
     ${tabletMediaQuery} {

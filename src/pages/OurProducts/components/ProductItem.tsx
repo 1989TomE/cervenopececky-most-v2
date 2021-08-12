@@ -20,7 +20,7 @@ const ProductItem = (props: ProductItemProps) => {
         <Price key={price} value={price} />
       ))}
       {descriptions.map((description) => (
-        <Paragraph key={description}>{description}</Paragraph>
+        <p key={description}>{description}</p>
       ))}
     </Wrapper>
   );
@@ -34,4 +34,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 1rem 0.3rem 4rem 0.3rem;
+
+  > p:first-of-type {
+    margin-top: 0.5rem;
+  }
 `;

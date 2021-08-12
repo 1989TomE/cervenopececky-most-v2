@@ -1,4 +1,3 @@
-import { tabletMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 
 type Props = {
@@ -6,6 +5,8 @@ type Props = {
   primaryColor?: boolean;
   bold?: boolean;
   smallFontSize?: boolean;
+  height?: string;
+  marginTop?: string;
 };
 
 type StyleProps = Omit<Props, "children">;
@@ -25,4 +26,6 @@ const Wrapper = styled.div<StyleProps>`
     props.primaryColor ? props.theme.colors.redLight : undefined};
   text-align: justify;
   padding-bottom: 0.5rem;
+  height: ${(props) => props.height || undefined};
+  margin-top: ${(props) => props.marginTop || undefined};
 `;

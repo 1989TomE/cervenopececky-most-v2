@@ -2,12 +2,14 @@ import { Header, Paragraph } from "@src/components/TextContent";
 import styled from "styled-components";
 import StyledMap from "./StyledMap";
 
+export const FIRST_P_HEIGHT = "60px";
+
 const Content = () => {
   return (
     <Wrapper>
       <Header title="Celoroční prodej" />
       <Paragraph bold>Dr. Dvořáka 394, Červené Pečky</Paragraph>
-      <Paragraph>
+      <Paragraph height={FIRST_P_HEIGHT}>
         Do vyprodání zásob lze zakoupit jablka, sušené ovoce a pasterizovaný
         mošt.
       </Paragraph>

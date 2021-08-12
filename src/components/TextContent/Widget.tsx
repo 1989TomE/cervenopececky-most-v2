@@ -16,7 +16,7 @@ const Widget = (props: Props) => {
 
 const Wrapper = styled.div<StyleProps>`
   padding: 2rem;
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.colors.greyLight};
   display: flex;
   align-items: center;
   flex-direction: column;

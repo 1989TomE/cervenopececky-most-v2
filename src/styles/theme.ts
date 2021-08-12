@@ -2,6 +2,7 @@ export type Theme = typeof theme;
 
 export const theme = {
   colors: {
+    greyLight: "rgb(246, 246, 246)",
     greyDark: "rgb(60, 60, 59)",
     redDark: "rgb(228, 3, 46)",
     redLight: "rgb(255, 77, 73)",

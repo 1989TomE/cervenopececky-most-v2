@@ -1,45 +1,61 @@
 import { ProductItemProps } from "./ProductItem";
-import productImage from "@root/assets/jablkohruska3L.jpg";
-import productImageAlt from "@root/assets/jablko123L_240px.jpg";
+import jablkabedynka from "@root/assets/jablkabedynka.jpg";
+import cerstvymost from "@root/assets/cerstvymost.jpg";
+import suseneovoce from "@root/assets/suseneovoce.jpg";
+import hruska from "@root/assets/hruska.jpg";
+import jablko from "@root/assets/jablko.jpg";
+import jablkohruska from "@root/assets/jablkohruska.jpg";
 
-export const data: ProductItemProps[] = [
+export const productsItems: ProductItemProps[] = [
   {
     title: "MOŠT JABLKO",
-    prices: ["70 Kč / 2 l", "90 Kč / 3 l"],
-    descriptions: ["100 % jablko, pasterizováno.", "Baleno v krabici."],
-    src: productImage,
+    prices: ["35 Kč / 1 l", "70 Kč / 2 l", "90 Kč / 3 l"],
+    descriptions: [
+      "100 % jablko, pasterizováno.",
+      "1 l láhev sklo, ostatní baleno v krabici.",
+    ],
+    src: jablko,
   },
   {
     title: "MOŠT HRUŠKA",
     prices: ["70 Kč / 2 l", "90 Kč / 3 l"],
     descriptions: ["100 % hruška, pasterizováno.", "Baleno v krabici."],
-    src: productImage,
+    src: hruska,
   },
   {
     title: "MOŠT JABLKO A HRUŠKA",
     prices: ["70 Kč / 2 l", "90 Kč / 3 l"],
     descriptions: [
-      "50 % jablko, 50 % hruška",
+      "50 % jablko, 50 % hruška,",
       "pasterizováno. Baleno v krabici.",
     ],
-    src: productImageAlt,
+    src: jablkohruska,
   },
   {
     title: "ČERSTVÝ MOŠT",
     prices: ["20 Kč / 1 l"],
-    descriptions: ["Jablko / hruška", "dle denní nabídky."],
-    src: productImage,
+    descriptions: [
+      "Jablko / hruška dle sklizně",
+      "K zakoupení během moštování",
+    ],
+    src: cerstvymost,
   },
   {
     title: "SUŠENÉ OVOCE",
     prices: ["40 Kč / 100 g"],
-    descriptions: ["100 % jablečné plátky", "Baleno v sáčku."],
-    src: productImage,
+    descriptions: [
+      "100 % jablečné nebo hruškové plátky.",
+      "Baleno v doypack sáčku.",
+    ],
+    src: suseneovoce,
   },
   {
     title: "JABLKA",
     prices: ["od 20 Kč / 1 kg"],
-    descriptions: ["Odrůdy dle sklizně."],
-    src: productImage,
+    descriptions: [
+      "Gloster, rubín, golden, idared",
+      "a další odrůdy dle sklizně.",
+    ],
+    src: jablkabedynka,
   },
 ];
