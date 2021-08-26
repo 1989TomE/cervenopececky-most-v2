@@ -3,11 +3,7 @@ import { default as InstagramSvgIcon } from "@root/assets/instagram.svg";
 import { default as FacebookSvgIcon } from "@root/assets/facebook.svg";
 import { default as Home } from "@root/assets/home.svg";
 import { default as Menu } from "@root/assets/menu.svg";
-import {
-  cellPhoneMediaQuery,
-  cellSmallPhoneMediaQuery,
-  tabletMediaQuery,
-} from "@src/styles/mediaQueries";
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
 import { useAppContext } from "@src/context/context";
 import { useHistory } from "react-router";
 import { Page } from "@src/pages";
@@ -96,6 +92,7 @@ const Wrapper = styled.div`
       height: 4rem;
       display: block;
       fill: white;
+      cursor: pointer;
 
       ${tabletMediaQuery} {
         height: 5rem;

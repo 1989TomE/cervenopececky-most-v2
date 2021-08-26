@@ -5,10 +5,6 @@ import {
 } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 import NavIconItem from "./components/NavIconItem";
-import cert from "@root/assets/pdf/cert.pdf";
-import euMostarna from "@root/assets/eu_mostarna.jpg";
-import polabi from "@root/assets/polabi.svg";
-import eu from "@root/assets/eu.svg";
 
 type Props = {
   menuOpened: boolean;

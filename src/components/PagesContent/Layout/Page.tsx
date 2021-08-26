@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import HomeBackgroundImage from "@root/assets/background.svg";
-import PageTopPart from "@src/components/PagesContent/TopPart/PageTopPart";
+import PageTopPart from "@src/components/PagesContent/IconLinks/IconLinks";
 import Navigation from "@src/components/Navigation/MainNavigation";
 import { useState, useEffect } from "react";
 import { useAppContext } from "@src/context/context";
