@@ -15,18 +15,6 @@ type Props = {
 };
 
 const Navigation = ({ menuOpened }: Props) => {
-  const additionalLinks = (
-    <>
-      <NavIconItem
-        href={cert}
-        label={"Regionální produkt"}
-        icon={polabi}
-        showLabel
-      />
-      <NavIconItem label={"Projekty"} showLabel href={euMostarna} icon={eu} />
-    </>
-  );
-
   return (
     <Nav closed={!menuOpened}>
       <ul>
@@ -43,7 +31,6 @@ const Navigation = ({ menuOpened }: Props) => {
             />
           );
         })}
-        {additionalLinks}
       </ul>
     </Nav>
   );
@@ -66,6 +53,7 @@ const Nav = styled.nav<{ closed: boolean }>`
     list-style-type: none;
     z-index: 2;
     background-color: white;
+    padding-left: 0.5rem;
 
     ${tabletMediaQuery} {
       margin-top: 0rem;

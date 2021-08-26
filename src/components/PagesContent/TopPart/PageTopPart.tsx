@@ -35,26 +35,24 @@ const PageTopPart = ({ toggleMenu }: Props) => {
 
   return (
     <Wrapper>
-      <div className="left">
+      <div className="homeContainer">
         <Home alt="domů" className="homeIcon" onClick={handleHomeIconClick} />
         <Menu alt="menu" className="menuIcon" onClick={handleMenuClick} />
-        <FacebookSvgIcon alt="facebook" className="facebook" />
-        <InstagramSvgIcon alt="instagram" className="instagram" />
       </div>
-      {/* <div className="mid">Moštárna Červené Pečky</div> */}
-      <div className="right">
-        <PolabiSvgIcon
-          alt="polabi"
-          className="polabi"
-          onClick={handlePolabiClick}
-        />
-        <EuSvgIcon alt="eu" className="eu" onClick={handleEUClick} />
-        <Home
-          alt="domů"
-          className="homeIconRight"
-          onClick={handleHomeIconClick}
-        />
-      </div>
+
+      <FacebookSvgIcon alt="facebook" className="facebook" />
+
+      <InstagramSvgIcon alt="instagram" className="instagram" />
+
+      <div className="emptySpacer" />
+
+      <PolabiSvgIcon
+        alt="polabi"
+        className="polabi"
+        onClick={handlePolabiClick}
+      />
+
+      <EuSvgIcon alt="eu" className="eu" onClick={handleEUClick} />
     </Wrapper>
   );
 };
@@ -71,6 +69,7 @@ const Wrapper = styled.div`
 
   ${tabletMediaQuery} {
     padding: 10px 15px 0px 15px;
+    top: -7rem;
   }
 
   > div {
@@ -80,62 +79,27 @@ const Wrapper = styled.div`
     display: flex;
   }
 
-  .mid {
-    display: flex;
-    flex: 3;
-    font-family: "neteworthy";
-    font-size: 2.4rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-left: 5px;
-
-    ${cellSmallPhoneMediaQuery} {
-      letter-spacing: 0px;
-      font-size: 1.8rem;
-      margin-left: 0px;
-    }
-  }
-
-  .left,
-  .right {
-    min-width: 130px;
-    justify-content: flex-start;
-
+  .emptySpacer {
+    flex: 1;
     ${tabletMediaQuery} {
-      min-width: 80px;
-    }
-
-    ${cellPhoneMediaQuery} {
-      min-width: 0px;
+      display: none;
     }
   }
 
-  .left {
-    .facebook {
-      height: 4rem;
-      fill: white;
-
-      ${tabletMediaQuery} {
-        display: none;
-      }
-    }
-
-    .instagram {
-      height: 4rem;
-      fill: white;
-
-      ${tabletMediaQuery} {
-        height: 3.5rem;
-        display: none;
-      }
-    }
+  .homeContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .homeIcon {
+      height: 4rem;
       display: block;
       fill: white;
 
       ${tabletMediaQuery} {
-        display: none;
+        height: 5rem;
+        fill: ${(props) => props.theme.colors.green};
       }
     }
 
@@ -144,48 +108,61 @@ const Wrapper = styled.div`
 
       ${tabletMediaQuery} {
         display: block;
+        height: 5rem;
+        fill: white;
+        position: absolute;
+        top: 7rem;
+        left: 0;
+        right: 0;
       }
-    }
-
-    .homeIcon,
-    .menuIcon {
-      height: 4rem;
-      fill: white;
-      cursor: pointer;
     }
   }
 
-  .right {
-    justify-content: flex-end;
+  .facebook {
+    height: 4rem;
+    fill: white;
 
-    .homeIconRight {
-      display: none;
-      height: 4rem;
-      fill: white;
-      cursor: pointer;
-
-      ${cellPhoneMediaQuery} {
-        display: block;
-      }
+    ${tabletMediaQuery} {
+      height: 5rem;
+      fill: ${(props) => props.theme.colors.green};
     }
-    .polabi {
-      cursor: pointer;
-      height: 4rem;
-      fill: white;
+  }
 
-      ${cellPhoneMediaQuery} {
-        display: none;
-      }
+  .instagram {
+    height: 4rem;
+    fill: white;
+
+    ${tabletMediaQuery} {
+      height: 5rem;
+      fill: ${(props) => props.theme.colors.green};
     }
+  }
 
-    .eu {
-      cursor: pointer;
-      height: 4rem;
-      fill: white;
+  ${tabletMediaQuery} {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+  }
 
-      ${cellPhoneMediaQuery} {
-        display: none;
-      }
+  .polabi {
+    cursor: pointer;
+    height: 4rem;
+    fill: white;
+
+    ${tabletMediaQuery} {
+      fill: ${(props) => props.theme.colors.green};
+      height: 5rem;
+    }
+  }
+
+  .eu {
+    cursor: pointer;
+    height: 4rem;
+    fill: white;
+
+    ${tabletMediaQuery} {
+      height: 5rem;
+      fill: ${(props) => props.theme.colors.green};
     }
   }
 `;

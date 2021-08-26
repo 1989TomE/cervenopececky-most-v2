@@ -91,6 +91,10 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
   margin: 0 auto;
   position: relative;
 
+  ${tabletMediaQuery} {
+    top: 7rem;
+  }
+
   .topBackground {
     position: absolute;
     top: 0;
