@@ -1,10 +1,10 @@
 import { ProductItemProps } from "./ProductItem";
-import jablkabedynka from "@root/assets/jablkabedynka.jpg";
+import bedynkajablka from "@root/assets/bedynkajablka.jpg";
 import cerstvymost from "@root/assets/cerstvymost.jpg";
 import suseneovoce from "@root/assets/suseneovoce.jpg";
-import hruska from "@root/assets/hruska.jpg";
-import jablko from "@root/assets/jablko.jpg";
-import jablkohruska from "@root/assets/jablkohruska.jpg";
+import hruska from "@root/assets/mosthruska.jpg";
+import jablko from "@root/assets/mostjablko.jpg";
+import jablkohruska from "@root/assets/mostjablkohruska.jpg";
 
 export const productsItems: ProductItemProps[] = [
   {
@@ -56,6 +56,6 @@ export const productsItems: ProductItemProps[] = [
       "Gloster, rubín, golden, idared",
       "a další odrůdy dle sklizně.",
     ],
-    src: jablkabedynka,
+    src: bedynkajablka,
   },
 ];

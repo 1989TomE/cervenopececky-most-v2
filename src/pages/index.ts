@@ -9,10 +9,10 @@ import { default as appleAndBottle } from "@root/assets/appleAndBottle.svg";
 import { default as tap } from "@root/assets/tap.svg";
 import { default as wineGlass } from "@root/assets/wineGlass.svg";
 
-import workPlaceWidescreen from "@root/assets/mostarnaWidescreen.jpg";
+import workPlaceWidescreen from "@root/assets/mostarna.jpg";
 import ovocnysadfoto from "@root/assets/ovocnysadfoto.jpg";
-import produkty from "@root/assets/produktyfoto.jpg";
-import publicAppleJuicing from "@root/assets/publicAppleJuicing.jpg";
+import making from "@root/assets/vyrabime.jpg";
+import publicAppleJuicing from "@root/assets/mostovaniproverejnost.jpg";
 import React from "react";
 
 export enum Page {
@@ -70,7 +70,7 @@ export const homePages: HomePageProps[] = [
     route: Page.Making,
     label: "Výroba",
     icon: appleAndBottle,
-    imageSource: produkty,
+    imageSource: making,
   },
   {
     route: Page.PublicAppleJuicing,

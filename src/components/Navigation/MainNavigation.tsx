@@ -5,12 +5,10 @@ import {
 } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 import NavIconItem from "./components/NavIconItem";
-import NavImageItem from "./components/NavImageItem";
 import cert from "@root/assets/pdf/cert.pdf";
 import euMostarna from "@root/assets/eu_mostarna.jpg";
 import polabi from "@root/assets/polabi.svg";
 import eu from "@root/assets/eu.svg";
-import { useAppContext } from "@src/context/context";
 
 type Props = {
   menuOpened: boolean;

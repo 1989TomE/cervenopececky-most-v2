@@ -1,5 +1,5 @@
 import TextContent from "./components/TextContent";
-import workplace from "@root/assets/mostarnaWidescreen.jpg";
+import workplace from "@root/assets/mostarna.jpg";
 import PageImage from "@src/components/PagesContent/PortraitImage/PageImage";
 import {
   ContentWrapper,
