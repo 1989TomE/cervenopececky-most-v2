@@ -2,6 +2,7 @@ import { Header, Paragraph } from "@src/components/TextContent";
 import styled from "styled-components";
 import prodejMap from "@root/assets/celorocniprodejMapa.png";
 import { StyledImage } from "./LeftColumn";
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
 
 export const FIRST_P_HEIGHT = "60px";
 
@@ -36,5 +37,9 @@ export default Content;
 export const Wrapper = styled.div`
   > .openingWrapper {
     margin-top: 42px;
+
+    ${tabletMediaQuery} {
+      margin-top: 15px;
+    }
   }
 `;

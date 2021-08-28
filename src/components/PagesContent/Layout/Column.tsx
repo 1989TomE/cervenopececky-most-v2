@@ -23,7 +23,7 @@ const Wrapper = styled.div<Props>`
   margin-right: ${(props) => (props.isOnLeft ? "2rem" : 0)};
 
   ${tabletMediaQuery} {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     margin-left: 0rem;
     margin-right: 0rem;
     flex-direction: column;

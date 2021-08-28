@@ -1,3 +1,4 @@
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 
 type Props = {
@@ -26,6 +27,12 @@ const Wrapper = styled.div<StyleProps>`
     props.primaryColor ? props.theme.colors.redLight : undefined};
   text-align: justify;
   padding-bottom: 0.5rem;
-  height: ${(props) => props.height || undefined};
+  min-height: ${(props) => props.height || undefined};
   margin-top: ${(props) => props.marginTop || undefined};
+
+  ${tabletMediaQuery} {
+    min-height: auto;
+    padding-bottom: 0rem;
+    margin-bottom: 0.5rem;
+  }
 `;
