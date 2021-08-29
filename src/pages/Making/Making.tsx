@@ -6,7 +6,7 @@ import {
 } from "@src/components/PagesContent/Layout";
 import PageImage from "@src/components/PagesContent/PortraitImage/PageImage";
 import TextContent from "./components/TextContent";
-import products from "@root/assets/produktyfoto.jpg";
+import making from "@root/assets/vyrabime.jpg";
 
 const Making = () => {
   return (
@@ -18,7 +18,7 @@ const Making = () => {
           </Column>
 
           <Column isOnRight>
-            <PageImage src={products} />
+            <PageImage src={making} />
           </Column>
         </ColumnsWrapper>
       </ContentWrapper>
