@@ -7,7 +7,10 @@ import { useAppContext } from "@src/context/context";
 import { useLocation } from "react-router";
 import { Page } from "@src/pages";
 import HomeNavigation from "@src/components/Navigation/HomeNavigation";
-import { tabletMediaQuery } from "@src/styles/mediaQueries";
+import {
+  cellPhoneMediaQuery,
+  tabletMediaQuery,
+} from "@src/styles/mediaQueries";
 import Landing from "../LandingScreen/Landing";
 import { renderToStaticMarkup } from "react-dom/server";
 import Title from "@root/assets/background-title.svg";
@@ -117,9 +120,10 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
       height: 5rem;
       top: 1rem;
 
-      ${tabletMediaQuery} {
+      ${cellPhoneMediaQuery} {
         top: 1.5rem;
         height: 4rem;
+        left: 1rem;
       }
     }
   }
