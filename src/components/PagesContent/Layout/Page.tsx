@@ -10,6 +10,7 @@ import HomeNavigation from "@src/components/Navigation/HomeNavigation";
 import { tabletMediaQuery } from "@src/styles/mediaQueries";
 import Landing from "../LandingScreen/Landing";
 import { renderToStaticMarkup } from "react-dom/server";
+import Title from "@root/assets/background-title.svg";
 
 type Props = {
   children?: React.ReactNode;
@@ -55,7 +56,9 @@ const PageWrapper = ({ children, withSubNavigation = true }: Props) => {
         style={{
           backgroundImage: `url("data:image/svg+xml,${svgString}")`,
         }}
-      ></div>
+      >
+        <Title />
+      </div>
 
       <div className="pageContainer">
         <PageTopPart toggleMenu={setMenuOpened} />
@@ -105,6 +108,20 @@ export const Wrapper = styled.div<{ mounted: boolean }>`
     background-position: top center;
     background-size: cover;
     z-index: -1;
+    display: flex;
+    justify-content: center;
+
+    > svg {
+      position: relative;
+      margin: 0 auto;
+      height: 5rem;
+      top: 1rem;
+
+      ${tabletMediaQuery} {
+        top: 1.5rem;
+        height: 4rem;
+      }
+    }
   }
 
   .pageContainer {

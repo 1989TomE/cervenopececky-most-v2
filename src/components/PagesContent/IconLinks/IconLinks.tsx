@@ -108,7 +108,7 @@ const Wrapper = styled.div`
         height: 5rem;
         fill: white;
         position: absolute;
-        top: 7rem;
+        top: 6.5rem;
         left: 0;
         right: 0;
       }
