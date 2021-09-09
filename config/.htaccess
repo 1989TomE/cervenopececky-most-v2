@@ -34,3 +34,7 @@ RewriteRule ^domains/[^/]+/(.+[^/])$ /$1/ [R]
 # subdomeny - spravne presmerovani pri chybejicim /
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^subdom/[^/]+/(.+[^/])$ /$1/ [R]
+
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{SERVER_NAME}/$1 [R=301,L]
+Header set Content-Security-Policy "upgrade-insecure-requests;"
