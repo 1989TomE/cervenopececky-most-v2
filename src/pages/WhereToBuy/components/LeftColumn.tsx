@@ -7,7 +7,7 @@ import mostarnaMap from "@root/assets/mostarnaMapa.png";
 const Content = () => {
   return (
     <>
-      <Header title="Čerstvý mošt / moštárna" />
+      <Header title="Podzimní / jarní prodej v moštárně" />
       <Paragraph bold>Amálka 72, Červené Pečky</Paragraph>
       <Paragraph height={FIRST_P_HEIGHT}>
         V moštárně lze do vyprodání zásob zakoupit jablka, sušené ovoce, čerstvý
@@ -18,16 +18,16 @@ const Content = () => {
       <div className="openingWrapper">
         <Column>
           <Paragraph bold primaryColor>
-            říjen – listopad
+            25. září – 27. listopad
           </Paragraph>
           <Paragraph bold>sobota 9–17 hod.</Paragraph>
         </Column>
 
         <Column>
           <Paragraph bold primaryColor>
-            březen – květen
+            Jaro 2022
           </Paragraph>
-          <Paragraph bold>středa 16–19 hod.</Paragraph>
+          <Paragraph bold>Bude upřesněno</Paragraph>
         </Column>
       </div>
 

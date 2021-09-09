@@ -12,8 +12,8 @@ const Content = () => {
       <Header title="Celoroční prodej" />
       <Paragraph bold>Dr. Dvořáka 394, Červené Pečky</Paragraph>
       <Paragraph height={FIRST_P_HEIGHT}>
-        Do vyprodání zásob lze zakoupit jablka, sušené ovoce a pasterizovaný
-        mošt.
+        Prodejní místo mimo otevírcí dobu moštárny. Do vyprodání zásob lze
+        nakoupit jablka, sušené ovoce a pasterizovaný mošt.
       </Paragraph>
 
       <div className="openingWrapper">
@@ -36,7 +36,7 @@ export default Content;
 
 export const Wrapper = styled.div`
   > .openingWrapper {
-    margin-top: 42px;
+    margin-top: 40px;
 
     ${tabletMediaQuery} {
       margin-top: 15px;
