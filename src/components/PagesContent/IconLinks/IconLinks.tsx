@@ -36,9 +36,13 @@ const PageTopPart = ({ toggleMenu }: Props) => {
         <Menu alt="menu" className="menuIcon" onClick={handleMenuClick} />
       </div>
 
-      <FacebookSvgIcon alt="facebook" className="facebook" />
+      <a href="https://m.facebook.com/mostarnaCP/">
+        <FacebookSvgIcon alt="facebook" className="facebook" />
+      </a>
 
-      <InstagramSvgIcon alt="instagram" className="instagram" />
+      <a href="https://www.instagram.com/mostarnacp/">
+        <InstagramSvgIcon alt="instagram" className="instagram" />
+      </a>
 
       <div className="emptySpacer" />
 
