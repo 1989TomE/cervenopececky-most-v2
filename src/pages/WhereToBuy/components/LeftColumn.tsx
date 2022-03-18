@@ -18,16 +18,16 @@ const Content = () => {
       <div className="openingWrapper">
         <Column>
           <Paragraph bold primaryColor>
-            25. září – 27. listopad
+            10. září – 10. prosince 2022
           </Paragraph>
           <Paragraph bold>sobota 9–17 hod.</Paragraph>
         </Column>
 
         <Column>
           <Paragraph bold primaryColor>
-            Jaro 2022
+            Duben 2022
           </Paragraph>
-          <Paragraph bold>Bude upřesněno</Paragraph>
+          <Paragraph bold>Sobota 9–17 hod.</Paragraph>
         </Column>
       </div>
 
