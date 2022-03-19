@@ -44,7 +44,7 @@ export const productsItems: ProductItemProps[] = [
   },
   {
     title: "ČERSTVÝ MOŠT",
-    variants: [{ text: "20 Kč / 1 l" }],
+    variants: [{ text: "25 Kč / 1 l" }],
     descriptions: [
       "Jablko / hruška dle sklizně",
       "K zakoupení během moštování",
