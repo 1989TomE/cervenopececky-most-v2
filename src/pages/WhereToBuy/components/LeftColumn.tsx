@@ -27,7 +27,7 @@ const Content = () => {
           <Paragraph bold primaryColor>
             Duben 2022
           </Paragraph>
-          <Paragraph bold>Sobota 9–17 hod.</Paragraph>
+          <Paragraph bold>Sobota 9–14 hod.</Paragraph>
         </Column>
       </div>
 
