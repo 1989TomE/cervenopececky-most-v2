@@ -15,7 +15,7 @@ const OurProducts = () => {
 
         <Descriptions>
           <Description>
-            Moloobchodní ceník (pro velkoobchodní nás neváhejte kontaktovat).
+            Maloobchodní ceník (pro velkoobchodní nás neváhejte kontaktovat).
           </Description>
           <Description>
             Vyprodané zboží bude opět naskladněno během podzimní sezóny.
