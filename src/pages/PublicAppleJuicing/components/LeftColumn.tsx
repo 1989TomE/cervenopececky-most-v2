@@ -13,7 +13,8 @@ const Content = () => {
       <div className="top">
         <Paragraph>
           Moštování pro veřejnost lze uskutečnit celoročně, a to na základě
-          telefonické dohody.
+          telefonické dohody. Moštujeme pro drobné zahrádkáře i ovocné podniky.
+          Minimální množství dovezeného ovoce 30 kg.
         </Paragraph>
         <Paragraph>
           Nabízíme výrobu jak čerstvého moštu, tak Vám mošt můžeme
@@ -29,21 +30,27 @@ const Content = () => {
         </Paragraph>
 
         <Paragraph marginTop={MARGIN_TOP}>
-          1. Zákazník zavolá a domluví se termín předání ovoce a vyzvednutí
-          moštu
+          1. Ke každému zákazníkovi přistupujeme individuálně, a proto nám
+          zavolejte nebo napište, abychom rezervovali čas, kdy se budeme věnovat
+          právě Vám.
         </Paragraph>
 
         <Paragraph marginTop={MARGIN_TOP}>
-          2. Zákazník zkontroluje ovoce, zda se zde nevyskytují nahnilé a
-          zablácené kusy (případně přetřídí a omyje)
+          2. Domluvíme termín, kdy k nám do moštárny přivezete své ovoce. Záleží
+          na Vás, může to být libovolný den v týdnu.
         </Paragraph>
 
         <Paragraph marginTop={MARGIN_TOP}>
-          3. Zákazník přiveze zkontrolované ovoce do moštárny
+          3. Ovoce zpracujeme vždy nejbližší sobotu. Mošt Vám vyrobíme čerstvý
+          i pasterizovaný.
         </Paragraph>
 
         <Paragraph marginTop={MARGIN_TOP}>
-          4. Zákazník si v domluveném termínu mošt vyzvedne
+          4. Hotový mošt budete mít připravený u nás v moštárně. Vyzvednete si,
+          jak se Vám to bude hodit.
+        </Paragraph>
+        <Paragraph marginTop={MARGIN_TOP}>
+          5. Pak si vychutnáte svou úrodu!{" "}
         </Paragraph>
       </div>
     </Wrapper>

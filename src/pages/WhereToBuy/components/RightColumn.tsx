@@ -12,7 +12,7 @@ const Content = () => {
       <Header title="Celoroční prodej" />
       <Paragraph bold>Dr. Dvořáka 394, Červené Pečky</Paragraph>
       <Paragraph height={FIRST_P_HEIGHT}>
-        Prodejní místo mimo otevírcí dobu moštárny. Do vyprodání zásob lze
+        Prodejní místo mimo otevírací dobu moštárny. Do vyprodání zásob lze
         nakoupit jablka, sušené ovoce a pasterizovaný mošt.
       </Paragraph>
 
