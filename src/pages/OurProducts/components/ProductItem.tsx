@@ -17,9 +17,9 @@ const ProductItem = (props: ProductItemProps) => {
       <ProductImage src={src} title={title} />
       <Title title={title} />
       <VariantWrapper>
-        {variants.map((variant, index) => (
+        {/* {variants.map((variant, index) => (
           <Variant key={`${index}-${variant.text}`} {...variant} />
-        ))}
+        ))} */}
       </VariantWrapper>
       {descriptions.map((description) => (
         <p key={description}>{description}</p>

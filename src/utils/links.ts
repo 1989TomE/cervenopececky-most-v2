@@ -1,5 +1,5 @@
-import cert from "@root/assets/pdf/cert.pdf";
 import euMostarna from "@root/assets/EU_PREZENTACE.pdf";
+import cert from "@root/assets/cert.jpg";
 
 export const handleEUClick = () => {
   window.open(euMostarna, "_blank");
