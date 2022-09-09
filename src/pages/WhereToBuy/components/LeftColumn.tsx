@@ -18,7 +18,7 @@ const Content = () => {
       <div className="openingWrapper">
         <Column>
           <Paragraph bold primaryColor>
-            10. září – 10. prosince 2022
+            17. září – 10. prosince 2022
           </Paragraph>
           <Paragraph bold>sobota 9–17 hod.</Paragraph>
         </Column>
