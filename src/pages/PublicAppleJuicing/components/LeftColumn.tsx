@@ -1,8 +1,5 @@
 import { Paragraph } from "@src/components/TextContent";
-import {
-  cellPhoneMediaQuery,
-  tabletMediaQuery,
-} from "@src/styles/mediaQueries";
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 
 const MARGIN_TOP = "0.5rem";
@@ -12,9 +9,9 @@ const Content = () => {
     <Wrapper>
       <div className="top">
         <Paragraph>
-          Moštování pro veřejnost lze uskutečnit celoročně, a to na základě
-          telefonické dohody. Moštujeme pro drobné zahrádkáře i ovocné podniky.
-          Minimální množství dovezeného ovoce 30 kg.
+          Moštování pro veřejnost lze uskutečnit během podzimní sezóny, a to na
+          základě telefonické dohody. Moštujeme pro drobné zahrádkáře i ovocné
+          podniky. Minimální množství dovezeného ovoce je 30 kg.
         </Paragraph>
         <Paragraph>
           Nabízíme výrobu jak čerstvého moštu, tak Vám mošt můžeme
