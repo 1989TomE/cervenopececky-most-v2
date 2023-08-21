@@ -11,23 +11,25 @@ const Content = () => {
       <Paragraph bold>Amálka 72, Červené Pečky</Paragraph>
       <Paragraph height={FIRST_P_HEIGHT}>
         V moštárně lze do vyprodání zásob zakoupit jablka, sušené ovoce, čerstvý
-        i pasterizovaný mošt. Celoročně si u nás také můžete nechat zmoštovat
-        své ovoce (dle domluvy +420 604 402 763).
+        i pasterizovaný mošt. Během letní a podzimní sezóny si u nás také můžete
+        nechat zmoštovat své ovoce (dle domluvy +420&nbsp;604&nbsp;402&nbsp;763
+        nebo info@cervenopececkymost.cz).
       </Paragraph>
 
       <div className="openingWrapper">
         <Column>
           <Paragraph bold primaryColor>
-            17. září – 10. prosince 2022
+            15. září – 31. listopadu 2023
           </Paragraph>
-          <Paragraph bold>sobota 9–17 hod.</Paragraph>
+          <Paragraph>Pátek 15-18h</Paragraph>
+          <Paragraph>Sobota 9-16h</Paragraph>
         </Column>
 
         <Column>
           <Paragraph bold primaryColor>
-            Duben 2022
+            Jaro 2024
           </Paragraph>
-          <Paragraph bold>Sobota 9–14 hod.</Paragraph>
+          <Paragraph>Bude upřesněno</Paragraph>
         </Column>
       </div>
 

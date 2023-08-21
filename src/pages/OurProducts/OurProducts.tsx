@@ -12,15 +12,6 @@ const OurProducts = () => {
             <ProductItem key={i.title} {...i} />
           ))}
         </Products>
-
-        <Descriptions>
-          <Description>
-            Maloobchodní ceník (pro velkoobchodní nás neváhejte kontaktovat).
-          </Description>
-          <Description>
-            Vyprodané zboží bude opět naskladněno během podzimní sezóny.
-          </Description>
-        </Descriptions>
       </ContentWrapper>
     </PageWrapper>
   );
@@ -39,15 +30,4 @@ const Products = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-`;
-
-const Descriptions = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const Description = styled.div`
-  margin-top: 0.25rem;
 `;

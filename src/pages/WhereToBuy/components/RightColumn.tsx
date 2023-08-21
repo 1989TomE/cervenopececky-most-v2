@@ -21,8 +21,8 @@ const Content = () => {
           pondělí – pátek
         </Paragraph>
         <Paragraph>
-          <span style={{ fontWeight: 700 }}>17–20 hod.</span> / nebo dle domluvy
-          volejte +420 731 171 256
+          <StyledSpan>17–20 hod.</StyledSpan>/ nebo dle domluvy volejte
+          +420&nbsp;604&nbsp;402&nbsp;763
         </Paragraph>
       </div>
       <a href="https://mapy.cz/zakladni?vlastni-body&x=15.2042351&y=49.9739936&z=19&ut=Celoro%C4%8Dn%C3%AD%20prodej&uc=9iMsgxXOyj&ud=Dr.%20Dvo%C5%99%C3%A1ka%20394%2C%20%C4%8Cerven%C3%A9%20Pe%C4%8Dky%2C%20281%2021%2C%20Kol%C3%ADn">
@@ -36,10 +36,14 @@ export default Content;
 
 export const Wrapper = styled.div`
   > .openingWrapper {
-    margin-top: 40px;
+    margin-top: 64px;
 
     ${tabletMediaQuery} {
       margin-top: 15px;
     }
   }
+`;
+
+export const StyledSpan = styled.span`
+  font-family: "robotoBold";
 `;
