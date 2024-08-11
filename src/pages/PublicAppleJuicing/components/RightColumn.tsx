@@ -7,9 +7,9 @@ const Content = () => {
       <Widget height={"160px"} marginBottom={"10px"}>
         <Header primary title="ČERSTVÝ MOŠT" marginTop="0rem" />
         <Paragraph bold primaryColor>
-          Mošt 1L&nbsp;10 Kč
+          Mošt 1L&nbsp;12 Kč
         </Paragraph>
-        <Paragraph bold>/ + 7 Kč nádoba 1,5L /</Paragraph>
+        <Paragraph bold>/ + 8 Kč nádoba 1,5L /</Paragraph>
         <Paragraph smallFontSize>
           Celková cena za litr šťávy získané z Vašeho ovoce, které bylo
           přetříděno, omyto, drceno, lisováno a plněno do nádob. Cena včetně
@@ -21,9 +21,9 @@ const Content = () => {
       <Widget height={"185px"}>
         <Header primary title="PASTERIZOVANÝ MOŠT" marginTop="0rem" />
         <Paragraph bold primaryColor>
-          Mošt 3L &nbsp;65 Kč
+          Mošt 3L &nbsp;70 Kč
         </Paragraph>
-        <Paragraph bold>/ + 10 Kč kartonová krabice 3L /</Paragraph>
+        <Paragraph bold>/ + 12 Kč kartonová krabice 3L /</Paragraph>
         <Paragraph smallFontSize>
           Celková cena za 3L pasterizované šťávy včetně obalu získané z Vašeho
           ovoce. Ovoce bylo přetříděno, omyto, drceno, lisováno, zpasterizováno
