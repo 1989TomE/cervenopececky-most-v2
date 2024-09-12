@@ -19,7 +19,7 @@ const Content = () => {
       <div className="openingWrapper">
         <Column>
           <Paragraph bold primaryColor>
-            15. září – 31. listopadu 2023
+            14. září – 30. listopadu 2024
           </Paragraph>
           <Paragraph>Pátek 15-18h</Paragraph>
           <Paragraph>Sobota 9-16h</Paragraph>
@@ -27,7 +27,7 @@ const Content = () => {
 
         <Column>
           <Paragraph bold primaryColor>
-            Jaro 2024
+            Jaro 2025
           </Paragraph>
           <Paragraph>Bude upřesněno</Paragraph>
         </Column>
