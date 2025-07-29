@@ -10,6 +10,7 @@ const Content = () => {
           Mošt 1L&nbsp;12 Kč
         </Paragraph>
         <Paragraph bold>/ + 8 Kč nádoba 1,5L /</Paragraph>
+        <Paragraph bold>/ +15 Kč 3L sáček BiB /</Paragraph>
         <Paragraph smallFontSize>
           Celková cena za litr šťávy získané z Vašeho ovoce, které bylo
           přetříděno, omyto, drceno, lisováno a plněno do nádob. Cena včetně
@@ -21,7 +22,7 @@ const Content = () => {
       <Widget height={"185px"}>
         <Header primary title="PASTERIZOVANÝ MOŠT" marginTop="0rem" />
         <Paragraph bold primaryColor>
-          Mošt 3L &nbsp;70 Kč
+          Mošt 3L &nbsp;75 Kč
         </Paragraph>
         <Paragraph bold>/ + 12 Kč kartonová krabice 3L /</Paragraph>
         <Paragraph smallFontSize>
@@ -31,6 +32,10 @@ const Content = () => {
           i kartonovou krabici, kterou můžete používat opakovaně.
         </Paragraph>
       </Widget>
+
+      <Paragraph bold marginTop="1rem">
+        Ceny platné pro rok 2025
+      </Paragraph>
     </>
   );
 };
