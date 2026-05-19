@@ -1,17 +1,21 @@
 import { Header, Paragraph } from "@src/components/TextContent";
-import Widget from "@src/components/TextContent/Widget";
-import StyledMap from "./StyledMap";
+import ContactWidget from "./ContactWidget";
+import styled from "styled-components";
 
-const Content = () => {
+const RightColumn = () => {
   return (
-    <Widget height={"175px"}>
+    <ContactWidget>
       <Header primary title="Fakturace" marginTop="0rem" />
-      <Paragraph bold>Tomáš Adamec</Paragraph>
-      <Paragraph>IČO: 06215718</Paragraph>
-      <Paragraph>Sídlo: Školní 196, Červené Pečky 28121</Paragraph>
-      <Paragraph>Provozovna: Amálka 72, Červené Pečky 28121</Paragraph>
-    </Widget>
+      <ContactLine bold>Tomáš Adamec, IČO: 06215718</ContactLine>
+      <ContactLine>Sídlo: Školní 196, Červené Pečky 28121</ContactLine>
+      <ContactLine>Provozovna: Amálka 72, Červené Pečky 28121</ContactLine>
+    </ContactWidget>
   );
 };
 
-export default Content;
+export default RightColumn;
+
+const ContactLine = styled(Paragraph)`
+  text-align: left;
+  width: 100%;
+`;

@@ -2,13 +2,49 @@ import { ProductItemProps } from "./ProductItem";
 import bedynkajablka from "@root/assets/bedynkajablka.jpg";
 import cerstvymost from "@root/assets/cerstvymost.jpg";
 import suseneovoce from "@root/assets/suseneovoce.jpg";
-import hruska from "@root/assets/mosthruska.jpg";
 import jablko from "@root/assets/mostjablko.jpg";
-import jablkohruska from "@root/assets/mostjablkohruska.jpg";
 import speciality from "@root/assets/mostspeciality.png";
+import { flavor, joinFlavors, text } from "./descriptionParts";
 import { StockStatus } from "./Variant";
 
+const freshJuiceMixFlavors = [
+  "mrkev",
+  "červená řepa",
+  "višeň",
+  "ostružina",
+  "pomeranč",
+  "rakytník",
+  "rybíz",
+  "jahoda",
+];
+
+const specialityMixFlavors = [
+  "jablko",
+  "mrkev",
+  "červená řepa",
+  "višeň",
+  "ostružina",
+  "pomeranč",
+  "rakytník",
+  "rybíz",
+  "jahoda",
+];
+
 export const productsItems: ProductItemProps[] = [
+  {
+    title: "SPECIALITY",
+    isNew: true,
+    variants: [],
+    descriptions: [
+      [
+        text("100 % mixy "),
+        ...joinFlavors(specialityMixFlavors),
+        text(","),
+      ],
+      [text("1l lahev sklo, 3l BiB, pasterizováno")],
+    ],
+    src: speciality,
+  },
   {
     title: "MOŠT JABLKO",
     variants: [
@@ -17,57 +53,27 @@ export const productsItems: ProductItemProps[] = [
       { text: "90 Kč / 3 l", stockStatus: StockStatus.InStock },
     ],
     descriptions: [
-      "100 % jablko, pasterizováno.",
-      "1 l láhev sklo, ostatní baleno v krabici.",
+      [text("100 % jablko, pasterizováno.")],
+      [text("1 l láhev sklo, ostatní baleno v krabici.")],
     ],
     src: jablko,
-  },
-  {
-    title: "MOŠT HRUŠKA",
-    variants: [
-      { text: "70 Kč / 2 l", stockStatus: StockStatus.OutOfStock },
-      { text: "90 Kč / 3 l", stockStatus: StockStatus.OutOfStock },
-    ],
-    descriptions: ["100 % hruška, pasterizováno.", "Baleno v krabici."],
-    src: hruska,
-  },
-  {
-    title: "MOŠT JABLKO A HRUŠKA",
-    variants: [
-      { text: "70 Kč / 2 l", stockStatus: StockStatus.OutOfStock },
-      { text: "90 Kč / 3 l", stockStatus: StockStatus.OutOfStock },
-    ],
-    descriptions: [
-      "50 % jablko, 50 % hruška,",
-      "pasterizováno. Baleno v krabici.",
-    ],
-    src: jablkohruska,
   },
   {
     title: "ČERSTVÝ MOŠT",
     variants: [{ text: "25 Kč / 1 l" }],
     descriptions: [
-      "Každý týden čepujeme jinou variantu",
-      "Jablko / hruška a mixy",
-      "(mrkev, červená řepa, višeň, ostružina, pomeranč, rakytník, rybíz, jahoda)",
+      [text("Každý týden čepujeme jinou variantu")],
+      [flavor("Jablko"), text(" / "), flavor("hruška"), text(" a mixy")],
+      [text("("), ...joinFlavors(freshJuiceMixFlavors), text(")")],
     ],
     src: cerstvymost,
-  },
-  {
-    title: "SPECIALITY",
-    variants: [],
-    descriptions: [
-      "100 % mixy jablko a mrkev, červená řepa, višeň, ostružina, pomeranč, rakytník, rybíz, jahoda,",
-      "1l lahev sklo, 3l BiB, pasterizováno",
-    ],
-    src: speciality,
   },
   {
     title: "SUŠENÉ OVOCE",
     variants: [{ text: "40 Kč / 100 g", stockStatus: StockStatus.InStock }],
     descriptions: [
-      "100 % jablečné nebo hruškové plátky.",
-      "Baleno v doypack sáčku.",
+      [text("100 % jablečné nebo hruškové plátky.")],
+      [text("Baleno v doypack sáčku.")],
     ],
     src: suseneovoce,
   },
@@ -77,8 +83,12 @@ export const productsItems: ProductItemProps[] = [
       { text: "od 20 Kč / 1 kg", stockStatus: StockStatus.OutOfStock },
     ],
     descriptions: [
-      "Red bohemia, gala, rozela, jonagold, golden, red topaz, goldstar",
-      "a další odrůdy dle sklizně.",
+      [
+        text(
+          "Red bohemia, gala, rozela, jonagold, golden, red topaz, goldstar"
+        ),
+      ],
+      [text("a další odrůdy dle sklizně.")],
     ],
     src: bedynkajablka,
   },

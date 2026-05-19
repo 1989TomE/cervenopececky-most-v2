@@ -30,10 +30,10 @@ const ContentWrapper = styled.div`
 
 const Products = styled.div`
   flex: 1;
-  height: 100%;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
 const StockNote = styled(Paragraph)`

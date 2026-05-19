@@ -1,33 +1,34 @@
-import { Header, Paragraph } from "@src/components/TextContent";
-import styled from "styled-components";
+import ContactSection from "./ContactSection";
 
-const Content = () => {
+const LeftColumn = () => {
   return (
-    <Wrapper>
-      <Header title="REZERVACE" marginTop="0rem" />
-      <Paragraph bold>MOŠTOVÁNÍ PRO VEŘEJNOST</Paragraph>
-      <Paragraph>+420 604 402 763</Paragraph>
-      <Paragraph>rezervace@cervenopececkymost.cz</Paragraph>
+    <>
+      <ContactSection
+        marginTop="0"
+        title="REZERVACE"
+        subtitle="MOŠTOVÁNÍ PRO VEŘEJNOST"
+        lines={["+420 604 402 763", "rezervace@cervenopececkymost.cz"]}
+      />
 
-      <Header title="Výroba a logistika" marginTop={"20px"} />
-      <Paragraph bold>Tomáš Adamec</Paragraph>
-      <Paragraph>+420 604 402 763 / info@cervenopececkymost.cz</Paragraph>
+      <ContactSection
+        title="Výroba a logistika"
+        name="Tomáš Adamec"
+        lines={["+420 604 402 763 / info@cervenopececkymost.cz"]}
+      />
 
-      <Header title="Sadařství" marginTop={"20px"} />
-      <Paragraph bold>Jiří Adamec st.</Paragraph>
-      <Paragraph>+420 731 171 256 / info@cervenopececkymost.cz</Paragraph>
+      <ContactSection
+        title="Sadařství"
+        name="Jiří Adamec st."
+        lines={["+420 731 171 256 / info@cervenopececkymost.cz"]}
+      />
 
-      <Header title="Účetnictví a marketing" marginTop={"20px"} />
-      <Paragraph bold>Aneta Adamcová</Paragraph>
-      <Paragraph>+420 728 317 274 / obchod@cervenopececkymost.cz</Paragraph>
-    </Wrapper>
+      <ContactSection
+        title="Účetnictví a marketing"
+        name="Aneta Adamcová"
+        lines={["+420 728 317 274 / obchod@cervenopececkymost.cz"]}
+      />
+    </>
   );
 };
 
-export default Content;
-
-const Wrapper = styled.div`
-  > .openingWrapper {
-    display: flex;
-  }
-`;
+export default LeftColumn;

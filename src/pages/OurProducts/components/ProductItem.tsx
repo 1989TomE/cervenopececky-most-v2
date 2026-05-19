@@ -1,27 +1,42 @@
-import styled from "styled-components";
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
+import styled, { useTheme } from "styled-components";
 import ProductImage, { ProductImageProps } from "./ProductImage";
 import { Title } from "./Title";
+import { DescriptionPart } from "./descriptionParts";
+import { getFlavorHighlightColor } from "./flavorHighlightColor";
 import { Variant } from "./Variant";
 
 export type ProductItemProps = ProductImageProps & {
   variants: Variant[];
-  descriptions: string[];
+  descriptions: DescriptionPart[][];
+  isNew?: boolean;
 };
 
 const ProductItem = (props: ProductItemProps) => {
-  const { src, title, variants, descriptions } = props;
+  const { src, title, descriptions, isNew = false } = props;
+  const theme = useTheme();
 
   return (
     <Wrapper>
+      {isNew && <NewBadge>Novinka!</NewBadge>}
       <ProductImage src={src} title={title} />
       <Title title={title} />
-      <VariantWrapper>
-        {/* {variants.map((variant, index) => (
-          <Variant key={`${index}-${variant.text}`} {...variant} />
-        ))} */}
-      </VariantWrapper>
-      {descriptions.map((description) => (
-        <Description key={description}>{description}</Description>
+      <VariantWrapper />
+      {descriptions.map((line, lineIndex) => (
+        <Description key={`${title}-${lineIndex}`}>
+          {line.map((part, partIndex) =>
+            part.highlight ? (
+              <FlavorHighlight
+                key={partIndex}
+                $color={getFlavorHighlightColor(part.text, theme)}
+              >
+                {part.text}
+              </FlavorHighlight>
+            ) : (
+              <span key={partIndex}>{part.text}</span>
+            )
+          )}
+        </Description>
       ))}
     </Wrapper>
   );
@@ -30,11 +45,33 @@ const ProductItem = (props: ProductItemProps) => {
 export default ProductItem;
 
 const Wrapper = styled.div`
-  flex: 1;
+  position: relative;
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem 0.3rem 4rem 0.3rem;
+  padding: 0 0.3rem;
+  margin-bottom: 4rem;
+
+  ${tabletMediaQuery} {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+`;
+
+const NewBadge = styled.span`
+  position: absolute;
+  top: 0;
+  left: 0.3rem;
+  z-index: 2;
+  padding: 0.4rem 0.75rem;
+  font-family: robotoBold;
+  font-size: ${(props) => props.theme.fontSize.normal};
+  color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.colors.redDark};
+  border-radius: 0.25rem;
 `;
 
 const VariantWrapper = styled.div`
@@ -48,4 +85,9 @@ const Description = styled.p`
   font-family: roboto;
   font-size: ${(props) => props.theme.fontSize.normal};
   padding-bottom: 0.25rem;
+`;
+
+const FlavorHighlight = styled.span<{ $color: string }>`
+  font-family: robotoBold;
+  color: ${(props) => props.$color};
 `;
