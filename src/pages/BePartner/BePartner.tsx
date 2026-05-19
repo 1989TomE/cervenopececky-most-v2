@@ -9,7 +9,7 @@ import {
 const BePartner = () => {
   return (
     <PageWrapper>
-      <ContentWrapper withPageHeader>
+      <ContentWrapper withPageHeader={false}>
         <ColumnsWrapper>
           <Column isOnLeft>
             <TextContent />
