@@ -16,7 +16,7 @@ const Content = () => {
         nebo rezervace@cervenopececkymost.cz).
       </Paragraph>
 
-      <div className="openingWrapper">
+      <OpeningWrapper>
         <Column>
           <Paragraph bold primaryColor>
             Září - prosinec
@@ -24,8 +24,6 @@ const Content = () => {
           <Paragraph>
             Začínáme dle sklizně ovoce (aktuálně vždy na FB nebo IG)
           </Paragraph>
-          <Paragraph>Pátek 15-18h</Paragraph>
-          <Paragraph>Sobota 9-16h</Paragraph>
         </Column>
 
         <Column>
@@ -36,7 +34,7 @@ const Content = () => {
             Začínáme dle počasí a skladových zásob (aktuálně vždy na FB nebo IG)
           </Paragraph>
         </Column>
-      </div>
+      </OpeningWrapper>
 
       <a
         href="https://mapy.cz/zakladni?x=15.2040071&y=49.9814219&z=17&q=mo%C5%A1t%C3%A1rna%20%C4%8Cerven%C3%A9%20pe%C4%8Dky&source=firm&id=13328234"
@@ -57,3 +55,10 @@ export const StyledImage = styled.img`
   object-fit: cover;
 `;
 
+const OpeningWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+`;
