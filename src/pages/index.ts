@@ -2,6 +2,7 @@ import { default as aboutIcon } from "@root/assets/about.svg";
 import { default as shoppingCart } from "@root/assets/shoppingCart.svg";
 import { default as cellPhone } from "@root/assets/cellPhone.svg";
 import { default as fruitPress } from "@root/assets/fruitPress.svg";
+import { default as partnerIcon } from "@root/assets/partner.svg";
 import { default as twoBottles } from "@root/assets/twoBottles.svg";
 
 import { default as leaf } from "@root/assets/leaf.svg";
@@ -19,6 +20,7 @@ export enum Page {
   Home = "/",
   WantToFruitPress = "/chci-zmostovat",
   WhereToBuy = "/kde-zakoupit",
+  BePartner = "/bud-partnerem",
   OurProducts = "/nase-produkty",
   Contact = "/kontakt",
   WorkPlace = "/mostarna",
@@ -41,6 +43,7 @@ export const mainPages: PageProps[] = [
     icon: twoBottles,
   },
   { route: Page.WhereToBuy, label: "Kde zakoupit", icon: shoppingCart },
+  { route: Page.BePartner, label: "Buď partnerem", icon: partnerIcon },
   {
     route: Page.WantToFruitPress,
     label: "Chci zmoštovat",

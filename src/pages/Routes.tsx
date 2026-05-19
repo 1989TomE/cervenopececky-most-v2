@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import BePartner from "./BePartner/BePartner";
 import Contact from "./Contact/Contact";
 import FruitOrchards from "./FruitOrchards/FruitOrchards";
 import Home from "./Home/Home";
@@ -28,6 +29,7 @@ const Routes = () => {
           <Route path={Page.FruitOrchards} component={FruitOrchards} />
 
           <Route path={Page.WhereToBuy} component={WhereToBuy} />
+          <Route path={Page.BePartner} component={BePartner} />
           <Route path={Page.OurProducts} component={OurProducts} />
           <Route path={Page.Contact} component={Contact} />
           <Route path={Page.WantToFruitPress} component={WantToFruitPress} />

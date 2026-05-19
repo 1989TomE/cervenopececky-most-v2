@@ -33,8 +33,15 @@ const Content = () => {
         </Paragraph>
       </Widget>
 
+      <Widget height={"120px"} marginTop="1rem">
+        <Header primary title="REZERVACE" marginTop="0rem" />
+        <Paragraph bold>MOŠTOVÁNÍ PRO VEŘEJNOST</Paragraph>
+        <Paragraph>+420 604 402 763</Paragraph>
+        <Paragraph>rezervace@cervenopececkymost.cz</Paragraph>
+      </Widget>
+
       <Paragraph bold marginTop="1rem">
-        Ceny platné pro rok 2025
+        Ceny platné pro sezónu 2025/2026
       </Paragraph>
     </>
   );

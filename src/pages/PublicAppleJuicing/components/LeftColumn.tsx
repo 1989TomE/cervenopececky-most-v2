@@ -43,8 +43,9 @@ const Content = () => {
         </Paragraph>
 
         <Paragraph marginTop={MARGIN_TOP}>
-          3. Ovoce následně zpracujeme vždy nejbližší výrobní den (středa, pátek
-          a sobota). Mošt Vám vyrobíme buď čerstvý, pasterizovaný nebo kombinaci
+          3. Ovoce následně zpracujeme vždy nejbližší výrobní den (dokážeme
+          vyrábět pondělí–neděle, vždy záleží na vytíženosti a konkrétní
+          domluvě). Mošt Vám vyrobíme buď čerstvý, pasterizovaný nebo kombinaci
           dle Vašeho přání.
         </Paragraph>
 

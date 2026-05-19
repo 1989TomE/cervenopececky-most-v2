@@ -7,19 +7,22 @@ import mostarnaMap from "@root/assets/mostarnaMapa.png";
 const Content = () => {
   return (
     <>
-      <Header title="Podzimní / jarní prodej v moštárně" />
+      <Header title="Podzimní / jarní prodej moštárna" />
       <Paragraph bold>Amálka 72, Červené Pečky</Paragraph>
       <Paragraph height={FIRST_P_HEIGHT}>
         V moštárně lze do vyprodání zásob zakoupit jablka, sušené ovoce, čerstvý
         i pasterizovaný mošt. Během letní a podzimní sezóny si u nás také můžete
         nechat zmoštovat své ovoce (dle domluvy +420&nbsp;604&nbsp;402&nbsp;763
-        nebo info@cervenopececkymost.cz).
+        nebo rezervace@cervenopececkymost.cz).
       </Paragraph>
 
       <div className="openingWrapper">
         <Column>
           <Paragraph bold primaryColor>
-            Září - prosinec (začínáme dle ovoce, aktuálně na FB nebo IG)
+            Září - prosinec
+          </Paragraph>
+          <Paragraph>
+            Začínáme dle sklizně ovoce (aktuálně vždy na FB nebo IG)
           </Paragraph>
           <Paragraph>Pátek 15-18h</Paragraph>
           <Paragraph>Sobota 9-16h</Paragraph>
@@ -27,17 +30,20 @@ const Content = () => {
 
         <Column>
           <Paragraph bold primaryColor>
-            Jaro 2026
+            Březen-duben
           </Paragraph>
-          <Paragraph>Bude upřesněno</Paragraph>
+          <Paragraph>
+            Začínáme dle počasí a skladových zásob (aktuálně vždy na FB nebo IG)
+          </Paragraph>
         </Column>
       </div>
 
       <a
-        href="https://mapy.cz/zakladni?x=15.2040071&y=49.9814219&z=17&q=mo%C5%A1t%C3%A1rna%20%C4%8Derven%C3%A9%20pe%C4%8Dky&source=firm&id=13328234"
+        href="https://mapy.cz/zakladni?x=15.2040071&y=49.9814219&z=17&q=mo%C5%A1t%C3%A1rna%20%C4%8Cerven%C3%A9%20pe%C4%8Dky&source=firm&id=13328234"
         target="_blank"
+        rel="noreferrer"
       >
-        <StyledImage src={mostarnaMap} className="mapImage" />
+        <StyledImage src={mostarnaMap} className="mapImage" alt="Mapa moštárny" />
       </a>
     </>
   );
@@ -50,3 +56,4 @@ export const StyledImage = styled.img`
   height: 250px;
   object-fit: cover;
 `;
+

@@ -1,3 +1,4 @@
+import { Paragraph } from "@src/components/TextContent";
 import { PageWrapper } from "@src/components/PagesContent/Layout";
 import { productsItems } from "./components/productsItems";
 import ProductItem from "./components/ProductItem";
@@ -12,6 +13,9 @@ const OurProducts = () => {
             <ProductItem key={i.title} {...i} />
           ))}
         </Products>
+        <StockNote>
+          Informace o skladové dostupnosti produktů na FB a IG
+        </StockNote>
       </ContentWrapper>
     </PageWrapper>
   );
@@ -30,4 +34,10 @@ const Products = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+`;
+
+const StockNote = styled(Paragraph)`
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0 1rem 2rem;
 `;
