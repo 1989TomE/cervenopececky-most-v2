@@ -56,8 +56,8 @@ const Wrapper = styled.div`
   margin-bottom: 4rem;
 
   ${tabletMediaQuery} {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 `;
 

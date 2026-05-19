@@ -1,5 +1,6 @@
 import { Header, Paragraph } from "@src/components/TextContent";
 import Widget from "@src/components/TextContent/Widget";
+import { tabletMediaQuery } from "@src/styles/mediaQueries";
 import styled from "styled-components";
 
 const ReservationBox = () => {
@@ -22,6 +23,11 @@ const CenteredWidget = styled(Widget)`
   border: none;
   outline: none;
   box-shadow: none;
+  box-sizing: border-box;
+
+  ${tabletMediaQuery} {
+    align-self: stretch;
+  }
 
   > * {
     width: 100%;

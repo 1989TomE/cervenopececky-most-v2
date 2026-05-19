@@ -13,13 +13,13 @@ const Contact = () => {
     <PageWrapper>
       <ContentWrapper withPageHeader={false}>
         <ContactColumns>
-          <Column isOnLeft>
+          <ContactLeftColumn isOnLeft>
             <LeftColumn />
-          </Column>
+          </ContactLeftColumn>
 
-          <Column isOnRight>
+          <ContactRightColumn isOnRight>
             <RightColumn />
-          </Column>
+          </ContactRightColumn>
         </ContactColumns>
       </ContentWrapper>
     </PageWrapper>
@@ -32,6 +32,20 @@ const ContactColumns = styled.div`
 
   ${tabletMediaQuery} {
     flex-direction: column;
+    align-items: stretch;
+  }
+`;
+
+const ContactLeftColumn = styled(Column)`
+  ${tabletMediaQuery} {
+    order: 2;
+  }
+`;
+
+const ContactRightColumn = styled(Column)`
+  ${tabletMediaQuery} {
+    order: 1;
+    width: 100%;
   }
 `;
 

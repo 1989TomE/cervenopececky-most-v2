@@ -5,11 +5,16 @@ type Props = {
   children: React.ReactNode;
   isOnLeft?: boolean;
   isOnRight?: boolean;
+  className?: string;
 };
 
-const PageColumn = ({ children, isOnLeft, isOnRight }: Props) => {
+const PageColumn = ({ children, isOnLeft, isOnRight, className }: Props) => {
   return (
-    <Wrapper isOnLeft={isOnLeft} isOnRight={isOnRight}>
+    <Wrapper
+      className={className}
+      isOnLeft={isOnLeft}
+      isOnRight={isOnRight}
+    >
       {children}
     </Wrapper>
   );
