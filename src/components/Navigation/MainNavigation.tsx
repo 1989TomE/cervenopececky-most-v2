@@ -53,15 +53,11 @@ const Nav = styled.nav<{ closed: boolean }>`
 
     ${tabletMediaQuery} {
       margin-top: 0rem;
-      max-height: ${(props) => (props.closed ? "0px" : "280px")};
+      max-height: ${(props) => (props.closed ? "0px" : "380px")};
       overflow-y: hidden;
       transition: max-height 0.3s ease-in-out;
       flex-direction: column;
       margin-bottom: 1rem;
-    }
-
-    ${cellPhoneMediaQuery} {
-      max-height: ${(props) => (props.closed ? "0px" : "380px")};
     }
   }
 `;
