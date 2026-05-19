@@ -1,4 +1,3 @@
-import { Paragraph } from "@src/components/TextContent";
 import styled from "styled-components";
 import ProductImage, { ProductImageProps } from "./ProductImage";
 import { Title } from "./Title";
@@ -22,7 +21,7 @@ const ProductItem = (props: ProductItemProps) => {
         ))} */}
       </VariantWrapper>
       {descriptions.map((description) => (
-        <p key={description}>{description}</p>
+        <Description key={description}>{description}</Description>
       ))}
     </Wrapper>
   );
@@ -41,4 +40,12 @@ const Wrapper = styled.div`
 const VariantWrapper = styled.div`
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+`;
+
+const Description = styled.p`
+  width: 100%;
+  text-align: center;
+  font-family: roboto;
+  font-size: ${(props) => props.theme.fontSize.normal};
+  padding-bottom: 0.25rem;
 `;

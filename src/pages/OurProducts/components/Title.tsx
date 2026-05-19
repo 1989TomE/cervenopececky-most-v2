@@ -9,6 +9,8 @@ export const Title = ({ title }: Props) => {
 };
 
 const Wrapper = styled.div`
+  width: 100%;
+  text-align: center;
   font-family: "barlow";
   font-size: 2rem;
   color: ${(props) => props.theme.colors.redLight};
