@@ -1,5 +1,5 @@
 import { Header, Paragraph } from "@src/components/TextContent";
-import Widget from "@src/components/TextContent/Widget";
+import styled from "styled-components";
 
 const partnerOfferings = [
   "ČERSTVÉ MOŠTY",
@@ -17,13 +17,15 @@ const TextContent = () => {
         Prodávejte naše ovocné produkty ve Vaší provozovně. Pro partnery
         zajišťujeme:
       </Paragraph>
-      <Widget marginBottom="1rem">
+
+      <StyledOfferingsList>
         {partnerOfferings.map((offering) => (
-          <Paragraph key={offering} bold primaryColor marginTop="0.5rem">
+          <Paragraph key={offering} bold marginTop="0.5rem">
             {offering}
           </Paragraph>
         ))}
-      </Widget>
+      </StyledOfferingsList>
+
       <Paragraph>
         Neváhejte nás kontaktovat a zašleme Vám nabídku s velkoobchodní cenou.
       </Paragraph>
@@ -32,3 +34,8 @@ const TextContent = () => {
 };
 
 export default TextContent;
+
+const StyledOfferingsList = styled.div`
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+`;
