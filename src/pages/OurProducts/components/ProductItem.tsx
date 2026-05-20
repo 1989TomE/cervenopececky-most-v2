@@ -1,42 +1,22 @@
 import { tabletMediaQuery } from "@src/styles/mediaQueries";
-import styled, { useTheme } from "styled-components";
+import styled from "styled-components";
 import ProductImage, { ProductImageProps } from "./ProductImage";
 import { Title } from "./Title";
-import { DescriptionPart } from "./descriptionParts";
-import { getFlavorHighlightColor } from "./flavorHighlightColor";
-import { Variant } from "./Variant";
 
 export type ProductItemProps = ProductImageProps & {
-  variants: Variant[];
-  descriptions: DescriptionPart[][];
-  isNew?: boolean;
+  descriptions: string[];
 };
 
 const ProductItem = (props: ProductItemProps) => {
-  const { src, title, descriptions, isNew = false } = props;
-  const theme = useTheme();
+  const { src, title, descriptions } = props;
 
   return (
     <Wrapper>
-      {isNew && <NewBadge>Novinka!</NewBadge>}
       <ProductImage src={src} title={title} />
       <Title title={title} />
       <VariantWrapper />
       {descriptions.map((line, lineIndex) => (
-        <Description key={`${title}-${lineIndex}`}>
-          {line.map((part, partIndex) =>
-            part.highlight ? (
-              <FlavorHighlight
-                key={partIndex}
-                $color={getFlavorHighlightColor(part.text, theme)}
-              >
-                {part.text}
-              </FlavorHighlight>
-            ) : (
-              <span key={partIndex}>{part.text}</span>
-            )
-          )}
-        </Description>
+        <Description key={`${title}-${lineIndex}`}>{line}</Description>
       ))}
     </Wrapper>
   );
@@ -61,19 +41,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const NewBadge = styled.span`
-  position: absolute;
-  top: 0;
-  left: 0.3rem;
-  z-index: 2;
-  padding: 0.4rem 0.75rem;
-  font-family: robotoBold;
-  font-size: ${(props) => props.theme.fontSize.normal};
-  color: ${(props) => props.theme.colors.white};
-  background-color: ${(props) => props.theme.colors.redDark};
-  border-radius: 0.25rem;
-`;
-
 const VariantWrapper = styled.div`
   margin-top: 0.5rem;
   margin-bottom: 1rem;
@@ -85,9 +52,4 @@ const Description = styled.p`
   font-family: roboto;
   font-size: ${(props) => props.theme.fontSize.normal};
   padding-bottom: 0.25rem;
-`;
-
-const FlavorHighlight = styled.span<{ $color: string }>`
-  font-family: robotoBold;
-  color: ${(props) => props.$color};
 `;
