@@ -4,6 +4,13 @@ import Widget from "@src/components/TextContent/Widget";
 const Content = () => {
   return (
     <>
+      <Widget height={"120px"} marginBottom={"10px"}>
+        <Header primary title="REZERVACE" marginTop="0rem" />
+        <Paragraph bold>MOŠTOVÁNÍ PRO VEŘEJNOST</Paragraph>
+        <Paragraph>+420 604 402 763</Paragraph>
+        <Paragraph>rezervace@cervenopececkymost.cz</Paragraph>
+      </Widget>
+
       <Widget height={"160px"} marginBottom={"10px"}>
         <Header primary title="ČERSTVÝ MOŠT" marginTop="0rem" />
         <Paragraph bold primaryColor>
@@ -31,13 +38,6 @@ const Content = () => {
           a plněno do sáčku. Cena včetně likvidace výlisků. K sáčku lze zakoupit
           i kartonovou krabici, kterou můžete používat opakovaně.
         </Paragraph>
-      </Widget>
-
-      <Widget height={"120px"} marginTop="1rem">
-        <Header primary title="REZERVACE" marginTop="0rem" />
-        <Paragraph bold>MOŠTOVÁNÍ PRO VEŘEJNOST</Paragraph>
-        <Paragraph>+420 604 402 763</Paragraph>
-        <Paragraph>rezervace@cervenopececkymost.cz</Paragraph>
       </Widget>
 
       <Paragraph bold marginTop="1rem">
